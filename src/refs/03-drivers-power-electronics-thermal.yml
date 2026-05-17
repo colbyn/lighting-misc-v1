@@ -1,0 +1,152 @@
+#----------------------------------------------------------------------------------------
+# Use for: Thermal path, junction temperature, heat sink logic, and why LED performance is
+# Use for: temperature-sensitive.
+# Reading angle: Use it to make heat a first-class system issue rather than a minor fixture
+# Reading angle: detail.
+# Caution: Older DOE document, but foundational. Pair with newer reliability/driver sources for
+# Caution: current practice.
+# Best chapters: LED Fundamentals §6, §13
+#----------------------------------------------------------------------------------------
+doe-thermal-management-white-leds:
+  type: report
+  title: "Thermal Management of White LEDs"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/thermal_led_feb07_2.pdf"
+  note: "Core thermal-management source. Useful for LED junction heat, luminaire design, and why LED performance is system-dependent."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver functions, driver stress, failure modes, reliability, and the driver as
+# Use for: essential power electronics.
+# Reading angle: This is a major support source for the claim that the driver is not an
+# Reading angle: accessory.
+# Caution: Research/stress-test framing; do not oversimplify into universal field failure rates.
+# Best chapters: LED Fundamentals §3, §4, §6, §13; Power Architecture claims 1–2
+#----------------------------------------------------------------------------------------
+doe-rti-led-driver-stress-testing-2018:
+  type: report
+  title: "Initial Results of Accelerated Stress Testing on Single-Channel and Multichannel Drivers"
+  author: "U.S. Department of Energy and RTI International"
+  date: 2018
+  url: "https://www.energy.gov/sites/prod/files/2018/06/f53/rti-ssl_multichanneldriver_initial-results.pdf"
+  note: "Best driver-focused public source so far. Defines driver functions: AC/DC conversion, power conditioning, current/voltage regulation, and reliability concerns."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver selection basics: current, voltage, AC/DC input, dimming, load matching.
+# Reading angle: Use for practical language and examples that non-engineers can follow.
+# Caution: Vendor source. Keep it in the practical/explanatory layer rather than the authority
+# Caution: layer.
+# Best chapters: LED Fundamentals §3, §5
+#----------------------------------------------------------------------------------------
+ledsupply-understanding-led-drivers:
+  type: web
+  title: "Understanding LED Drivers and How to Choose the Right One"
+  author: "LEDSupply"
+  date: 2020
+  url: "https://www.ledsupply.com/blog/understanding-led-drivers/"
+  note: "Practical driver-selection article. Good for forward voltage, current, input source, AC/DC input, space, and application questions."
+
+#----------------------------------------------------------------------------------------
+# Use for: Clear explanation of constant-current vs constant-voltage systems.
+# Reading angle: Useful for preventing the naive conclusion that all DC LED systems are
+# Reading angle: equivalent.
+# Caution: Vendor educational article; corroborate with driver datasheets or DOE/technical
+# Caution: sources if making hard claims.
+# Best chapters: LED Fundamentals §5, §14
+#----------------------------------------------------------------------------------------
+ledsupply-constant-current-vs-voltage:
+  type: web
+  title: "LED Drivers: Constant Current vs. Constant Voltage"
+  author: "LEDSupply"
+  date: 2019
+  url: "https://www.ledsupply.com/blog/constant-current-led-drivers-vs-constant-voltage-led-drivers/"
+  note: "Clean practical explanation of CC vs CV. Useful for preventing oversimplified 'LEDs are DC' arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Concise CC/CV selection logic.
+# Reading angle: Use as a quick practical check while drafting the
+# Reading angle: constant-current/constant-voltage section.
+# Caution: Forum-style distributor content; keep citations modest.
+# Best chapters: LED Fundamentals §5
+#----------------------------------------------------------------------------------------
+digikey-constant-current-or-voltage-drivers:
+  type: web
+  title: "Constant Current or Constant Voltage LED Drivers: Which is Right for You?"
+  author: "DigiKey Forum"
+  url: "https://forum.digikey.com/t/constant-current-or-constant-voltage-led-drivers-which-is-right-for-you/45207"
+  note: "Concise comparison source. Useful for quick selection logic and chapter notes."
+
+#----------------------------------------------------------------------------------------
+# Use for: Forward voltage, current, heat, and feedback behavior in LEDs.
+# Reading angle: Good conceptual source for explaining why current control and thermal design
+# Reading angle: matter together.
+# Caution: Vendor explanation; use for intuition, not as sole technical proof.
+# Best chapters: LED Fundamentals §5, §6
+#----------------------------------------------------------------------------------------
+ledsupply-thermal-runaway-explained:
+  type: web
+  title: "Thermal Runaway Explained"
+  author: "LEDSupply"
+  date: 2019
+  url: "https://www.ledsupply.com/blog/thermal-runaway-explained/"
+  note: "Useful for explaining LED thermal failure as a feedback mechanism, not just generic heat-is-bad language."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver lifetime, thermal stress, lifetime prediction, and reliability planning.
+# Reading angle: Useful for lifecycle chapters and for making driver location/serviceability
+# Reading angle: feel concrete.
+# Caution: Manufacturer white paper. Strong practical source, but vendor framing should be
+# Caution: identified as such.
+# Best chapters: LED Fundamentals §13; Power Architecture claims 1–2, 5
+#----------------------------------------------------------------------------------------
+philips-led-driver-lifetime-reliability:
+  type: report
+  title: "LED Driver Lifetime and Reliability"
+  author: "Philips"
+  url: "https://www.docs.lighting.philips.com/en_gb/oem/download/led_driver_lifetime/White_paper_LED_Driver_lifetime_reliability.pdf"
+  note: "Driver-specific lifecycle source. Useful for serviceability, temperature stress, and maintenance planning."
+
+#----------------------------------------------------------------------------------------
+# Use for: Field-service reality: replacing drivers, compatibility, programmability, and access
+# Use for: problems.
+# Reading angle: Use this to make maintenance consequences vivid and credible.
+# Caution: Trade article; good for practice and anecdotes, less for quantitative reliability
+# Caution: claims.
+# Best chapters: LED Fundamentals §4, §13; Power Architecture claim 1
+#----------------------------------------------------------------------------------------
+ecmag-replacing-failing-drivers-2023:
+  type: web
+  title: "Driving LED Lighting: Replacing Failing Drivers"
+  author: "Electrical Contractor"
+  date: 2023
+  url: "https://www.ecmag.com/magazine/articles/article-detail/driving-led-lighting-replacing-failing-drivers"
+  note: "Practical field-service article. Good for maintenance reality: driver failures, replacements, access, compatibility, and troubleshooting."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver replacement criteria: current, voltage, dimming interface, physical fit,
+# Use for: rating, listing.
+# Reading angle: Good for showing that driver replacement is not always plug-and-play.
+# Caution: Older source; use for persistent replacement logic, not current market specifics.
+# Best chapters: LED Fundamentals §13; Installation realities
+#----------------------------------------------------------------------------------------
+ecmag-out-with-old-replacing-led-drivers-2016:
+  type: web
+  title: "Out With The Old: Replacing LED Drivers"
+  author: "Electrical Contractor"
+  date: 2016
+  url: "https://www.ecmag.com/magazine/articles/article-detail/lighting-out-old-replacing-led-drivers"
+  note: "Older but practical driver-replacement article. Useful for replacement criteria: current, voltage, dimming interface, ratings, fit, and listing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical driver-replacement checklist.
+# Reading angle: Useful for drafting a sidebar on what must be known to replace a driver
+# Reading angle: correctly.
+# Caution: Vendor source; practical but not neutral.
+# Best chapters: LED Fundamentals §13
+#----------------------------------------------------------------------------------------
+ledsupply-driver-replacement-factors-2022:
+  type: web
+  title: "5 Important Factors of LED Driver Replacement"
+  author: "LEDSupply"
+  date: 2022
+  url: "https://www.ledsupply.com/blog/five-factors-for-replacement-led-drivers/"
+  note: "Practical replacement checklist. Useful for lifecycle, serviceability, and driver-as-weak-link discussion."

@@ -1,0 +1,215 @@
+#----------------------------------------------------------------------------------------
+# Use for: Historical LED adoption context and retrofit-market framing.
+# Reading angle: Use to show why LED adoption followed familiar lamp/fixture categories.
+# Caution: 2015 market data is old. Use historically, not for current adoption statistics.
+# Best chapters: LED Fundamentals §11
+#----------------------------------------------------------------------------------------
+doe-led-adoption-common-applications-2015:
+  type: report
+  title: "Adoption of LEDs in Common Lighting Applications"
+  author: "U.S. Department of Energy"
+  date: 2015
+  url: "https://www.energy.gov/sites/prod/files/2015/07/f24/led-adoption-report_2015.pdf"
+  note: "Useful historical market context for LED adoption, retrofit formats, and integrated luminaires."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design/specification discipline: serviceability, replaceability, glare, controls, and
+# Use for: system requirements.
+# Reading angle: Use as a serious specification-oriented reference, especially for
+# Reading angle: non-residential rigor.
+# Caution: DoD/UFC context is not every project. Translate into general principles, not
+# Caution: universal requirements.
+# Best chapters: LED Fundamentals §8, §12, §13; Power Architecture technical constraints
+#----------------------------------------------------------------------------------------
+wbdg-ufc-lighting-systems-2023:
+  type: report
+  title: "UFC 3-530-01 Interior and Exterior Lighting Systems"
+  author: "Whole Building Design Guide and U.S. Department of Defense"
+  date: 2023
+  url: "https://www.wbdg.org/FFC/DOD/UFC/ufc_3_530_01_2023_c1.pdf"
+  note: "Strong design/specification source. Useful for retrofit limits, serviceability, replaceable drivers, glare, controls, and lighting-system discipline."
+
+#----------------------------------------------------------------------------------------
+# Use for: Separating lumen depreciation, color shift, catastrophic failure, design defects,
+# Use for: manufacturing defects, and wear-out.
+# Reading angle: Core myth-clearing source for lifetime claims.
+# Caution: Fact sheet format; pair with lifetime guide for deeper reporting details.
+# Best chapters: LED Fundamentals §13, §14
+#----------------------------------------------------------------------------------------
+doe-lifetime-reliability:
+  type: report
+  title: "Lifetime and Reliability"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/life-reliability_fact-sheet.pdf"
+  note: "Good myth-corrector: separates catastrophic failure, lumen depreciation, color shift, design flaws, manufacturing defects, and wear-out."
+
+#----------------------------------------------------------------------------------------
+# Use for: Luminaire lifetime reporting, test limitations, and why LED package lifetime is not
+# Use for: system lifetime.
+# Reading angle: Use when correcting the common L70 equals fixture lifetime misunderstanding.
+# Caution: Older but important. Use as technical guardrail, not as current product warranty
+# Caution: guidance.
+# Best chapters: LED Fundamentals §13, §14
+#----------------------------------------------------------------------------------------
+doe-led-luminaire-lifetime-testing-reporting:
+  type: report
+  title: "LED Luminaire Lifetime: Recommendations for Testing and Reporting"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/led_luminaire-lifetime-guide.pdf"
+  note: "Important myth-corrector: luminaire lifetime is not just LED package lifetime."
+
+#----------------------------------------------------------------------------------------
+# Use for: Color shift as a reliability and lifecycle issue.
+# Reading angle: Good support for the idea that LEDs fail by more than turning off.
+# Caution: Use with color-quality sources if connecting color shift to specification outcomes.
+# Best chapters: LED Fundamentals §9, §13
+#----------------------------------------------------------------------------------------
+doe-led-luminaire-reliability-color-shift:
+  type: web
+  title: "LED Luminaire Reliability: Impact of Color Shift"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/eere/ssl/articles/led-luminaire-reliability-impact-color-shift"
+  note: "Useful for lifecycle and LEDs-do-not-just-dim-over-time framing. Supports color shift as a reliability issue."
+
+#----------------------------------------------------------------------------------------
+# Use for: Source hub for LED reliability documents.
+# Reading angle: Use as a bibliographic trailhead to expand reliability sources later.
+# Caution: Hub source; cite specific reports when making specific claims.
+# Best chapters: LED Fundamentals §13
+#----------------------------------------------------------------------------------------
+doe-led-systems-reliability-consortium:
+  type: web
+  title: "LED Systems Reliability Consortium"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/led-systems-reliability-consortium"
+  note: "Reference hub for deeper reliability documents: lifetime guide, color shift, dim-to-warm reliability, and SSL reliability research."
+
+#----------------------------------------------------------------------------------------
+# Use for: Serviceable, modular, circular luminaire design.
+# Reading angle: Use for repairability/circularity rhetoric and product-design direction.
+# Caution: Industry publication; check whether claims are vendor-authored or editorial.
+# Best chapters: LED Fundamentals §13; Power Architecture claim 5
+#----------------------------------------------------------------------------------------
+led-professional-serviceable-luminaires-circular-future:
+  type: web
+  title: "Serviceable Indoor Luminaires for a Circular Future"
+  author: "LED Professional"
+  url: "https://www.led-professional.com/all/serviceable-indoor-luminaires-for-a-circular-future"
+  note: "Good serviceability/circularity source. Useful for repairable, upgradeable, modular luminaire arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Class 2 compliance, low-voltage safety, power supply access, and inspection issues.
+# Reading angle: Useful practical source for low-voltage not automatically simple/safe.
+# Caution: Vendor/source likely sales-adjacent. Confirm code details with NEC or AHJ for formal
+# Caution: claims.
+# Best chapters: LED Fundamentals §12, §14; Technical constraints
+#----------------------------------------------------------------------------------------
+diodeled-class-2-compliance:
+  type: web
+  title: "Low Voltage Safety: Understanding Class 2 Compliance"
+  author: "Diode LED"
+  url: "https://www.diodeled.com/low-voltage-safety-understanding-class-2-compliance/"
+  note: "Inspection-oriented Class 2 source. Useful for code-boundary, power-supply access, separation, listing, and installation discipline."
+
+#----------------------------------------------------------------------------------------
+# Use for: Voltage drop, run length, polarity, 12V/24V behavior, low-voltage installation
+# Use for: practice.
+# Reading angle: Excellent practical field source for the realities that appear after drivers
+# Reading angle: move remote.
+# Caution: Vendor blog. Good for practical consequences, not final code authority.
+# Best chapters: LED Fundamentals §5, §12, §14; Technical constraints
+#----------------------------------------------------------------------------------------
+aspectled-electricians-guide-led-strips:
+  type: web
+  title: "Low Voltage Lighting: The Electrician's Guide to LED Strips"
+  author: "aspectLED"
+  url: "https://www.aspectled.com/blogs/blog/low-voltage-lighting-the-electricians-guide-to-led-strips"
+  note: "Practical installation source. Useful for Class 2, NEC Article 725, polarity, voltage drop, run length, and 12V vs 24V behavior."
+
+#----------------------------------------------------------------------------------------
+# Use for: Remote driver placement, wire gauge, voltage drop, distance, access, and ventilation.
+# Reading angle: Use as practical support for remote-driver tradeoffs.
+# Caution: Vendor blog. Do not treat product-specific advice as universal.
+# Best chapters: LED Fundamentals §12; Power Architecture taxonomy B
+#----------------------------------------------------------------------------------------
+hitlights-remote-mounting-led-drivers:
+  type: web
+  title: "Remote-Mounting LED Drivers: Voltage Drop, Wire Gauge, and Best Practices"
+  author: "HitLights"
+  url: "https://hitlights.com/blogs/premium-led-strip-lighting/remote-mounting-led-drivers"
+  note: "Practical remote-driver source. Good for voltage drop, wire gauge, driver access, ventilation, and service placement."
+
+#----------------------------------------------------------------------------------------
+# Use for: End-of-life ambiguity, driver replacement, color shift, lumen depreciation,
+# Use for: nonstandardization, sustainability.
+# Reading angle: Excellent trade source for lifecycle realism.
+# Caution: Trade publication; use for practice and industry concerns, not lab-derived lifetime
+# Caution: data.
+# Best chapters: LED Fundamentals §13, §14; Power Architecture claim 5
+#----------------------------------------------------------------------------------------
+ecmag-led-end-of-life-questions-2024:
+  type: web
+  title: "LED End-of-Life Questions: What Happens When It's Time for an Upgrade or Replacement?"
+  author: "Electrical Contractor"
+  date: 2024
+  url: "https://www.ecmag.com/magazine/articles/article-detail/led-end-of-life-questions-what-happens-when-it-s-time-for-an-upgrade-or-replacement"
+  note: "Strong source for LED end-of-life ambiguity: drivers, color shift, lumen depreciation, nonstandardization, and sustainability."
+
+#----------------------------------------------------------------------------------------
+# Use for: TLED retrofit options and why retrofit choices are not one-size-fits-all.
+# Reading angle: Use to show the lamp-replacement path has real but limited value.
+# Caution: TLED-specific; avoid overgeneralizing to all architectural lighting.
+# Best chapters: LED Fundamentals §11
+#----------------------------------------------------------------------------------------
+ecmag-guidance-tled-retrofits-2024:
+  type: web
+  title: "Consider All Options: Guidance for TLED Retrofits"
+  author: "Electrical Contractor"
+  date: 2024
+  url: "https://www.ecmag.com/magazine/articles/article-detail/consider-all-options-guidance-for-tled-retrofits"
+  note: "Good retrofit-options piece. Useful for arguing against naive just-swap-the-lamps thinking."
+
+#----------------------------------------------------------------------------------------
+# Use for: Industry/vendor conversation about field-replaceable drivers and serviceability.
+# Reading angle: Good subjective source for how manufacturers talk about maintenance pain.
+# Caution: Interview with manufacturer perspective; cite as industry framing, not neutral proof.
+# Best chapters: LED Fundamentals §13; Power Architecture claim 1
+#----------------------------------------------------------------------------------------
+lightnow-field-replaceable-led-drivers-2023:
+  type: web
+  title: "Acuity's Daren Hatfield Talks Field-Replaceable LED Drivers"
+  author: "LightNOW"
+  date: 2023
+  url: "https://www.lightnowblog.com/2023/04/acuitys-daren-hatfield-talks-field-replaceable-led-drivers/"
+  note: "Subjective/vendor-adjacent interview. Useful for serviceability rhetoric and how manufacturers frame field replacement."
+
+#----------------------------------------------------------------------------------------
+# Use for: Current retrofit wave: LED-to-LED upgrades, aging first-generation installations,
+# Use for: controls opportunity.
+# Reading angle: Useful for contemporary market narrative.
+# Caution: Current-trade source; verify any market claims if they become central.
+# Best chapters: LED Fundamentals §11; Power Architecture opening
+#----------------------------------------------------------------------------------------
+lightnow-contractor-led-to-led-retrofits-2025:
+  type: web
+  title: "Contractor Considerations for LED-to-LED Retrofits"
+  author: "LightNOW"
+  date: 2025
+  url: "https://www.lightnowblog.com/2025/06/contractor-considerations-for-led-to-led-retrofits/"
+  note: "Current-market piece framing first-generation LEDs as the next retrofit wave and controls as part of the value story."
+
+#----------------------------------------------------------------------------------------
+# Use for: Commercial retrofit logic and installed-base aging.
+# Reading angle: Use as subjective/interview evidence of how manufacturers frame upgrade
+# Reading angle: opportunity.
+# Caution: Vendor interview; keep it in the market-framing layer.
+# Best chapters: LED Fundamentals §11, §13
+#----------------------------------------------------------------------------------------
+lightnow-cree-commercial-lighting-upgrades-2023:
+  type: web
+  title: "Cree's Erik Milz Talks Commercial Lighting Upgrades"
+  author: "LightNOW"
+  date: 2023
+  url: "https://www.lightnowblog.com/2023/07/crees-erik-milz-talks-commercial-lighting-upgrades/"
+  note: "Interview source on LED-to-LED upgrade opportunity, installed-base aging, and commercial retrofit logic."
+

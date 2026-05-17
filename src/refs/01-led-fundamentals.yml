@@ -1,0 +1,127 @@
+#----------------------------------------------------------------------------------------
+# Use for: Opening LED literacy: semiconductor device, solid-state lighting, phosphor-converted
+# Use for: white light, and LED-as-electronic-source framing.
+# Reading angle: Use it to support the plain claim that LEDs are not filament lamps or
+# Reading angle: gas-discharge lamps. It is strongest as a public-facing authority for basic
+# Reading angle: definitions.
+# Caution: Too introductory for technical claims about architecture, thermal design, or
+# Caution: controls. Use as a baseline, not as the proof source for later system arguments.
+# Best chapters: LED Fundamentals §1, §2, §9
+#----------------------------------------------------------------------------------------
+doe-led-basics:
+  type: web
+  title: "LED Basics"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/led-basics"
+  note: "Plain-language official primer on LED operation, white-light generation, phosphor conversion, and why LEDs are not simply white bulbs."
+
+#----------------------------------------------------------------------------------------
+# Use for: Accessible statements on efficiency, heat, directionality, lifetime, and
+# Use for: consumer-visible LED advantages.
+# Reading angle: Good for explaining why LED adoption happened quickly and why readers already
+# Reading angle: think of LEDs as efficient long-life replacements.
+# Caution: Consumer education source; avoid leaning on it for engineering-level reliability,
+# Caution: driver, or architectural claims.
+# Best chapters: LED Fundamentals §1, §11, §13
+#----------------------------------------------------------------------------------------
+doe-led-lighting-energy-saver:
+  type: web
+  title: "LED Lighting"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/energysaver/led-lighting"
+  note: "Accessible overview of LED efficiency, directionality, heat, lifetime, and consumer-facing advantages."
+
+#----------------------------------------------------------------------------------------
+# Use for: Market-facing language around LED lamp/fixture replacement, lumen maintenance, rated
+# Use for: life, and consumer expectations.
+# Reading angle: Useful for identifying the inherited replacement-lamp mental model you may want
+# Reading angle: to critique later.
+# Caution: ENERGY STAR language is intentionally simplified. Use it to describe market
+# Caution: assumptions, not to define system-level luminaire lifetime.
+# Best chapters: LED Fundamentals §11, §13, §14
+#----------------------------------------------------------------------------------------
+energy-star-learn-about-led-lighting:
+  type: web
+  title: "Learn About LED Lighting"
+  author: "ENERGY STAR"
+  url: "https://www.energystar.gov/products/learn-about-led-lighting"
+  note: "Useful for market-facing language around LED lifetime, lumen depreciation, lamps versus fixtures, and replacement expectations."
+
+#----------------------------------------------------------------------------------------
+# Use for: Basic electronics explanation of LEDs as diodes requiring polarity, current limiting,
+# Use for: and electrical care.
+# Reading angle: Good for turning semiconductor basics into reader-friendly electrical
+# Reading angle: intuition.
+# Caution: Hobby/electronics context, not architectural lighting. Do not extrapolate directly to
+# Caution: commercial luminaire systems.
+# Best chapters: LED Fundamentals §1, §3, §5
+#----------------------------------------------------------------------------------------
+sparkfun-light-emitting-diodes:
+  type: web
+  title: "Light-Emitting Diodes (LEDs)"
+  author: "SparkFun"
+  url: "https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds/how-to-use-them"
+  note: "Electronics-level explainer. Good for grounding LEDs as current-driven semiconductor devices before moving into luminaires."
+
+#----------------------------------------------------------------------------------------
+# Use for: Popular-science explanation of p-n junctions and electroluminescence.
+# Reading angle: Useful for copywriting: it can help shape intuitive explanations without
+# Reading angle: becoming too technical.
+# Caution: Not authoritative enough for final technical argument. Use only for background and
+# Caution: analogy development.
+# Best chapters: LED Fundamentals §1
+#----------------------------------------------------------------------------------------
+howstuffworks-light-emitting-diodes:
+  type: web
+  title: "How Light Emitting Diodes Work"
+  author: "HowStuffWorks"
+  url: "https://electronics.howstuffworks.com/led.htm"
+  note: "Popular-science explanation of p-n junctions, electroluminescence, and LED behavior. Useful for intuitive copy."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical vocabulary for high-power LEDs, arrays, heat sinking, forward voltage,
+# Use for: current, and component selection.
+# Reading angle: Read for applied language that bridges electronics and lighting practice.
+# Caution: Vendor source. Useful for practical framing, but corroborate critical claims with
+# Caution: DOE/standards sources.
+# Best chapters: LED Fundamentals §1, §2, §5, §6
+#----------------------------------------------------------------------------------------
+ledsupply-high-power-led-basics:
+  type: web
+  title: "Everything about LEDs: Basics of High Power LED Lighting"
+  author: "LEDSupply"
+  date: 2021
+  url: "https://www.ledsupply.com/blog/what-you-need-to-know-about-leds/"
+  note: "Vendor/educational source that frames LEDs as designable components rather than generic bulbs."
+
+#----------------------------------------------------------------------------------------
+# Use for: System framing: LED luminaire performance depends on optical, thermal, electrical,
+# Use for: mechanical, and driver choices.
+# Reading angle: Good support for the statement that the luminaire is a system, not merely a
+# Reading angle: bulb or emitter.
+# Caution: Distributor/industry article. Strong for practical engineering framing; supplement
+# Caution: with DOE for authority.
+# Best chapters: LED Fundamentals §2, §6, §8, §13
+#----------------------------------------------------------------------------------------
+digikey-led-luminaire-design-guide:
+  type: web
+  title: "LED Luminaire Design Guide"
+  author: "DigiKey"
+  url: "https://www.digikey.com/es/articles/led-luminaire-design-guide"
+  note: "Practical luminaire design source. Good for optical, electrical, and thermal efficiencies as interacting design variables."
+
+#----------------------------------------------------------------------------------------
+# Use for: Color quality, spectrum, phosphor-converted LEDs, museum sensitivity, and
+# Use for: conservation-oriented lighting concerns.
+# Reading angle: Read as a neutral applied-lighting perspective where spectrum and material
+# Reading angle: effects matter.
+# Caution: Museum/gallery context is specialized. Use it when spectrum, color rendering, UV/IR,
+# Caution: or conservation issues help the argument.
+# Best chapters: LED Fundamentals §2, §8, §9, §10
+#----------------------------------------------------------------------------------------
+canada-cci-led-lighting-museums:
+  type: web
+  title: "LED Lighting in Museums and Art Galleries"
+  author: "Canadian Conservation Institute"
+  url: "https://www.canada.ca/en/conservation-institute/services/conservation-preservation-publications/technical-bulletins/led-lighting-museums.html"
+  note: "Neutral public reference for phosphor-converted white LEDs, spectrum, museums, color quality, and conservation context."

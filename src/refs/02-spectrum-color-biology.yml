@@ -1,0 +1,269 @@
+#----------------------------------------------------------------------------------------
+# Use for: Color rendition beyond CRI: fidelity, gamut, color vector graphics, Rf/Rg, hue
+# Use for: shifts, and specification literacy.
+# Reading angle: Use it to argue that CCT and CRI are inadequate as the entire language of color
+# Reading angle: quality.
+# Caution: It is about color rendition, not circadian biology. Do not use TM-30 to prove
+# Caution: biological-response claims.
+# Best chapters: LED Fundamentals §9, §14
+#----------------------------------------------------------------------------------------
+doe-tm30-tutorial-2022:
+  type: report
+  title: "Tutorial: Background and Guidance for Using the ANSI/IES TM-30 Method for Evaluating Light Source Color Rendition"
+  author: "U.S. Department of Energy"
+  date: 2022
+  url: "https://www.energy.gov/sites/default/files/2022-04/ssl-royer-leukos-tm-30-tutorial-2022.pdf"
+  note: "Strong open guide for moving beyond CRI into fidelity, gamut, color vector graphics, and richer color-quality language."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design-facing explanation of CRI, R9, LED spectra, and color rendering consequences.
+# Reading angle: Useful for translating technical color-rendering issues into
+# Reading angle: architectural/specification language.
+# Caution: Manufacturer source; useful for vocabulary and design framing, weaker as neutral
+# Caution: evidence.
+# Best chapters: LED Fundamentals §8, §9
+#----------------------------------------------------------------------------------------
+erco-led-color-rendering:
+  type: web
+  title: "LED Color Rendering"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/led/led-color-rendering-7738/"
+  note: "Readable manufacturer guide on LED spectra, CRI limitations, red rendering, and color-quality vocabulary."
+
+#----------------------------------------------------------------------------------------
+# Use for: Melanopic / alpha-opic metrics, non-visual photometry, ipRGC-related measurement
+# Use for: vocabulary.
+# Reading angle: This is the main technical anchor for any serious melanopic or
+# Reading angle: biological-response terminology.
+# Caution: CIE S 026 gives measurement terms; it does not by itself validate broad wellness
+# Caution: marketing claims.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+cie-s026-tutorial-2021:
+  type: report
+  title: "Understanding and Application of CIE S 026:2018"
+  author: "International Commission on Illumination"
+  date: 2021
+  url: "https://files.cie.co.at/CIE_S_026_Tutorial2021_information.pdf"
+  note: "Main open source for melanopic and alpha-opic lighting metrics. Important for responsible biological-response writing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Guardrail against simplistic circadian lighting claims; supports timing, dose,
+# Use for: spectrum, and context framing.
+# Reading angle: Use this as your cautionary authority: good light depends on when, how much,
+# Reading angle: for whom, and in what context.
+# Caution: Position statement; not a design manual. Use it to constrain claims, not to prescribe
+# Caution: a full lighting design method.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+cie-proper-light-proper-time-2024:
+  type: report
+  title: "Proper Light at the Proper Time"
+  author: "International Commission on Illumination"
+  date: 2024
+  url: "https://files.cie.co.at/CIE%20PS%20001_2024%20CIE%20Position%20Statement%20-%20Recommending%20Proper%20Light%20at%20the%20Proper%20Time-3rd%20ed.pdf"
+  note: "Guardrail source against simplistic circadian-lighting claims. Emphasizes timing, dose, spectrum, and context."
+
+#----------------------------------------------------------------------------------------
+# Use for: Narrative explanation of how light affects health, including ipRGCs, melanopsin, and
+# Use for: non-visual pathways.
+# Reading angle: Helpful for copy that needs to be scientifically literate but still readable.
+# Caution: Use for framing, not detailed thresholds. For recommendations, pair with Brown et al.
+# Caution: and CIE S 026.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+cie-how-light-affects-human-health-2025:
+  type: report
+  title: "How Does Light Affect Human Health?"
+  author: "International Commission on Illumination"
+  date: 2025
+  url: "https://files.cie.co.at/General%20files/20250516_CIE_How_does_light_affect_human_health.pdf"
+  note: "Narrative CIE explainer on ipRGCs, melanopsin, physiology, and the current state of evidence."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical consensus recommendations for daytime, evening, and nighttime melanopic
+# Use for: light exposure.
+# Reading angle: Use when you need concrete reference values or a disciplined time-of-day
+# Reading angle: structure.
+# Caution: Healthy adults are the central population; be careful when applying to children,
+# Caution: older adults, clinical settings, or shift workers.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-indoor-light-exposure-2022:
+  type: article
+  title: "Recommendations for Daytime, Evening, and Nighttime Indoor Light Exposure to Best Support Physiology, Sleep, and Wakefulness in Healthy Adults"
+  author: "Brown, Timothy M. and others"
+  date: 2022
+  url: "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3001571"
+  note: "Strong open-access consensus-style paper. Gives practical melanopic EDI recommendations by time of day."
+
+#----------------------------------------------------------------------------------------
+# Use for: Same recommendation set as the PLOS source, accessible via PMC.
+# Reading angle: Use as the stable open-access reading copy for detailed note-taking and
+# Reading angle: quotations.
+# Caution: Avoid duplicating citations to both versions unless you need both links for access
+# Caution: reasons.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-indoor-light-exposure-pmc-2022:
+  type: article
+  title: "Recommendations for Daytime, Evening, and Nighttime Indoor Light Exposure"
+  author: "Brown, Timothy M. and others"
+  date: 2022
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8929548/"
+  note: "Open PMC version of the indoor light exposure recommendations. Useful for design-facing biological light targets."
+
+#----------------------------------------------------------------------------------------
+# Use for: Broad review of light effects on circadian rhythm, sleep, and mood.
+# Reading angle: Use it to establish the evidence base without making the chapter sound like
+# Reading angle: product marketing.
+# Caution: Review article; extract cautious principles rather than deterministic design
+# Caution: promises.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+blume-light-circadian-sleep-mood-2019:
+  type: article
+  title: "Effects of Light on Human Circadian Rhythms, Sleep and Mood"
+  author: "Blume, Christine and Garbazza, Corrado and Spitschan, Manuel"
+  date: 2019
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6751071/"
+  note: "Open review. Strong evidence baseline for sleep, circadian rhythm, alertness, and mood without overmarketing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Evidence check on light and wellbeing claims.
+# Reading angle: Use it to temper language around wellness, productivity, mood, and health
+# Reading angle: benefits.
+# Caution: Wellbeing is broad and heterogeneous. Avoid over-precise claims if the source reports
+# Caution: mixed or context-dependent results.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+landvreugd-light-wellbeing-meta-analysis-2024:
+  type: article
+  title: "The Effect of Light on Wellbeing: A Systematic Review and Meta-Analysis"
+  author: "Landvreugd, Anouk and others"
+  date: 2024
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11628446/"
+  note: "Recent systematic review/meta-analysis on light and wellbeing. Useful for cautious human-centered-lighting claims."
+
+#----------------------------------------------------------------------------------------
+# Use for: Alertness and acute daytime effects of light.
+# Reading angle: Good for distinguishing alerting effects from circadian phase-shifting and
+# Reading angle: sleep outcomes.
+# Caution: Alertness is not the same as long-term health. Keep terminology precise.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+mu-alerting-effects-light-2022:
+  type: article
+  title: "Alerting Effects of Light in Healthy Individuals"
+  author: "Mu, Yufei and others"
+  date: 2022
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8848614/"
+  note: "Systematic review/meta-analysis on alertness. Useful for daytime/workplace claims."
+
+#----------------------------------------------------------------------------------------
+# Use for: Age-sensitive discussion of light timing and sleep outcomes.
+# Reading angle: Use when noting that biological response varies by population and timing.
+# Caution: Older adult context; do not generalize too broadly to all architectural projects.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+dautovich-light-timing-sleep-older-adults-2018:
+  type: article
+  title: "A Systematic Review of the Amount and Timing of Light in Association with Objective and Subjective Sleep Outcomes in Older Adults"
+  author: "Dautovich, Natalie D. and others"
+  date: 2018
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6814154/"
+  note: "Useful for age-sensitive design, healthcare, older adults, and timing-specific light exposure."
+
+#----------------------------------------------------------------------------------------
+# Use for: Residential lighting, home-health outcomes, exposure context, and evidence
+# Use for: variability.
+# Reading angle: Useful if the book/paper expands into residential or daily-life exposure
+# Reading angle: patterns.
+# Caution: Home-health studies vary widely; use for framing questions rather than hard
+# Caution: specification rules.
+# Best chapters: LED Fundamentals §10, installation/residential sidebars
+#----------------------------------------------------------------------------------------
+osibona-lighting-home-health-2021:
+  type: article
+  title: "Lighting in the Home and Health: A Systematic Review"
+  author: "Osibona, Oladunni and Solomon, Ben D. and Fecht, Daniela"
+  date: 2021
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7828303/"
+  note: "Residential/home-health review. Useful if the project expands beyond commercial architectural lighting."
+
+#----------------------------------------------------------------------------------------
+# Use for: Argument that indoor lighting standards need to account for non-visual effects, not
+# Use for: just visual performance.
+# Reading angle: Excellent source for the philosophical/standards critique: lighting quality is
+# Reading angle: broader than horizontal illuminance and CCT.
+# Caution: Argumentative academic article; cite alongside CIE and consensus recommendations for
+# Caution: balance.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+stefani-rethink-indoor-lighting-standards-2021:
+  type: article
+  title: "Should We Re-think Regulations and Standards for Indoor Lighting?"
+  author: "Stefani, Ombretta and others"
+  date: 2021
+  url: "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2021.652161/full"
+  note: "Excellent argument source on visual versus non-visual lighting standards. Good for critique and misunderstandings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Melanopic illuminance as a predictor of circadian response magnitude.
+# Reading angle: Keep as a canonical research trailhead for deeper circadian science.
+# Caution: Likely abstract-only/paywalled in your accessible-source workflow. Use sparingly
+# Caution: unless full text is available.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-melanopic-illuminance-circadian-2020:
+  type: article
+  title: "Melanopic Illuminance Defines the Magnitude of Human Circadian Light Responses under a Wide Range of Conditions"
+  author: "Brown, Timothy M. and others"
+  date: 2020
+  url: "https://pubmed.ncbi.nlm.nih.gov/32248548/"
+  note: "Public abstract; full text may be paywalled. Canonical enough to keep on radar for melanopic-response arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Night-shift / applied circadian-informed lighting evidence.
+# Reading angle: Useful for showing that timing and application context matter, especially in
+# Reading angle: non-daytime work settings.
+# Caution: Night-shift findings do not translate directly to normal daytime architectural
+# Caution: lighting.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+scott-circadian-informed-lighting-night-shift-2024:
+  type: article
+  title: "Circadian-Informed Lighting Improves Vigilance, Sleep, and Performance in Night-Shift Conditions"
+  author: "Scott, Holly and others"
+  date: 2024
+  url: "https://academic.oup.com/sleep/article/47/11/zsae173/7724228"
+  note: "Newer application-oriented paper on night-shift lighting, vigilance, sleep, and performance. Worth tracking if circadian lighting becomes a major chapter."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design/product-language example of melanopic lighting concepts.
+# Reading angle: Read as an industry framing source, not as the core scientific authority.
+# Caution: Manufacturer source. Cross-check scientific claims against CIE and peer-reviewed
+# Caution: work.
+# Best chapters: LED Fundamentals §10, industry framing
+#----------------------------------------------------------------------------------------
+erco-melanopic-light-effect:
+  type: web
+  title: "Melanopic Light Effect"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/led/melanopic-light-effect-7737/"
+  note: "Shows how melanopic concepts are translated into design/product language. Useful but should be read critically."
+
+#----------------------------------------------------------------------------------------
+# Use for: Manufacturer-side framing of melanopic lighting, indoor environments, and product
+# Use for: value.
+# Reading angle: Useful for understanding how the market packages circadian/melanopic ideas.
+# Caution: Vendor white-paper style. Treat as market rhetoric unless backed by cited standards
+# Caution: or studies.
+# Best chapters: LED Fundamentals §10, industry framing
+#----------------------------------------------------------------------------------------
+cooper-melanopic-lighting-indoor-environments:
+  type: web
+  title: "Melanopic Lighting for Improved Indoor Environments"
+  author: "Cooper Lighting"
+  url: "https://www.cooperlighting.com/global/resources/the-lighting-resource/melanopic-lighting-for-improved-indoor-environments"
+  note: "Vendor white-paper style source showing how manufacturers market melanopic/circadian lighting."

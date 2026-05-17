@@ -1,0 +1,40 @@
+#----------------------------------------------------------------------------------------
+# Use for: Glare, luminance contrast, reflections, shielding, and visual comfort.
+# Reading angle: Use it as a design-language source to keep optics connected to lived
+# Reading angle: experience.
+# Caution: Manufacturer source. Good for explanation, less for neutral evidence.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-visual-comfort-glare-control:
+  type: web
+  title: "Visual Comfort via Glare Control"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/light-studies/visual-comfort-via-glare-control-6672/"
+  note: "Useful qualitative source for glare, luminance contrast, shielding, reflections, and visual comfort."
+
+#----------------------------------------------------------------------------------------
+# Use for: Cut-off angle and shielding vocabulary.
+# Reading angle: Useful for a concise definition box or diagram label.
+# Caution: Do not let this source carry broader glare theory alone.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-cut-off-angle:
+  type: web
+  title: "Cut-Off Angle"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/lighting-technology/cut-off-angle-7567/"
+  note: "Clear vocabulary source for shielding and cut-off angle. Good for optics/glare chapter definitions."
+
+#----------------------------------------------------------------------------------------
+# Use for: Downlight beam quality, shielding, and comfort framing.
+# Reading angle: Good for showing how source intensity, optics, and application geometry
+# Reading angle: interact.
+# Caution: Product/design study flavor; cite as design framing.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-quality-of-light-downlights:
+  type: web
+  title: "Quality of Light with Downlights"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/light-studies/quality-of-light-with-downlights-6671/"
+  note: "Useful for showing how downlights can balance beam distribution, shielding, and visual comfort."

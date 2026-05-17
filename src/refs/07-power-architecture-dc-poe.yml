@@ -1,0 +1,191 @@
+#----------------------------------------------------------------------------------------
+# Use for: AC/DC mismatch in buildings, DC loads, DC distribution opportunities and constraints.
+# Reading angle: Core bridge source for the power-architecture thesis.
+# Caution: Building-level DC is broader than lighting. Translate carefully to architectural
+# Caution: lighting.
+# Best chapters: Power Architecture opening; Taxonomy; Technical constraints
+#----------------------------------------------------------------------------------------
+doe-building-level-dc-distribution-2019:
+  type: report
+  title: "Building-Level DC Distribution Systems"
+  author: "U.S. Department of Energy, Lawrence Berkeley National Laboratory, and National Renewable Energy Laboratory"
+  date: 2019
+  url: "https://www.energy.gov/eere/buildings/articles/building-level-dc-distribution-systems"
+  note: "Main bridge into power architecture. Frames mismatch between AC building distribution and increasingly DC building loads."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting/electronics in grid-interactive efficient buildings, DER interaction,
+# Use for: controls, and demand response.
+# Reading angle: Use to situate lighting as part of building energy infrastructure, not isolated
+# Reading angle: fixtures.
+# Caution: GEB context may be broader than your paper; avoid turning a lighting thesis into a
+# Caution: full grid paper.
+# Best chapters: Power Architecture opening, claims 4–5
+#----------------------------------------------------------------------------------------
+doe-grid-interactive-efficient-buildings-lighting-electronics:
+  type: report
+  title: "Grid-Interactive Efficient Buildings: Lighting and Electronics"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/pdfs/75475.pdf"
+  note: "Useful for connecting lighting, electronics, grid-interactive buildings, DERs, controls, and demand response."
+
+#----------------------------------------------------------------------------------------
+# Use for: Maturity check for connected lighting and GEB-related lighting technologies.
+# Reading angle: Good source for measured optimism: promising but not universally solved.
+# Caution: Use to keep credibility guardrails visible.
+# Best chapters: Power Architecture credibility guardrails
+#----------------------------------------------------------------------------------------
+doe-lighting-technologies-geb-2019:
+  type: report
+  title: "Lighting Technologies for Grid-Interactive Efficient Buildings"
+  author: "U.S. Department of Energy"
+  date: 2019
+  url: "https://www.energy.gov/documents/bto-peer-2019-navigant-geb-report-lightingpdf"
+  note: "Good maturity check. Treats connected/DC lighting as promising but not magically solved."
+
+#----------------------------------------------------------------------------------------
+# Use for: PoE lighting system behavior, energy reporting, cabling, and power/data integration.
+# Reading angle: Use for PoE as a real commercial precedent.
+# Caution: Study context matters. Do not generalize all PoE efficiency or cost claims from one
+# Caution: study.
+# Best chapters: Power Architecture taxonomy C
+#----------------------------------------------------------------------------------------
+doe-pnnl-poe-energy-reporting-part1-2017:
+  type: report
+  title: "PoE Lighting System Energy Reporting Study, Part 1"
+  author: "U.S. Department of Energy and Pacific Northwest National Laboratory"
+  date: 2017
+  url: "https://www.energy.gov/sites/prod/files/2017/04/f34/2017-02%20ssl-poe_part1_0r.pdf"
+  note: "Useful PoE system source: data, power, cabling, low-voltage distribution, retrofit constraints, and power envelope."
+
+#----------------------------------------------------------------------------------------
+# Use for: Cable losses and efficiency tradeoffs in PoE systems.
+# Reading angle: Use as a corrective against PoE hype.
+# Caution: Cable loss is only one piece of system performance. Do not use it to dismiss PoE
+# Caution: categorically.
+# Best chapters: Power Architecture taxonomy C; Credibility guardrails
+#----------------------------------------------------------------------------------------
+doe-poe-cable-energy-losses-part1-2019:
+  type: report
+  title: "Connected Lighting Systems Efficiency Study: PoE Cable Energy Losses, Part 1"
+  author: "U.S. Department of Energy"
+  date: 2019
+  url: "https://www.energy.gov/sites/prod/files/2019/01/f58/cls_poe-cable-pt1.pdf"
+  note: "Good corrective to PoE enthusiasm. Focuses on cable losses and system efficiency tradeoffs."
+
+#----------------------------------------------------------------------------------------
+# Use for: Plain-language PoE lighting explanation: Ethernet power/data, switches, endpoints.
+# Reading angle: Use for taxonomy and market vocabulary.
+# Caution: Vendor source. It explains the model but should not be the authority for comparative
+# Caution: superiority.
+# Best chapters: Power Architecture taxonomy C
+#----------------------------------------------------------------------------------------
+cisco-what-is-poe-lighting:
+  type: web
+  title: "What Is PoE Lighting?"
+  author: "Cisco"
+  url: "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-poe-lighting.html"
+  note: "Accessible PoE reference. Useful for the taxonomy branch where power and data are distributed over Ethernet."
+
+#----------------------------------------------------------------------------------------
+# Use for: Concrete example of DC-to-DC / zonal DC lighting architecture.
+# Reading angle: Use to show the preferred architecture is not imaginary; it has product/system
+# Reading angle: precedents.
+# Caution: Manufacturer source. Do not treat as independent proof of performance or cost.
+# Best chapters: Power Architecture taxonomy D
+#----------------------------------------------------------------------------------------
+acuity-dc2dc-architecture-in-action:
+  type: web
+  title: "DC2DC Architecture in Action"
+  author: "Acuity Brands"
+  url: "https://www.acuitybrands.com/resources/featured-technologies/dc2dc"
+  note: "Concrete manufacturer example of zonal DC lighting architecture. Use as an example, not neutral proof."
+
+#----------------------------------------------------------------------------------------
+# Use for: Physical/product example of a DC power distribution hub.
+# Reading angle: Useful for visualizing what zonal DC infrastructure can look like.
+# Caution: Product page. Use as example, not evidence that the architecture is always best.
+# Best chapters: Power Architecture taxonomy D
+#----------------------------------------------------------------------------------------
+acuity-dchub:
+  type: web
+  title: "DCHUB: DC Power Distribution Hub"
+  author: "Acuity Brands"
+  url: "https://www.acuitybrands.com/products/detail/1839095/nlight/dchub/dc-power-distribution-hub"
+  note: "Product-level example of a DC power-distribution hub. Useful for illustrating what zonal DC infrastructure can physically look like."
+
+#----------------------------------------------------------------------------------------
+# Use for: Manufacturer argument for DC-powered lighting benefits.
+# Reading angle: Read to understand industry selling points: efficiency, integration, controls,
+# Reading angle: serviceability.
+# Caution: Clearly vendor-perspective evidence. Balance with DOE/DC distribution and PoE loss
+# Caution: sources.
+# Best chapters: Power Architecture taxonomy D; claims
+#----------------------------------------------------------------------------------------
+acuity-benefits-dc-powered-lighting:
+  type: web
+  title: "The Benefits of DC-Powered Lighting Solutions"
+  author: "Acuity Brands"
+  url: "https://insights.acuitybrands.com/acuity-perspectives-blog/the-benefits-of-dc-powered-lighting-solutions"
+  note: "Manufacturer argument for DC-powered lighting. Useful for industry framing, but should be labeled as vendor-perspective evidence."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting as distributed energy resource, digitized lighting, controls, grid/building
+# Use for: integration.
+# Reading angle: Good broader systems framing when the paper wants to feel forward-looking.
+# Caution: May pull the argument too far toward grid strategy. Use selectively.
+# Best chapters: Power Architecture closing; claims 4–5
+#----------------------------------------------------------------------------------------
+aceee-lighting-as-der-2024:
+  type: paper
+  title: "Lighting as a Distributed Energy Resource"
+  author: "American Council for an Energy-Efficient Economy"
+  date: 2024
+  url: "https://www.aceee.org/sites/default/files/proceedings/ssb24/assets/attachments/20240722163153672_c19e8020-f906-4eaa-a220-71a7c749c92f.pdf"
+  note: "Useful broader systems framing: digitization, interoperability, lighting as a DER, and grid/building integration."
+
+#----------------------------------------------------------------------------------------
+# Use for: Energy savings from networked controls and luminaire-level lighting controls.
+# Reading angle: Use for quantifying why controls matter beyond convenience.
+# Caution: Savings depend on baseline, application, commissioning, and behavior. Avoid universal
+# Caution: percentages without context.
+# Best chapters: Power Architecture controls layer; claim 4
+#----------------------------------------------------------------------------------------
+dlc-nlc-savings-with-without-lllc-2020:
+  type: report
+  title: "Energy Savings from Networked Lighting Control Systems with and without Luminaire Level Lighting Controls"
+  author: "DesignLights Consortium and Northwest Energy Efficiency Alliance"
+  date: 2020
+  url: "https://designlights.org/wp-content/uploads/2021/01/Energy-Savings-From-Networked-Lighting-Controls-with-and-without-LLLC_FINAL_09242020.pdf"
+  note: "Useful for quantifying control-system savings and luminaire-level lighting control value."
+
+#----------------------------------------------------------------------------------------
+# Use for: Economic potential and under-adoption of networked lighting controls.
+# Reading angle: Useful for arguing that much value is stranded when lighting remains simple
+# Reading angle: fixture replacement.
+# Caution: Market potential report; not proof that every individual project pencils out.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+dlc-economic-potential-nlc-2023:
+  type: report
+  title: "Economic Potential of Networked Lighting Controls"
+  author: "DesignLights Consortium"
+  date: 2023
+  url: "https://designlights.org/wp-content/uploads/2023/08/Full-Potential-Study-Final.pdf"
+  note: "Strategic source on stranded value and the economic potential of NLC adoption. Good for retrofit sequencing arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Standards trailhead and terminology orientation.
+# Reading angle: Use as a map to relevant NEMA/ANSI/industry standards, not as a central
+# Reading angle: citation.
+# Caution: Guide is broad and older. For standards claims, cite the actual standard or current
+# Caution: official page.
+# Best chapters: Technical constraints; standards notes
+#----------------------------------------------------------------------------------------
+nema-electrical-standards-products-guide-2015:
+  type: report
+  title: "Electrical Standards & Products Guide"
+  author: "NEMA"
+  date: 2015
+  url: "https://www.nema.org/docs/default-source/news-document-library/nema-espg.pdf"
+  note: "Not a core citation, but useful as a trailhead for standards numbers and related NEMA material."

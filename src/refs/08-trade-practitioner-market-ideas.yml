@@ -1,0 +1,79 @@
+#----------------------------------------------------------------------------------------
+# Use for: Luminaire-level lighting controls, wireless control, retrofit flexibility, ROI
+# Use for: framing, code-driven adoption.
+# Reading angle: Good market-perspective source for why intelligence is moving into or near
+# Reading angle: luminaires.
+# Caution: Interview/vendor perspective. Useful as industry framing, not neutral comparative
+# Caution: proof.
+# Best chapters: Power Architecture controls layer; taxonomy E
+#----------------------------------------------------------------------------------------
+lightnow-signify-luminaire-level-controls-2022:
+  type: web
+  title: "Signify's Rahul Shira Talks Luminaire-Level Lighting Controls"
+  author: "LightNOW"
+  date: 2022
+  url: "https://www.lightnowblog.com/2022/03/signifys-rahul-shira-talks-luminaire-level-lighting-controls/"
+  note: "Useful for wireless, luminaire-level controls, ROI, retrofit flexibility, and code-driven controls adoption."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting-HVAC controls integration, occupancy data, rebates, shallow dimming, and
+# Use for: future system value.
+# Reading angle: Use for the idea that lighting control infrastructure can become building
+# Reading angle: intelligence infrastructure.
+# Caution: Future-facing trade conversation; avoid making it sound mature everywhere.
+# Best chapters: Power Architecture claims 4–5; closing
+#----------------------------------------------------------------------------------------
+lightnow-lighting-hvac-controls-integration-2024:
+  type: web
+  title: "The Horizons of Lighting-HVAC Controls Integration"
+  author: "LightNOW"
+  date: 2024
+  url: "https://www.lightnowblog.com/2024/04/the-horizons-of-lighting-hvac-controls-integration-a-conversation/"
+  note: "Strong options/future-value source: lighting/HVAC integration, rebates, shallow dimming adoption, and stranded potential."
+
+#----------------------------------------------------------------------------------------
+# Use for: Facility-management perspective on lighting controls, operational savings, HVAC
+# Use for: signaling, and customization.
+# Reading angle: Useful for post-handover ownership and facilities value.
+# Caution: General facility article; check specific claims before using them as evidence.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+facility-executive-lighting-cost-savings-2024:
+  type: web
+  title: "Lighting the Way to Cost Savings"
+  author: "Facility Executive"
+  date: 2024
+  url: "https://facilityexecutive.com/lighting-the-way-to-cost-savings/"
+  note: "Facility-management angle on networked lighting, HVAC signaling, occupancy response, customization, and operational savings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Engineering-trade perspective on wireless lighting controls, retrofits, smart
+# Use for: buildings, and decarbonization.
+# Reading angle: Use to capture current practitioner language around wireless lighting control
+# Reading angle: direction.
+# Caution: Current as of 2026; future readers may need updated context. Verify before
+# Caution: publication.
+# Best chapters: Power Architecture controls layer; taxonomy E
+#----------------------------------------------------------------------------------------
+cse-wireless-lighting-control-innovations-2026:
+  type: web
+  title: "Exploring New Innovations in Wireless Lighting Control"
+  author: "Consulting-Specifying Engineer"
+  date: 2026
+  url: "https://www.csemag.com/exploring-new-innovations-in-wireless-lighting-control/"
+  note: "Engineering-trade perspective on wireless lighting controls, LEDs, retrofits, decarbonization, and smart buildings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Subjective trend tracking: healthy buildings, occupancy data, maintenance, product
+# Use for: turnover, attic stock.
+# Reading angle: Useful for market mood and issue spotting.
+# Caution: Trend piece, not authority. Use lightly or as a prompt for further sourcing.
+# Best chapters: Industry framing; optional sidebars
+#----------------------------------------------------------------------------------------
+facility-executive-2025-lighting-trends:
+  type: web
+  title: "A Look at 2025 Lighting Design Trends"
+  author: "Facility Executive"
+  date: 2025
+  url: "https://facilityexecutive.com/a-look-at-lighting-trends/"
+  note: "Subjective trend piece. Useful for rhetoric around healthy buildings, occupancy data, maintenance, product turnover, and attic stock."

@@ -1,0 +1,259 @@
+#----------------------------------------------------------------------------------------
+# Use for: LED dimming compatibility, phase dimming issues, drivers, dimmers, flicker,
+# Use for: pop-on/drop-out, and load behavior.
+# Reading angle: Use it to show that dimming quality is mediated by power electronics.
+# Caution: Older, but still useful. Pair with more current DALI/DLC sources for modern controls.
+# Best chapters: LED Fundamentals §7, §14; Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+doe-led-dimming-what-you-need-to-know:
+  type: report
+  title: "LED Dimming: What You Need to Know"
+  author: "U.S. Department of Energy"
+  date: 2012
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/dimming_webcast_12-10-2012.pdf"
+  note: "Main public source for LED dimming compatibility, driver behavior, dimmers, and why LED dimming is not automatically clean."
+
+#----------------------------------------------------------------------------------------
+# Use for: Entry point for temporal light modulation and DOE flicker research.
+# Reading angle: Use as a hub source when discussing flicker as a recognized SSL issue.
+# Caution: Hub pages are less specific; cite detailed PDFs or papers for precise metrics.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+doe-flicker-research:
+  type: web
+  title: "Flicker Research"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/flicker-research"
+  note: "Good entry point for temporal light modulation and flicker research."
+
+#----------------------------------------------------------------------------------------
+# Use for: Flicker metrics, modulation, frequency, IEEE risk framing, and driver/dimmer
+# Use for: interactions.
+# Reading angle: Good technical support for explaining why low-end dimming quality matters.
+# Caution: Presentation format; use for concepts, but avoid overquoting slide language.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+doe-flicker-ieee-recommended-practice:
+  type: report
+  title: "Flicker: Understanding the New IEEE Recommended Practice"
+  author: "U.S. Department of Energy"
+  date: 2015
+  url: "https://www.energy.gov/sites/default/files/2022-11/ssl-miller-lehman_flicker_lightfair2015.pdf"
+  note: "Useful for explaining flicker metrics, modulation, driver/dimmer interaction, and risk factors."
+
+#----------------------------------------------------------------------------------------
+# Use for: Historical flicker health-concern framing and IEEE PAR1789 context.
+# Reading angle: Use to show flicker concerns are not merely aesthetic.
+# Caution: Older and partly historical. For current practice, pair with DOE flicker resources.
+# Best chapters: LED Fundamentals §7, §14
+#----------------------------------------------------------------------------------------
+wilkins-led-flicker-par1789-2010:
+  type: paper
+  title: "LED Lighting Flicker and Potential Health Concerns: IEEE Standard PAR1789 Update"
+  author: "Wilkins, Arnold and Veitch, Jennifer and Lehman, Brad and others"
+  date: 2010
+  url: "https://ece.northeastern.edu/groups/power/lehman/Publications/Pub2010/2010_9_Wilkins.pdf"
+  note: "Older but important early framing of flicker risk in the LED era."
+
+#----------------------------------------------------------------------------------------
+# Use for: Flicker and harmonic emissions related to LED lamps.
+# Reading angle: Useful as a trailhead for power quality and lamp electronics discussion.
+# Caution: Paywalled/abstract-only. Do not rely heavily unless you obtain full text.
+# Best chapters: LED Fundamentals §7; Power quality sidebar
+#----------------------------------------------------------------------------------------
+gil-de-castro-led-flicker-harmonics-2017:
+  type: article
+  title: "Light Intensity Variation (Flicker) and Harmonic Emission Related to LED Lamps"
+  author: "Gil-de-Castro, Aurora and others"
+  date: 2017
+  url: "https://www.sciencedirect.com/science/article/abs/pii/S0378779617300354"
+  note: "Abstract public; full text paywalled. Relevant to flicker, driver electronics, and power quality."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI system basics: control gear, control devices, bus, addressing, groups, scenes.
+# Reading angle: Main primer for making DALI readable without diving into the standard itself.
+# Caution: Alliance source; it promotes the ecosystem. Still highly useful for terminology.
+# Best chapters: LED Fundamentals §7; Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-quick-start-guide-2023:
+  type: report
+  title: "DALI Quick Start Guide"
+  author: "DALI Alliance"
+  date: 2023
+  url: "https://www.dali-alliance.org/data/downloadables/3/4/8/dali-quick-start-guide_public-v1_1_april-2023.pdf"
+  note: "Best open DALI primer: devices, control gear, addressing, groups, scenes, bus model, and system basics."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design and specification implications of DALI: commissioning, interoperability,
+# Use for: scenes, emergency and diagnostics context.
+# Reading angle: Use when connecting protocol choice to documentation and commissioning
+# Reading angle: discipline.
+# Caution: Industry alliance guide; favorable toward DALI by design.
+# Best chapters: Power Architecture controls layer; Technical constraints
+#----------------------------------------------------------------------------------------
+dali-specifying-with-dali:
+  type: report
+  title: "Specifying with DALI: A Lighting Designer's Guide"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/data/downloadables/4/3/6/diiase001a-specifying-with-dali-a-lighting-designers-guide.pdf"
+  note: "Good for design-facing DALI discussion: specification, commissioning, interoperability, diagnostics, and design intent."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI data, diagnostics, memory banks, energy reporting, and lifecycle information.
+# Reading angle: Important for your argument that controls can be maintenance infrastructure,
+# Reading angle: not just dimming.
+# Caution: Use as protocol capability evidence; actual product implementation may vary.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+dali-data:
+  type: web
+  title: "DALI Data"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/dali/data.html"
+  note: "Useful for diagnostics, memory-bank data, energy data, and D4i-style lifecycle value beyond simple dimming."
+
+#----------------------------------------------------------------------------------------
+# Use for: Automated emergency testing, duration tests, and reporting through DALI emergency
+# Use for: lighting.
+# Reading angle: Use for the emergency-lighting constraint section.
+# Caution: Emergency compliance is jurisdiction-specific; do not imply DALI alone satisfies
+# Caution: code.
+# Best chapters: LED Fundamentals §12; Technical constraints
+#----------------------------------------------------------------------------------------
+dali-emergency:
+  type: web
+  title: "DALI Emergency"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/dali/emergency.html"
+  note: "Best open emergency-lighting controls reference so far. Useful for automated function tests, duration tests, and emergency integration."
+
+#----------------------------------------------------------------------------------------
+# Use for: Intra-luminaire power/data, smart drivers, sensors, D4i data, and standardized
+# Use for: luminaire intelligence.
+# Reading angle: Useful counterpoint: intelligence can live at luminaire level too, not only in
+# Reading angle: centralized panels.
+# Caution: Use carefully because it may complicate the centralization thesis. It is a good
+# Caution: guardrail against overclaiming.
+# Best chapters: Power Architecture taxonomy; Controls layer
+#----------------------------------------------------------------------------------------
+dali-d4i-overview:
+  type: web
+  title: "D4i Overview"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/d4i/"
+  note: "Important bridge between drivers, sensors, luminaires, standardized data, and intra-luminaire control/power interfaces."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI over wireless/IP networks.
+# Reading angle: Use to show that protocol semantics and physical transport can separate.
+# Caution: Emerging/future-facing; avoid overstating adoption unless separately verified.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-plus-overview:
+  type: web
+  title: "DALI+ Overview"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/daliplus/"
+  note: "Shows DALI moving over wireless/IP transport while preserving DALI command semantics. Good future-architecture reference."
+
+#----------------------------------------------------------------------------------------
+# Use for: Industry framing of wireless/IP-based DALI.
+# Reading angle: Good for market direction and narrative, less for technical detail.
+# Caution: News item. Use as context, not proof of project-ready maturity.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-plus-news-2021:
+  type: web
+  title: "DALI Delivers DALI+ Lighting Control with Wireless and IP-Based Networking"
+  author: "DALI Alliance"
+  date: 2021
+  url: "https://www.dali-alliance.org/news/293/dali-delivers-dali-lighting-control-with-wireless-and-ip-based-networking"
+  note: "News-style companion to DALI+. Useful for industry framing of wireless/IP-based DALI control."
+
+#----------------------------------------------------------------------------------------
+# Use for: Basic 0–10V dimming behavior.
+# Reading angle: Use for quick description in the controls comparison table.
+# Caution: Vendor source; 0–10V implementations and dim-to-off behavior vary.
+# Best chapters: LED Fundamentals §7; Controls comparison table
+#----------------------------------------------------------------------------------------
+lutron-control-type-0-10v:
+  type: report
+  title: "Control Type: 0–10V"
+  author: "Lutron"
+  url: "https://assets.lutron.com/a/documents/10V.pdf"
+  note: "Simple reference for 0–10V control behavior and its role as an analog control layer."
+
+#----------------------------------------------------------------------------------------
+# Use for: 0–10V limitations: source/sink behavior, wiring, dim-to-off, compatibility, rezoning.
+# Reading angle: Useful for explaining why simple analog dimming can become a coordination
+# Reading angle: problem.
+# Caution: Vendor technical note; cite for topology and practical issues, not broad market
+# Caution: conclusions.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+lutron-0-10v-control-topology:
+  type: report
+  title: "0–10 V Control Topology"
+  author: "Lutron"
+  date: 2024
+  url: "https://assets.lutron.com/a/documents/048587_web.pdf"
+  note: "Practical vendor note on 0–10V limitations: wiring, source/sink behavior, dim-to-off, compatibility, and rezoning constraints."
+
+#----------------------------------------------------------------------------------------
+# Use for: CCR vs PWM, visual comfort, camera flicker, dimming quality.
+# Reading angle: Good design-facing complement to DOE flicker sources.
+# Caution: Manufacturer framing; claims may reflect ERCO product philosophy.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+erco-flicker-free-dimming:
+  type: web
+  title: "Flicker-Free Dimming"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/luminaire-technology/flicker-free-dimming-6412/"
+  note: "Useful for CCR vs PWM, flicker, camera behavior, and dimming quality."
+
+#----------------------------------------------------------------------------------------
+# Use for: Architectural/theatrical control system categories, including DMX-oriented contexts.
+# Reading angle: Use to keep DMX in the right lane: excellent for dynamic/color/theatrical
+# Reading angle: applications, not always the default architectural answer.
+# Caution: Product ecosystem source, not neutral protocol comparison.
+# Best chapters: Power Architecture controls comparison
+#----------------------------------------------------------------------------------------
+etc-architectural-systems:
+  type: web
+  title: "Architectural Systems"
+  author: "ETC"
+  url: "https://www.etcconnect.com/Products/Architectural-Systems/"
+  note: "Practical source for distinguishing DMX, architectural controls, wired/wireless systems, and application-specific control roles."
+
+#----------------------------------------------------------------------------------------
+# Use for: Networked lighting control capabilities: scheduling, sensing, reporting,
+# Use for: interoperability, cybersecurity, demand response.
+# Reading angle: Strong requirements-oriented source for what modern NLC systems are expected to
+# Reading angle: do.
+# Caution: Program requirements are not the same as design best practice, but they are useful
+# Caution: market standards.
+# Best chapters: Power Architecture controls layer; claims 4–5
+#----------------------------------------------------------------------------------------
+dlc-nlc-technical-requirements-5-1:
+  type: report
+  title: "Networked Lighting Control System Technical Requirements 5.1"
+  author: "DesignLights Consortium"
+  date: 2024
+  url: "https://designlights.org/wp-content/uploads/2024/06/DLC_NLC5.1-Technical-Requirements_FINAL_06282024.pdf"
+  note: "Requirements-oriented source for NLC features, reporting, interoperability, cybersecurity, and control capability expectations."
+
+#----------------------------------------------------------------------------------------
+# Use for: Interoperability barriers and market adoption issues in networked lighting controls.
+# Reading angle: Use it to avoid naive controls optimism.
+# Caution: Report context is NLC market/program adoption; translate carefully into architectural
+# Caution: design claims.
+# Best chapters: Power Architecture controls layer; Credibility guardrails
+#----------------------------------------------------------------------------------------
+dlc-interoperability-nlc-2020:
+  type: report
+  title: "Interoperability for Networked Lighting Controls"
+  author: "DesignLights Consortium"
+  date: 2020
+  url: "https://designlights.org/wp-content/uploads/2021/01/DLC_Report_Interoperability-for-Networked-Lighting-Controls_5-19-2020.pdf"
+  note: "Good ecosystem source. Frames interoperability as both technical problem and market-adoption barrier."

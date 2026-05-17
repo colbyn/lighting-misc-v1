@@ -1,0 +1,1377 @@
+# ========================================================================================
+# 01-led-fundamentals.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Opening LED literacy: semiconductor device, solid-state lighting, phosphor-converted
+# Use for: white light, and LED-as-electronic-source framing.
+# Reading angle: Use it to support the plain claim that LEDs are not filament lamps or
+# Reading angle: gas-discharge lamps. It is strongest as a public-facing authority for basic
+# Reading angle: definitions.
+# Caution: Too introductory for technical claims about architecture, thermal design, or
+# Caution: controls. Use as a baseline, not as the proof source for later system arguments.
+# Best chapters: LED Fundamentals §1, §2, §9
+#----------------------------------------------------------------------------------------
+doe-led-basics:
+  type: web
+  title: "LED Basics"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/led-basics"
+  note: "Plain-language official primer on LED operation, white-light generation, phosphor conversion, and why LEDs are not simply white bulbs."
+
+#----------------------------------------------------------------------------------------
+# Use for: Accessible statements on efficiency, heat, directionality, lifetime, and
+# Use for: consumer-visible LED advantages.
+# Reading angle: Good for explaining why LED adoption happened quickly and why readers already
+# Reading angle: think of LEDs as efficient long-life replacements.
+# Caution: Consumer education source; avoid leaning on it for engineering-level reliability,
+# Caution: driver, or architectural claims.
+# Best chapters: LED Fundamentals §1, §11, §13
+#----------------------------------------------------------------------------------------
+doe-led-lighting-energy-saver:
+  type: web
+  title: "LED Lighting"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/energysaver/led-lighting"
+  note: "Accessible overview of LED efficiency, directionality, heat, lifetime, and consumer-facing advantages."
+
+#----------------------------------------------------------------------------------------
+# Use for: Market-facing language around LED lamp/fixture replacement, lumen maintenance, rated
+# Use for: life, and consumer expectations.
+# Reading angle: Useful for identifying the inherited replacement-lamp mental model you may want
+# Reading angle: to critique later.
+# Caution: ENERGY STAR language is intentionally simplified. Use it to describe market
+# Caution: assumptions, not to define system-level luminaire lifetime.
+# Best chapters: LED Fundamentals §11, §13, §14
+#----------------------------------------------------------------------------------------
+energy-star-learn-about-led-lighting:
+  type: web
+  title: "Learn About LED Lighting"
+  author: "ENERGY STAR"
+  url: "https://www.energystar.gov/products/learn-about-led-lighting"
+  note: "Useful for market-facing language around LED lifetime, lumen depreciation, lamps versus fixtures, and replacement expectations."
+
+#----------------------------------------------------------------------------------------
+# Use for: Basic electronics explanation of LEDs as diodes requiring polarity, current limiting,
+# Use for: and electrical care.
+# Reading angle: Good for turning semiconductor basics into reader-friendly electrical
+# Reading angle: intuition.
+# Caution: Hobby/electronics context, not architectural lighting. Do not extrapolate directly to
+# Caution: commercial luminaire systems.
+# Best chapters: LED Fundamentals §1, §3, §5
+#----------------------------------------------------------------------------------------
+sparkfun-light-emitting-diodes:
+  type: web
+  title: "Light-Emitting Diodes (LEDs)"
+  author: "SparkFun"
+  url: "https://learn.sparkfun.com/tutorials/light-emitting-diodes-leds/how-to-use-them"
+  note: "Electronics-level explainer. Good for grounding LEDs as current-driven semiconductor devices before moving into luminaires."
+
+#----------------------------------------------------------------------------------------
+# Use for: Popular-science explanation of p-n junctions and electroluminescence.
+# Reading angle: Useful for copywriting: it can help shape intuitive explanations without
+# Reading angle: becoming too technical.
+# Caution: Not authoritative enough for final technical argument. Use only for background and
+# Caution: analogy development.
+# Best chapters: LED Fundamentals §1
+#----------------------------------------------------------------------------------------
+howstuffworks-light-emitting-diodes:
+  type: web
+  title: "How Light Emitting Diodes Work"
+  author: "HowStuffWorks"
+  url: "https://electronics.howstuffworks.com/led.htm"
+  note: "Popular-science explanation of p-n junctions, electroluminescence, and LED behavior. Useful for intuitive copy."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical vocabulary for high-power LEDs, arrays, heat sinking, forward voltage,
+# Use for: current, and component selection.
+# Reading angle: Read for applied language that bridges electronics and lighting practice.
+# Caution: Vendor source. Useful for practical framing, but corroborate critical claims with
+# Caution: DOE/standards sources.
+# Best chapters: LED Fundamentals §1, §2, §5, §6
+#----------------------------------------------------------------------------------------
+ledsupply-high-power-led-basics:
+  type: web
+  title: "Everything about LEDs: Basics of High Power LED Lighting"
+  author: "LEDSupply"
+  date: 2021
+  url: "https://www.ledsupply.com/blog/what-you-need-to-know-about-leds/"
+  note: "Vendor/educational source that frames LEDs as designable components rather than generic bulbs."
+
+#----------------------------------------------------------------------------------------
+# Use for: System framing: LED luminaire performance depends on optical, thermal, electrical,
+# Use for: mechanical, and driver choices.
+# Reading angle: Good support for the statement that the luminaire is a system, not merely a
+# Reading angle: bulb or emitter.
+# Caution: Distributor/industry article. Strong for practical engineering framing; supplement
+# Caution: with DOE for authority.
+# Best chapters: LED Fundamentals §2, §6, §8, §13
+#----------------------------------------------------------------------------------------
+digikey-led-luminaire-design-guide:
+  type: web
+  title: "LED Luminaire Design Guide"
+  author: "DigiKey"
+  url: "https://www.digikey.com/es/articles/led-luminaire-design-guide"
+  note: "Practical luminaire design source. Good for optical, electrical, and thermal efficiencies as interacting design variables."
+
+#----------------------------------------------------------------------------------------
+# Use for: Color quality, spectrum, phosphor-converted LEDs, museum sensitivity, and
+# Use for: conservation-oriented lighting concerns.
+# Reading angle: Read as a neutral applied-lighting perspective where spectrum and material
+# Reading angle: effects matter.
+# Caution: Museum/gallery context is specialized. Use it when spectrum, color rendering, UV/IR,
+# Caution: or conservation issues help the argument.
+# Best chapters: LED Fundamentals §2, §8, §9, §10
+#----------------------------------------------------------------------------------------
+canada-cci-led-lighting-museums:
+  type: web
+  title: "LED Lighting in Museums and Art Galleries"
+  author: "Canadian Conservation Institute"
+  url: "https://www.canada.ca/en/conservation-institute/services/conservation-preservation-publications/technical-bulletins/led-lighting-museums.html"
+  note: "Neutral public reference for phosphor-converted white LEDs, spectrum, museums, color quality, and conservation context."
+
+
+# ========================================================================================
+# 02-spectrum-color-biology.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Color rendition beyond CRI: fidelity, gamut, color vector graphics, Rf/Rg, hue
+# Use for: shifts, and specification literacy.
+# Reading angle: Use it to argue that CCT and CRI are inadequate as the entire language of color
+# Reading angle: quality.
+# Caution: It is about color rendition, not circadian biology. Do not use TM-30 to prove
+# Caution: biological-response claims.
+# Best chapters: LED Fundamentals §9, §14
+#----------------------------------------------------------------------------------------
+doe-tm30-tutorial-2022:
+  type: report
+  title: "Tutorial: Background and Guidance for Using the ANSI/IES TM-30 Method for Evaluating Light Source Color Rendition"
+  author: "U.S. Department of Energy"
+  date: 2022
+  url: "https://www.energy.gov/sites/default/files/2022-04/ssl-royer-leukos-tm-30-tutorial-2022.pdf"
+  note: "Strong open guide for moving beyond CRI into fidelity, gamut, color vector graphics, and richer color-quality language."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design-facing explanation of CRI, R9, LED spectra, and color rendering consequences.
+# Reading angle: Useful for translating technical color-rendering issues into
+# Reading angle: architectural/specification language.
+# Caution: Manufacturer source; useful for vocabulary and design framing, weaker as neutral
+# Caution: evidence.
+# Best chapters: LED Fundamentals §8, §9
+#----------------------------------------------------------------------------------------
+erco-led-color-rendering:
+  type: web
+  title: "LED Color Rendering"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/led/led-color-rendering-7738/"
+  note: "Readable manufacturer guide on LED spectra, CRI limitations, red rendering, and color-quality vocabulary."
+
+#----------------------------------------------------------------------------------------
+# Use for: Melanopic / alpha-opic metrics, non-visual photometry, ipRGC-related measurement
+# Use for: vocabulary.
+# Reading angle: This is the main technical anchor for any serious melanopic or
+# Reading angle: biological-response terminology.
+# Caution: CIE S 026 gives measurement terms; it does not by itself validate broad wellness
+# Caution: marketing claims.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+cie-s026-tutorial-2021:
+  type: report
+  title: "Understanding and Application of CIE S 026:2018"
+  author: "International Commission on Illumination"
+  date: 2021
+  url: "https://files.cie.co.at/CIE_S_026_Tutorial2021_information.pdf"
+  note: "Main open source for melanopic and alpha-opic lighting metrics. Important for responsible biological-response writing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Guardrail against simplistic circadian lighting claims; supports timing, dose,
+# Use for: spectrum, and context framing.
+# Reading angle: Use this as your cautionary authority: good light depends on when, how much,
+# Reading angle: for whom, and in what context.
+# Caution: Position statement; not a design manual. Use it to constrain claims, not to prescribe
+# Caution: a full lighting design method.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+cie-proper-light-proper-time-2024:
+  type: report
+  title: "Proper Light at the Proper Time"
+  author: "International Commission on Illumination"
+  date: 2024
+  url: "https://files.cie.co.at/CIE%20PS%20001_2024%20CIE%20Position%20Statement%20-%20Recommending%20Proper%20Light%20at%20the%20Proper%20Time-3rd%20ed.pdf"
+  note: "Guardrail source against simplistic circadian-lighting claims. Emphasizes timing, dose, spectrum, and context."
+
+#----------------------------------------------------------------------------------------
+# Use for: Narrative explanation of how light affects health, including ipRGCs, melanopsin, and
+# Use for: non-visual pathways.
+# Reading angle: Helpful for copy that needs to be scientifically literate but still readable.
+# Caution: Use for framing, not detailed thresholds. For recommendations, pair with Brown et al.
+# Caution: and CIE S 026.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+cie-how-light-affects-human-health-2025:
+  type: report
+  title: "How Does Light Affect Human Health?"
+  author: "International Commission on Illumination"
+  date: 2025
+  url: "https://files.cie.co.at/General%20files/20250516_CIE_How_does_light_affect_human_health.pdf"
+  note: "Narrative CIE explainer on ipRGCs, melanopsin, physiology, and the current state of evidence."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical consensus recommendations for daytime, evening, and nighttime melanopic
+# Use for: light exposure.
+# Reading angle: Use when you need concrete reference values or a disciplined time-of-day
+# Reading angle: structure.
+# Caution: Healthy adults are the central population; be careful when applying to children,
+# Caution: older adults, clinical settings, or shift workers.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-indoor-light-exposure-2022:
+  type: article
+  title: "Recommendations for Daytime, Evening, and Nighttime Indoor Light Exposure to Best Support Physiology, Sleep, and Wakefulness in Healthy Adults"
+  author: "Brown, Timothy M. and others"
+  date: 2022
+  url: "https://journals.plos.org/plosbiology/article?id=10.1371%2Fjournal.pbio.3001571"
+  note: "Strong open-access consensus-style paper. Gives practical melanopic EDI recommendations by time of day."
+
+#----------------------------------------------------------------------------------------
+# Use for: Same recommendation set as the PLOS source, accessible via PMC.
+# Reading angle: Use as the stable open-access reading copy for detailed note-taking and
+# Reading angle: quotations.
+# Caution: Avoid duplicating citations to both versions unless you need both links for access
+# Caution: reasons.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-indoor-light-exposure-pmc-2022:
+  type: article
+  title: "Recommendations for Daytime, Evening, and Nighttime Indoor Light Exposure"
+  author: "Brown, Timothy M. and others"
+  date: 2022
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8929548/"
+  note: "Open PMC version of the indoor light exposure recommendations. Useful for design-facing biological light targets."
+
+#----------------------------------------------------------------------------------------
+# Use for: Broad review of light effects on circadian rhythm, sleep, and mood.
+# Reading angle: Use it to establish the evidence base without making the chapter sound like
+# Reading angle: product marketing.
+# Caution: Review article; extract cautious principles rather than deterministic design
+# Caution: promises.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+blume-light-circadian-sleep-mood-2019:
+  type: article
+  title: "Effects of Light on Human Circadian Rhythms, Sleep and Mood"
+  author: "Blume, Christine and Garbazza, Corrado and Spitschan, Manuel"
+  date: 2019
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6751071/"
+  note: "Open review. Strong evidence baseline for sleep, circadian rhythm, alertness, and mood without overmarketing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Evidence check on light and wellbeing claims.
+# Reading angle: Use it to temper language around wellness, productivity, mood, and health
+# Reading angle: benefits.
+# Caution: Wellbeing is broad and heterogeneous. Avoid over-precise claims if the source reports
+# Caution: mixed or context-dependent results.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+landvreugd-light-wellbeing-meta-analysis-2024:
+  type: article
+  title: "The Effect of Light on Wellbeing: A Systematic Review and Meta-Analysis"
+  author: "Landvreugd, Anouk and others"
+  date: 2024
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11628446/"
+  note: "Recent systematic review/meta-analysis on light and wellbeing. Useful for cautious human-centered-lighting claims."
+
+#----------------------------------------------------------------------------------------
+# Use for: Alertness and acute daytime effects of light.
+# Reading angle: Good for distinguishing alerting effects from circadian phase-shifting and
+# Reading angle: sleep outcomes.
+# Caution: Alertness is not the same as long-term health. Keep terminology precise.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+mu-alerting-effects-light-2022:
+  type: article
+  title: "Alerting Effects of Light in Healthy Individuals"
+  author: "Mu, Yufei and others"
+  date: 2022
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8848614/"
+  note: "Systematic review/meta-analysis on alertness. Useful for daytime/workplace claims."
+
+#----------------------------------------------------------------------------------------
+# Use for: Age-sensitive discussion of light timing and sleep outcomes.
+# Reading angle: Use when noting that biological response varies by population and timing.
+# Caution: Older adult context; do not generalize too broadly to all architectural projects.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+dautovich-light-timing-sleep-older-adults-2018:
+  type: article
+  title: "A Systematic Review of the Amount and Timing of Light in Association with Objective and Subjective Sleep Outcomes in Older Adults"
+  author: "Dautovich, Natalie D. and others"
+  date: 2018
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6814154/"
+  note: "Useful for age-sensitive design, healthcare, older adults, and timing-specific light exposure."
+
+#----------------------------------------------------------------------------------------
+# Use for: Residential lighting, home-health outcomes, exposure context, and evidence
+# Use for: variability.
+# Reading angle: Useful if the book/paper expands into residential or daily-life exposure
+# Reading angle: patterns.
+# Caution: Home-health studies vary widely; use for framing questions rather than hard
+# Caution: specification rules.
+# Best chapters: LED Fundamentals §10, installation/residential sidebars
+#----------------------------------------------------------------------------------------
+osibona-lighting-home-health-2021:
+  type: article
+  title: "Lighting in the Home and Health: A Systematic Review"
+  author: "Osibona, Oladunni and Solomon, Ben D. and Fecht, Daniela"
+  date: 2021
+  url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7828303/"
+  note: "Residential/home-health review. Useful if the project expands beyond commercial architectural lighting."
+
+#----------------------------------------------------------------------------------------
+# Use for: Argument that indoor lighting standards need to account for non-visual effects, not
+# Use for: just visual performance.
+# Reading angle: Excellent source for the philosophical/standards critique: lighting quality is
+# Reading angle: broader than horizontal illuminance and CCT.
+# Caution: Argumentative academic article; cite alongside CIE and consensus recommendations for
+# Caution: balance.
+# Best chapters: LED Fundamentals §10, §14
+#----------------------------------------------------------------------------------------
+stefani-rethink-indoor-lighting-standards-2021:
+  type: article
+  title: "Should We Re-think Regulations and Standards for Indoor Lighting?"
+  author: "Stefani, Ombretta and others"
+  date: 2021
+  url: "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2021.652161/full"
+  note: "Excellent argument source on visual versus non-visual lighting standards. Good for critique and misunderstandings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Melanopic illuminance as a predictor of circadian response magnitude.
+# Reading angle: Keep as a canonical research trailhead for deeper circadian science.
+# Caution: Likely abstract-only/paywalled in your accessible-source workflow. Use sparingly
+# Caution: unless full text is available.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+brown-melanopic-illuminance-circadian-2020:
+  type: article
+  title: "Melanopic Illuminance Defines the Magnitude of Human Circadian Light Responses under a Wide Range of Conditions"
+  author: "Brown, Timothy M. and others"
+  date: 2020
+  url: "https://pubmed.ncbi.nlm.nih.gov/32248548/"
+  note: "Public abstract; full text may be paywalled. Canonical enough to keep on radar for melanopic-response arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Night-shift / applied circadian-informed lighting evidence.
+# Reading angle: Useful for showing that timing and application context matter, especially in
+# Reading angle: non-daytime work settings.
+# Caution: Night-shift findings do not translate directly to normal daytime architectural
+# Caution: lighting.
+# Best chapters: LED Fundamentals §10
+#----------------------------------------------------------------------------------------
+scott-circadian-informed-lighting-night-shift-2024:
+  type: article
+  title: "Circadian-Informed Lighting Improves Vigilance, Sleep, and Performance in Night-Shift Conditions"
+  author: "Scott, Holly and others"
+  date: 2024
+  url: "https://academic.oup.com/sleep/article/47/11/zsae173/7724228"
+  note: "Newer application-oriented paper on night-shift lighting, vigilance, sleep, and performance. Worth tracking if circadian lighting becomes a major chapter."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design/product-language example of melanopic lighting concepts.
+# Reading angle: Read as an industry framing source, not as the core scientific authority.
+# Caution: Manufacturer source. Cross-check scientific claims against CIE and peer-reviewed
+# Caution: work.
+# Best chapters: LED Fundamentals §10, industry framing
+#----------------------------------------------------------------------------------------
+erco-melanopic-light-effect:
+  type: web
+  title: "Melanopic Light Effect"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/led/melanopic-light-effect-7737/"
+  note: "Shows how melanopic concepts are translated into design/product language. Useful but should be read critically."
+
+#----------------------------------------------------------------------------------------
+# Use for: Manufacturer-side framing of melanopic lighting, indoor environments, and product
+# Use for: value.
+# Reading angle: Useful for understanding how the market packages circadian/melanopic ideas.
+# Caution: Vendor white-paper style. Treat as market rhetoric unless backed by cited standards
+# Caution: or studies.
+# Best chapters: LED Fundamentals §10, industry framing
+#----------------------------------------------------------------------------------------
+cooper-melanopic-lighting-indoor-environments:
+  type: web
+  title: "Melanopic Lighting for Improved Indoor Environments"
+  author: "Cooper Lighting"
+  url: "https://www.cooperlighting.com/global/resources/the-lighting-resource/melanopic-lighting-for-improved-indoor-environments"
+  note: "Vendor white-paper style source showing how manufacturers market melanopic/circadian lighting."
+
+
+# ========================================================================================
+# 03-drivers-power-electronics-thermal.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Thermal path, junction temperature, heat sink logic, and why LED performance is
+# Use for: temperature-sensitive.
+# Reading angle: Use it to make heat a first-class system issue rather than a minor fixture
+# Reading angle: detail.
+# Caution: Older DOE document, but foundational. Pair with newer reliability/driver sources for
+# Caution: current practice.
+# Best chapters: LED Fundamentals §6, §13
+#----------------------------------------------------------------------------------------
+doe-thermal-management-white-leds:
+  type: report
+  title: "Thermal Management of White LEDs"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/thermal_led_feb07_2.pdf"
+  note: "Core thermal-management source. Useful for LED junction heat, luminaire design, and why LED performance is system-dependent."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver functions, driver stress, failure modes, reliability, and the driver as
+# Use for: essential power electronics.
+# Reading angle: This is a major support source for the claim that the driver is not an
+# Reading angle: accessory.
+# Caution: Research/stress-test framing; do not oversimplify into universal field failure rates.
+# Best chapters: LED Fundamentals §3, §4, §6, §13; Power Architecture claims 1–2
+#----------------------------------------------------------------------------------------
+doe-rti-led-driver-stress-testing-2018:
+  type: report
+  title: "Initial Results of Accelerated Stress Testing on Single-Channel and Multichannel Drivers"
+  author: "U.S. Department of Energy and RTI International"
+  date: 2018
+  url: "https://www.energy.gov/sites/prod/files/2018/06/f53/rti-ssl_multichanneldriver_initial-results.pdf"
+  note: "Best driver-focused public source so far. Defines driver functions: AC/DC conversion, power conditioning, current/voltage regulation, and reliability concerns."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver selection basics: current, voltage, AC/DC input, dimming, load matching.
+# Reading angle: Use for practical language and examples that non-engineers can follow.
+# Caution: Vendor source. Keep it in the practical/explanatory layer rather than the authority
+# Caution: layer.
+# Best chapters: LED Fundamentals §3, §5
+#----------------------------------------------------------------------------------------
+ledsupply-understanding-led-drivers:
+  type: web
+  title: "Understanding LED Drivers and How to Choose the Right One"
+  author: "LEDSupply"
+  date: 2020
+  url: "https://www.ledsupply.com/blog/understanding-led-drivers/"
+  note: "Practical driver-selection article. Good for forward voltage, current, input source, AC/DC input, space, and application questions."
+
+#----------------------------------------------------------------------------------------
+# Use for: Clear explanation of constant-current vs constant-voltage systems.
+# Reading angle: Useful for preventing the naive conclusion that all DC LED systems are
+# Reading angle: equivalent.
+# Caution: Vendor educational article; corroborate with driver datasheets or DOE/technical
+# Caution: sources if making hard claims.
+# Best chapters: LED Fundamentals §5, §14
+#----------------------------------------------------------------------------------------
+ledsupply-constant-current-vs-voltage:
+  type: web
+  title: "LED Drivers: Constant Current vs. Constant Voltage"
+  author: "LEDSupply"
+  date: 2019
+  url: "https://www.ledsupply.com/blog/constant-current-led-drivers-vs-constant-voltage-led-drivers/"
+  note: "Clean practical explanation of CC vs CV. Useful for preventing oversimplified 'LEDs are DC' arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Concise CC/CV selection logic.
+# Reading angle: Use as a quick practical check while drafting the
+# Reading angle: constant-current/constant-voltage section.
+# Caution: Forum-style distributor content; keep citations modest.
+# Best chapters: LED Fundamentals §5
+#----------------------------------------------------------------------------------------
+digikey-constant-current-or-voltage-drivers:
+  type: web
+  title: "Constant Current or Constant Voltage LED Drivers: Which is Right for You?"
+  author: "DigiKey Forum"
+  url: "https://forum.digikey.com/t/constant-current-or-constant-voltage-led-drivers-which-is-right-for-you/45207"
+  note: "Concise comparison source. Useful for quick selection logic and chapter notes."
+
+#----------------------------------------------------------------------------------------
+# Use for: Forward voltage, current, heat, and feedback behavior in LEDs.
+# Reading angle: Good conceptual source for explaining why current control and thermal design
+# Reading angle: matter together.
+# Caution: Vendor explanation; use for intuition, not as sole technical proof.
+# Best chapters: LED Fundamentals §5, §6
+#----------------------------------------------------------------------------------------
+ledsupply-thermal-runaway-explained:
+  type: web
+  title: "Thermal Runaway Explained"
+  author: "LEDSupply"
+  date: 2019
+  url: "https://www.ledsupply.com/blog/thermal-runaway-explained/"
+  note: "Useful for explaining LED thermal failure as a feedback mechanism, not just generic heat-is-bad language."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver lifetime, thermal stress, lifetime prediction, and reliability planning.
+# Reading angle: Useful for lifecycle chapters and for making driver location/serviceability
+# Reading angle: feel concrete.
+# Caution: Manufacturer white paper. Strong practical source, but vendor framing should be
+# Caution: identified as such.
+# Best chapters: LED Fundamentals §13; Power Architecture claims 1–2, 5
+#----------------------------------------------------------------------------------------
+philips-led-driver-lifetime-reliability:
+  type: report
+  title: "LED Driver Lifetime and Reliability"
+  author: "Philips"
+  url: "https://www.docs.lighting.philips.com/en_gb/oem/download/led_driver_lifetime/White_paper_LED_Driver_lifetime_reliability.pdf"
+  note: "Driver-specific lifecycle source. Useful for serviceability, temperature stress, and maintenance planning."
+
+#----------------------------------------------------------------------------------------
+# Use for: Field-service reality: replacing drivers, compatibility, programmability, and access
+# Use for: problems.
+# Reading angle: Use this to make maintenance consequences vivid and credible.
+# Caution: Trade article; good for practice and anecdotes, less for quantitative reliability
+# Caution: claims.
+# Best chapters: LED Fundamentals §4, §13; Power Architecture claim 1
+#----------------------------------------------------------------------------------------
+ecmag-replacing-failing-drivers-2023:
+  type: web
+  title: "Driving LED Lighting: Replacing Failing Drivers"
+  author: "Electrical Contractor"
+  date: 2023
+  url: "https://www.ecmag.com/magazine/articles/article-detail/driving-led-lighting-replacing-failing-drivers"
+  note: "Practical field-service article. Good for maintenance reality: driver failures, replacements, access, compatibility, and troubleshooting."
+
+#----------------------------------------------------------------------------------------
+# Use for: Driver replacement criteria: current, voltage, dimming interface, physical fit,
+# Use for: rating, listing.
+# Reading angle: Good for showing that driver replacement is not always plug-and-play.
+# Caution: Older source; use for persistent replacement logic, not current market specifics.
+# Best chapters: LED Fundamentals §13; Installation realities
+#----------------------------------------------------------------------------------------
+ecmag-out-with-old-replacing-led-drivers-2016:
+  type: web
+  title: "Out With The Old: Replacing LED Drivers"
+  author: "Electrical Contractor"
+  date: 2016
+  url: "https://www.ecmag.com/magazine/articles/article-detail/lighting-out-old-replacing-led-drivers"
+  note: "Older but practical driver-replacement article. Useful for replacement criteria: current, voltage, dimming interface, ratings, fit, and listing."
+
+#----------------------------------------------------------------------------------------
+# Use for: Practical driver-replacement checklist.
+# Reading angle: Useful for drafting a sidebar on what must be known to replace a driver
+# Reading angle: correctly.
+# Caution: Vendor source; practical but not neutral.
+# Best chapters: LED Fundamentals §13
+#----------------------------------------------------------------------------------------
+ledsupply-driver-replacement-factors-2022:
+  type: web
+  title: "5 Important Factors of LED Driver Replacement"
+  author: "LEDSupply"
+  date: 2022
+  url: "https://www.ledsupply.com/blog/five-factors-for-replacement-led-drivers/"
+  note: "Practical replacement checklist. Useful for lifecycle, serviceability, and driver-as-weak-link discussion."
+
+
+# ========================================================================================
+# 04-controls-dimming-protocols.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: LED dimming compatibility, phase dimming issues, drivers, dimmers, flicker,
+# Use for: pop-on/drop-out, and load behavior.
+# Reading angle: Use it to show that dimming quality is mediated by power electronics.
+# Caution: Older, but still useful. Pair with more current DALI/DLC sources for modern controls.
+# Best chapters: LED Fundamentals §7, §14; Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+doe-led-dimming-what-you-need-to-know:
+  type: report
+  title: "LED Dimming: What You Need to Know"
+  author: "U.S. Department of Energy"
+  date: 2012
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/dimming_webcast_12-10-2012.pdf"
+  note: "Main public source for LED dimming compatibility, driver behavior, dimmers, and why LED dimming is not automatically clean."
+
+#----------------------------------------------------------------------------------------
+# Use for: Entry point for temporal light modulation and DOE flicker research.
+# Reading angle: Use as a hub source when discussing flicker as a recognized SSL issue.
+# Caution: Hub pages are less specific; cite detailed PDFs or papers for precise metrics.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+doe-flicker-research:
+  type: web
+  title: "Flicker Research"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/flicker-research"
+  note: "Good entry point for temporal light modulation and flicker research."
+
+#----------------------------------------------------------------------------------------
+# Use for: Flicker metrics, modulation, frequency, IEEE risk framing, and driver/dimmer
+# Use for: interactions.
+# Reading angle: Good technical support for explaining why low-end dimming quality matters.
+# Caution: Presentation format; use for concepts, but avoid overquoting slide language.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+doe-flicker-ieee-recommended-practice:
+  type: report
+  title: "Flicker: Understanding the New IEEE Recommended Practice"
+  author: "U.S. Department of Energy"
+  date: 2015
+  url: "https://www.energy.gov/sites/default/files/2022-11/ssl-miller-lehman_flicker_lightfair2015.pdf"
+  note: "Useful for explaining flicker metrics, modulation, driver/dimmer interaction, and risk factors."
+
+#----------------------------------------------------------------------------------------
+# Use for: Historical flicker health-concern framing and IEEE PAR1789 context.
+# Reading angle: Use to show flicker concerns are not merely aesthetic.
+# Caution: Older and partly historical. For current practice, pair with DOE flicker resources.
+# Best chapters: LED Fundamentals §7, §14
+#----------------------------------------------------------------------------------------
+wilkins-led-flicker-par1789-2010:
+  type: paper
+  title: "LED Lighting Flicker and Potential Health Concerns: IEEE Standard PAR1789 Update"
+  author: "Wilkins, Arnold and Veitch, Jennifer and Lehman, Brad and others"
+  date: 2010
+  url: "https://ece.northeastern.edu/groups/power/lehman/Publications/Pub2010/2010_9_Wilkins.pdf"
+  note: "Older but important early framing of flicker risk in the LED era."
+
+#----------------------------------------------------------------------------------------
+# Use for: Flicker and harmonic emissions related to LED lamps.
+# Reading angle: Useful as a trailhead for power quality and lamp electronics discussion.
+# Caution: Paywalled/abstract-only. Do not rely heavily unless you obtain full text.
+# Best chapters: LED Fundamentals §7; Power quality sidebar
+#----------------------------------------------------------------------------------------
+gil-de-castro-led-flicker-harmonics-2017:
+  type: article
+  title: "Light Intensity Variation (Flicker) and Harmonic Emission Related to LED Lamps"
+  author: "Gil-de-Castro, Aurora and others"
+  date: 2017
+  url: "https://www.sciencedirect.com/science/article/abs/pii/S0378779617300354"
+  note: "Abstract public; full text paywalled. Relevant to flicker, driver electronics, and power quality."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI system basics: control gear, control devices, bus, addressing, groups, scenes.
+# Reading angle: Main primer for making DALI readable without diving into the standard itself.
+# Caution: Alliance source; it promotes the ecosystem. Still highly useful for terminology.
+# Best chapters: LED Fundamentals §7; Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-quick-start-guide-2023:
+  type: report
+  title: "DALI Quick Start Guide"
+  author: "DALI Alliance"
+  date: 2023
+  url: "https://www.dali-alliance.org/data/downloadables/3/4/8/dali-quick-start-guide_public-v1_1_april-2023.pdf"
+  note: "Best open DALI primer: devices, control gear, addressing, groups, scenes, bus model, and system basics."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design and specification implications of DALI: commissioning, interoperability,
+# Use for: scenes, emergency and diagnostics context.
+# Reading angle: Use when connecting protocol choice to documentation and commissioning
+# Reading angle: discipline.
+# Caution: Industry alliance guide; favorable toward DALI by design.
+# Best chapters: Power Architecture controls layer; Technical constraints
+#----------------------------------------------------------------------------------------
+dali-specifying-with-dali:
+  type: report
+  title: "Specifying with DALI: A Lighting Designer's Guide"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/data/downloadables/4/3/6/diiase001a-specifying-with-dali-a-lighting-designers-guide.pdf"
+  note: "Good for design-facing DALI discussion: specification, commissioning, interoperability, diagnostics, and design intent."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI data, diagnostics, memory banks, energy reporting, and lifecycle information.
+# Reading angle: Important for your argument that controls can be maintenance infrastructure,
+# Reading angle: not just dimming.
+# Caution: Use as protocol capability evidence; actual product implementation may vary.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+dali-data:
+  type: web
+  title: "DALI Data"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/dali/data.html"
+  note: "Useful for diagnostics, memory-bank data, energy data, and D4i-style lifecycle value beyond simple dimming."
+
+#----------------------------------------------------------------------------------------
+# Use for: Automated emergency testing, duration tests, and reporting through DALI emergency
+# Use for: lighting.
+# Reading angle: Use for the emergency-lighting constraint section.
+# Caution: Emergency compliance is jurisdiction-specific; do not imply DALI alone satisfies
+# Caution: code.
+# Best chapters: LED Fundamentals §12; Technical constraints
+#----------------------------------------------------------------------------------------
+dali-emergency:
+  type: web
+  title: "DALI Emergency"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/dali/emergency.html"
+  note: "Best open emergency-lighting controls reference so far. Useful for automated function tests, duration tests, and emergency integration."
+
+#----------------------------------------------------------------------------------------
+# Use for: Intra-luminaire power/data, smart drivers, sensors, D4i data, and standardized
+# Use for: luminaire intelligence.
+# Reading angle: Useful counterpoint: intelligence can live at luminaire level too, not only in
+# Reading angle: centralized panels.
+# Caution: Use carefully because it may complicate the centralization thesis. It is a good
+# Caution: guardrail against overclaiming.
+# Best chapters: Power Architecture taxonomy; Controls layer
+#----------------------------------------------------------------------------------------
+dali-d4i-overview:
+  type: web
+  title: "D4i Overview"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/d4i/"
+  note: "Important bridge between drivers, sensors, luminaires, standardized data, and intra-luminaire control/power interfaces."
+
+#----------------------------------------------------------------------------------------
+# Use for: DALI over wireless/IP networks.
+# Reading angle: Use to show that protocol semantics and physical transport can separate.
+# Caution: Emerging/future-facing; avoid overstating adoption unless separately verified.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-plus-overview:
+  type: web
+  title: "DALI+ Overview"
+  author: "DALI Alliance"
+  url: "https://www.dali-alliance.org/daliplus/"
+  note: "Shows DALI moving over wireless/IP transport while preserving DALI command semantics. Good future-architecture reference."
+
+#----------------------------------------------------------------------------------------
+# Use for: Industry framing of wireless/IP-based DALI.
+# Reading angle: Good for market direction and narrative, less for technical detail.
+# Caution: News item. Use as context, not proof of project-ready maturity.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+dali-plus-news-2021:
+  type: web
+  title: "DALI Delivers DALI+ Lighting Control with Wireless and IP-Based Networking"
+  author: "DALI Alliance"
+  date: 2021
+  url: "https://www.dali-alliance.org/news/293/dali-delivers-dali-lighting-control-with-wireless-and-ip-based-networking"
+  note: "News-style companion to DALI+. Useful for industry framing of wireless/IP-based DALI control."
+
+#----------------------------------------------------------------------------------------
+# Use for: Basic 0–10V dimming behavior.
+# Reading angle: Use for quick description in the controls comparison table.
+# Caution: Vendor source; 0–10V implementations and dim-to-off behavior vary.
+# Best chapters: LED Fundamentals §7; Controls comparison table
+#----------------------------------------------------------------------------------------
+lutron-control-type-0-10v:
+  type: report
+  title: "Control Type: 0–10V"
+  author: "Lutron"
+  url: "https://assets.lutron.com/a/documents/10V.pdf"
+  note: "Simple reference for 0–10V control behavior and its role as an analog control layer."
+
+#----------------------------------------------------------------------------------------
+# Use for: 0–10V limitations: source/sink behavior, wiring, dim-to-off, compatibility, rezoning.
+# Reading angle: Useful for explaining why simple analog dimming can become a coordination
+# Reading angle: problem.
+# Caution: Vendor technical note; cite for topology and practical issues, not broad market
+# Caution: conclusions.
+# Best chapters: Power Architecture controls layer
+#----------------------------------------------------------------------------------------
+lutron-0-10v-control-topology:
+  type: report
+  title: "0–10 V Control Topology"
+  author: "Lutron"
+  date: 2024
+  url: "https://assets.lutron.com/a/documents/048587_web.pdf"
+  note: "Practical vendor note on 0–10V limitations: wiring, source/sink behavior, dim-to-off, compatibility, and rezoning constraints."
+
+#----------------------------------------------------------------------------------------
+# Use for: CCR vs PWM, visual comfort, camera flicker, dimming quality.
+# Reading angle: Good design-facing complement to DOE flicker sources.
+# Caution: Manufacturer framing; claims may reflect ERCO product philosophy.
+# Best chapters: LED Fundamentals §7
+#----------------------------------------------------------------------------------------
+erco-flicker-free-dimming:
+  type: web
+  title: "Flicker-Free Dimming"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/luminaire-technology/flicker-free-dimming-6412/"
+  note: "Useful for CCR vs PWM, flicker, camera behavior, and dimming quality."
+
+#----------------------------------------------------------------------------------------
+# Use for: Architectural/theatrical control system categories, including DMX-oriented contexts.
+# Reading angle: Use to keep DMX in the right lane: excellent for dynamic/color/theatrical
+# Reading angle: applications, not always the default architectural answer.
+# Caution: Product ecosystem source, not neutral protocol comparison.
+# Best chapters: Power Architecture controls comparison
+#----------------------------------------------------------------------------------------
+etc-architectural-systems:
+  type: web
+  title: "Architectural Systems"
+  author: "ETC"
+  url: "https://www.etcconnect.com/Products/Architectural-Systems/"
+  note: "Practical source for distinguishing DMX, architectural controls, wired/wireless systems, and application-specific control roles."
+
+#----------------------------------------------------------------------------------------
+# Use for: Networked lighting control capabilities: scheduling, sensing, reporting,
+# Use for: interoperability, cybersecurity, demand response.
+# Reading angle: Strong requirements-oriented source for what modern NLC systems are expected to
+# Reading angle: do.
+# Caution: Program requirements are not the same as design best practice, but they are useful
+# Caution: market standards.
+# Best chapters: Power Architecture controls layer; claims 4–5
+#----------------------------------------------------------------------------------------
+dlc-nlc-technical-requirements-5-1:
+  type: report
+  title: "Networked Lighting Control System Technical Requirements 5.1"
+  author: "DesignLights Consortium"
+  date: 2024
+  url: "https://designlights.org/wp-content/uploads/2024/06/DLC_NLC5.1-Technical-Requirements_FINAL_06282024.pdf"
+  note: "Requirements-oriented source for NLC features, reporting, interoperability, cybersecurity, and control capability expectations."
+
+#----------------------------------------------------------------------------------------
+# Use for: Interoperability barriers and market adoption issues in networked lighting controls.
+# Reading angle: Use it to avoid naive controls optimism.
+# Caution: Report context is NLC market/program adoption; translate carefully into architectural
+# Caution: design claims.
+# Best chapters: Power Architecture controls layer; Credibility guardrails
+#----------------------------------------------------------------------------------------
+dlc-interoperability-nlc-2020:
+  type: report
+  title: "Interoperability for Networked Lighting Controls"
+  author: "DesignLights Consortium"
+  date: 2020
+  url: "https://designlights.org/wp-content/uploads/2021/01/DLC_Report_Interoperability-for-Networked-Lighting-Controls_5-19-2020.pdf"
+  note: "Good ecosystem source. Frames interoperability as both technical problem and market-adoption barrier."
+
+
+# ========================================================================================
+# 05-optics-glare-visual-comfort.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Glare, luminance contrast, reflections, shielding, and visual comfort.
+# Reading angle: Use it as a design-language source to keep optics connected to lived
+# Reading angle: experience.
+# Caution: Manufacturer source. Good for explanation, less for neutral evidence.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-visual-comfort-glare-control:
+  type: web
+  title: "Visual Comfort via Glare Control"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/light-studies/visual-comfort-via-glare-control-6672/"
+  note: "Useful qualitative source for glare, luminance contrast, shielding, reflections, and visual comfort."
+
+#----------------------------------------------------------------------------------------
+# Use for: Cut-off angle and shielding vocabulary.
+# Reading angle: Useful for a concise definition box or diagram label.
+# Caution: Do not let this source carry broader glare theory alone.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-cut-off-angle:
+  type: web
+  title: "Cut-Off Angle"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/lighting-knowledge/lighting-technology/cut-off-angle-7567/"
+  note: "Clear vocabulary source for shielding and cut-off angle. Good for optics/glare chapter definitions."
+
+#----------------------------------------------------------------------------------------
+# Use for: Downlight beam quality, shielding, and comfort framing.
+# Reading angle: Good for showing how source intensity, optics, and application geometry
+# Reading angle: interact.
+# Caution: Product/design study flavor; cite as design framing.
+# Best chapters: LED Fundamentals §8
+#----------------------------------------------------------------------------------------
+erco-quality-of-light-downlights:
+  type: web
+  title: "Quality of Light with Downlights"
+  author: "ERCO"
+  url: "https://www.erco.com/en_us/designing-with-light/mediaassetpool/light-studies/quality-of-light-with-downlights-6671/"
+  note: "Useful for showing how downlights can balance beam distribution, shielding, and visual comfort."
+
+
+# ========================================================================================
+# 06-retrofit-installation-serviceability-lifecycle.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Historical LED adoption context and retrofit-market framing.
+# Reading angle: Use to show why LED adoption followed familiar lamp/fixture categories.
+# Caution: 2015 market data is old. Use historically, not for current adoption statistics.
+# Best chapters: LED Fundamentals §11
+#----------------------------------------------------------------------------------------
+doe-led-adoption-common-applications-2015:
+  type: report
+  title: "Adoption of LEDs in Common Lighting Applications"
+  author: "U.S. Department of Energy"
+  date: 2015
+  url: "https://www.energy.gov/sites/prod/files/2015/07/f24/led-adoption-report_2015.pdf"
+  note: "Useful historical market context for LED adoption, retrofit formats, and integrated luminaires."
+
+#----------------------------------------------------------------------------------------
+# Use for: Design/specification discipline: serviceability, replaceability, glare, controls, and
+# Use for: system requirements.
+# Reading angle: Use as a serious specification-oriented reference, especially for
+# Reading angle: non-residential rigor.
+# Caution: DoD/UFC context is not every project. Translate into general principles, not
+# Caution: universal requirements.
+# Best chapters: LED Fundamentals §8, §12, §13; Power Architecture technical constraints
+#----------------------------------------------------------------------------------------
+wbdg-ufc-lighting-systems-2023:
+  type: report
+  title: "UFC 3-530-01 Interior and Exterior Lighting Systems"
+  author: "Whole Building Design Guide and U.S. Department of Defense"
+  date: 2023
+  url: "https://www.wbdg.org/FFC/DOD/UFC/ufc_3_530_01_2023_c1.pdf"
+  note: "Strong design/specification source. Useful for retrofit limits, serviceability, replaceable drivers, glare, controls, and lighting-system discipline."
+
+#----------------------------------------------------------------------------------------
+# Use for: Separating lumen depreciation, color shift, catastrophic failure, design defects,
+# Use for: manufacturing defects, and wear-out.
+# Reading angle: Core myth-clearing source for lifetime claims.
+# Caution: Fact sheet format; pair with lifetime guide for deeper reporting details.
+# Best chapters: LED Fundamentals §13, §14
+#----------------------------------------------------------------------------------------
+doe-lifetime-reliability:
+  type: report
+  title: "Lifetime and Reliability"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/life-reliability_fact-sheet.pdf"
+  note: "Good myth-corrector: separates catastrophic failure, lumen depreciation, color shift, design flaws, manufacturing defects, and wear-out."
+
+#----------------------------------------------------------------------------------------
+# Use for: Luminaire lifetime reporting, test limitations, and why LED package lifetime is not
+# Use for: system lifetime.
+# Reading angle: Use when correcting the common L70 equals fixture lifetime misunderstanding.
+# Caution: Older but important. Use as technical guardrail, not as current product warranty
+# Caution: guidance.
+# Best chapters: LED Fundamentals §13, §14
+#----------------------------------------------------------------------------------------
+doe-led-luminaire-lifetime-testing-reporting:
+  type: report
+  title: "LED Luminaire Lifetime: Recommendations for Testing and Reporting"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/publications/pdfs/ssl/led_luminaire-lifetime-guide.pdf"
+  note: "Important myth-corrector: luminaire lifetime is not just LED package lifetime."
+
+#----------------------------------------------------------------------------------------
+# Use for: Color shift as a reliability and lifecycle issue.
+# Reading angle: Good support for the idea that LEDs fail by more than turning off.
+# Caution: Use with color-quality sources if connecting color shift to specification outcomes.
+# Best chapters: LED Fundamentals §9, §13
+#----------------------------------------------------------------------------------------
+doe-led-luminaire-reliability-color-shift:
+  type: web
+  title: "LED Luminaire Reliability: Impact of Color Shift"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/eere/ssl/articles/led-luminaire-reliability-impact-color-shift"
+  note: "Useful for lifecycle and LEDs-do-not-just-dim-over-time framing. Supports color shift as a reliability issue."
+
+#----------------------------------------------------------------------------------------
+# Use for: Source hub for LED reliability documents.
+# Reading angle: Use as a bibliographic trailhead to expand reliability sources later.
+# Caution: Hub source; cite specific reports when making specific claims.
+# Best chapters: LED Fundamentals §13
+#----------------------------------------------------------------------------------------
+doe-led-systems-reliability-consortium:
+  type: web
+  title: "LED Systems Reliability Consortium"
+  author: "U.S. Department of Energy"
+  url: "https://www.energy.gov/cmei/ssl/led-systems-reliability-consortium"
+  note: "Reference hub for deeper reliability documents: lifetime guide, color shift, dim-to-warm reliability, and SSL reliability research."
+
+#----------------------------------------------------------------------------------------
+# Use for: Serviceable, modular, circular luminaire design.
+# Reading angle: Use for repairability/circularity rhetoric and product-design direction.
+# Caution: Industry publication; check whether claims are vendor-authored or editorial.
+# Best chapters: LED Fundamentals §13; Power Architecture claim 5
+#----------------------------------------------------------------------------------------
+led-professional-serviceable-luminaires-circular-future:
+  type: web
+  title: "Serviceable Indoor Luminaires for a Circular Future"
+  author: "LED Professional"
+  url: "https://www.led-professional.com/all/serviceable-indoor-luminaires-for-a-circular-future"
+  note: "Good serviceability/circularity source. Useful for repairable, upgradeable, modular luminaire arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Class 2 compliance, low-voltage safety, power supply access, and inspection issues.
+# Reading angle: Useful practical source for low-voltage not automatically simple/safe.
+# Caution: Vendor/source likely sales-adjacent. Confirm code details with NEC or AHJ for formal
+# Caution: claims.
+# Best chapters: LED Fundamentals §12, §14; Technical constraints
+#----------------------------------------------------------------------------------------
+diodeled-class-2-compliance:
+  type: web
+  title: "Low Voltage Safety: Understanding Class 2 Compliance"
+  author: "Diode LED"
+  url: "https://www.diodeled.com/low-voltage-safety-understanding-class-2-compliance/"
+  note: "Inspection-oriented Class 2 source. Useful for code-boundary, power-supply access, separation, listing, and installation discipline."
+
+#----------------------------------------------------------------------------------------
+# Use for: Voltage drop, run length, polarity, 12V/24V behavior, low-voltage installation
+# Use for: practice.
+# Reading angle: Excellent practical field source for the realities that appear after drivers
+# Reading angle: move remote.
+# Caution: Vendor blog. Good for practical consequences, not final code authority.
+# Best chapters: LED Fundamentals §5, §12, §14; Technical constraints
+#----------------------------------------------------------------------------------------
+aspectled-electricians-guide-led-strips:
+  type: web
+  title: "Low Voltage Lighting: The Electrician’s Guide to LED Strips"
+  author: "aspectLED"
+  url: "https://www.aspectled.com/blogs/blog/low-voltage-lighting-the-electricians-guide-to-led-strips"
+  note: "Practical installation source. Useful for Class 2, NEC Article 725, polarity, voltage drop, run length, and 12V vs 24V behavior."
+
+#----------------------------------------------------------------------------------------
+# Use for: Remote driver placement, wire gauge, voltage drop, distance, access, and ventilation.
+# Reading angle: Use as practical support for remote-driver tradeoffs.
+# Caution: Vendor blog. Do not treat product-specific advice as universal.
+# Best chapters: LED Fundamentals §12; Power Architecture taxonomy B
+#----------------------------------------------------------------------------------------
+hitlights-remote-mounting-led-drivers:
+  type: web
+  title: "Remote-Mounting LED Drivers: Voltage Drop, Wire Gauge, and Best Practices"
+  author: "HitLights"
+  url: "https://hitlights.com/blogs/premium-led-strip-lighting/remote-mounting-led-drivers"
+  note: "Practical remote-driver source. Good for voltage drop, wire gauge, driver access, ventilation, and service placement."
+
+#----------------------------------------------------------------------------------------
+# Use for: End-of-life ambiguity, driver replacement, color shift, lumen depreciation,
+# Use for: nonstandardization, sustainability.
+# Reading angle: Excellent trade source for lifecycle realism.
+# Caution: Trade publication; use for practice and industry concerns, not lab-derived lifetime
+# Caution: data.
+# Best chapters: LED Fundamentals §13, §14; Power Architecture claim 5
+#----------------------------------------------------------------------------------------
+ecmag-led-end-of-life-questions-2024:
+  type: web
+  title: "LED End-of-Life Questions: What Happens When It's Time for an Upgrade or Replacement?"
+  author: "Electrical Contractor"
+  date: 2024
+  url: "https://www.ecmag.com/magazine/articles/article-detail/led-end-of-life-questions-what-happens-when-it-s-time-for-an-upgrade-or-replacement"
+  note: "Strong source for LED end-of-life ambiguity: drivers, color shift, lumen depreciation, nonstandardization, and sustainability."
+
+#----------------------------------------------------------------------------------------
+# Use for: TLED retrofit options and why retrofit choices are not one-size-fits-all.
+# Reading angle: Use to show the lamp-replacement path has real but limited value.
+# Caution: TLED-specific; avoid overgeneralizing to all architectural lighting.
+# Best chapters: LED Fundamentals §11
+#----------------------------------------------------------------------------------------
+ecmag-guidance-tled-retrofits-2024:
+  type: web
+  title: "Consider All Options: Guidance for TLED Retrofits"
+  author: "Electrical Contractor"
+  date: 2024
+  url: "https://www.ecmag.com/magazine/articles/article-detail/consider-all-options-guidance-for-tled-retrofits"
+  note: "Good retrofit-options piece. Useful for arguing against naive just-swap-the-lamps thinking."
+
+#----------------------------------------------------------------------------------------
+# Use for: Industry/vendor conversation about field-replaceable drivers and serviceability.
+# Reading angle: Good subjective source for how manufacturers talk about maintenance pain.
+# Caution: Interview with manufacturer perspective; cite as industry framing, not neutral proof.
+# Best chapters: LED Fundamentals §13; Power Architecture claim 1
+#----------------------------------------------------------------------------------------
+lightnow-field-replaceable-led-drivers-2023:
+  type: web
+  title: "Acuity’s Daren Hatfield Talks Field-Replaceable LED Drivers"
+  author: "LightNOW"
+  date: 2023
+  url: "https://www.lightnowblog.com/2023/04/acuitys-daren-hatfield-talks-field-replaceable-led-drivers/"
+  note: "Subjective/vendor-adjacent interview. Useful for serviceability rhetoric and how manufacturers frame field replacement."
+
+#----------------------------------------------------------------------------------------
+# Use for: Current retrofit wave: LED-to-LED upgrades, aging first-generation installations,
+# Use for: controls opportunity.
+# Reading angle: Useful for contemporary market narrative.
+# Caution: Current-trade source; verify any market claims if they become central.
+# Best chapters: LED Fundamentals §11; Power Architecture opening
+#----------------------------------------------------------------------------------------
+lightnow-contractor-led-to-led-retrofits-2025:
+  type: web
+  title: "Contractor Considerations for LED-to-LED Retrofits"
+  author: "LightNOW"
+  date: 2025
+  url: "https://www.lightnowblog.com/2025/06/contractor-considerations-for-led-to-led-retrofits/"
+  note: "Current-market piece framing first-generation LEDs as the next retrofit wave and controls as part of the value story."
+
+#----------------------------------------------------------------------------------------
+# Use for: Commercial retrofit logic and installed-base aging.
+# Reading angle: Use as subjective/interview evidence of how manufacturers frame upgrade
+# Reading angle: opportunity.
+# Caution: Vendor interview; keep it in the market-framing layer.
+# Best chapters: LED Fundamentals §11, §13
+#----------------------------------------------------------------------------------------
+lightnow-cree-commercial-lighting-upgrades-2023:
+  type: web
+  title: "Cree's Erik Milz Talks Commercial Lighting Upgrades"
+  author: "LightNOW"
+  date: 2023
+  url: "https://www.lightnowblog.com/2023/07/crees-erik-milz-talks-commercial-lighting-upgrades/"
+  note: "Interview source on LED-to-LED upgrade opportunity, installed-base aging, and commercial retrofit logic."
+
+
+# ========================================================================================
+# 07-power-architecture-dc-poe.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: AC/DC mismatch in buildings, DC loads, DC distribution opportunities and constraints.
+# Reading angle: Core bridge source for the power-architecture thesis.
+# Caution: Building-level DC is broader than lighting. Translate carefully to architectural
+# Caution: lighting.
+# Best chapters: Power Architecture opening; Taxonomy; Technical constraints
+#----------------------------------------------------------------------------------------
+doe-building-level-dc-distribution-2019:
+  type: report
+  title: "Building-Level DC Distribution Systems"
+  author: "U.S. Department of Energy, Lawrence Berkeley National Laboratory, and National Renewable Energy Laboratory"
+  date: 2019
+  url: "https://www.energy.gov/eere/buildings/articles/building-level-dc-distribution-systems"
+  note: "Main bridge into power architecture. Frames mismatch between AC building distribution and increasingly DC building loads."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting/electronics in grid-interactive efficient buildings, DER interaction,
+# Use for: controls, and demand response.
+# Reading angle: Use to situate lighting as part of building energy infrastructure, not isolated
+# Reading angle: fixtures.
+# Caution: GEB context may be broader than your paper; avoid turning a lighting thesis into a
+# Caution: full grid paper.
+# Best chapters: Power Architecture opening, claims 4–5
+#----------------------------------------------------------------------------------------
+doe-grid-interactive-efficient-buildings-lighting-electronics:
+  type: report
+  title: "Grid-Interactive Efficient Buildings: Lighting and Electronics"
+  author: "U.S. Department of Energy"
+  url: "https://www1.eere.energy.gov/buildings/pdfs/75475.pdf"
+  note: "Useful for connecting lighting, electronics, grid-interactive buildings, DERs, controls, and demand response."
+
+#----------------------------------------------------------------------------------------
+# Use for: Maturity check for connected lighting and GEB-related lighting technologies.
+# Reading angle: Good source for measured optimism: promising but not universally solved.
+# Caution: Use to keep credibility guardrails visible.
+# Best chapters: Power Architecture credibility guardrails
+#----------------------------------------------------------------------------------------
+doe-lighting-technologies-geb-2019:
+  type: report
+  title: "Lighting Technologies for Grid-Interactive Efficient Buildings"
+  author: "U.S. Department of Energy"
+  date: 2019
+  url: "https://www.energy.gov/documents/bto-peer-2019-navigant-geb-report-lightingpdf"
+  note: "Good maturity check. Treats connected/DC lighting as promising but not magically solved."
+
+#----------------------------------------------------------------------------------------
+# Use for: PoE lighting system behavior, energy reporting, cabling, and power/data integration.
+# Reading angle: Use for PoE as a real commercial precedent.
+# Caution: Study context matters. Do not generalize all PoE efficiency or cost claims from one
+# Caution: study.
+# Best chapters: Power Architecture taxonomy C
+#----------------------------------------------------------------------------------------
+doe-pnnl-poe-energy-reporting-part1-2017:
+  type: report
+  title: "PoE Lighting System Energy Reporting Study, Part 1"
+  author: "U.S. Department of Energy and Pacific Northwest National Laboratory"
+  date: 2017
+  url: "https://www.energy.gov/sites/prod/files/2017/04/f34/2017-02%20ssl-poe_part1_0r.pdf"
+  note: "Useful PoE system source: data, power, cabling, low-voltage distribution, retrofit constraints, and power envelope."
+
+#----------------------------------------------------------------------------------------
+# Use for: Cable losses and efficiency tradeoffs in PoE systems.
+# Reading angle: Use as a corrective against PoE hype.
+# Caution: Cable loss is only one piece of system performance. Do not use it to dismiss PoE
+# Caution: categorically.
+# Best chapters: Power Architecture taxonomy C; Credibility guardrails
+#----------------------------------------------------------------------------------------
+doe-poe-cable-energy-losses-part1-2019:
+  type: report
+  title: "Connected Lighting Systems Efficiency Study: PoE Cable Energy Losses, Part 1"
+  author: "U.S. Department of Energy"
+  date: 2019
+  url: "https://www.energy.gov/sites/prod/files/2019/01/f58/cls_poe-cable-pt1.pdf"
+  note: "Good corrective to PoE enthusiasm. Focuses on cable losses and system efficiency tradeoffs."
+
+#----------------------------------------------------------------------------------------
+# Use for: Plain-language PoE lighting explanation: Ethernet power/data, switches, endpoints.
+# Reading angle: Use for taxonomy and market vocabulary.
+# Caution: Vendor source. It explains the model but should not be the authority for comparative
+# Caution: superiority.
+# Best chapters: Power Architecture taxonomy C
+#----------------------------------------------------------------------------------------
+cisco-what-is-poe-lighting:
+  type: web
+  title: "What Is PoE Lighting?"
+  author: "Cisco"
+  url: "https://www.cisco.com/site/us/en/learn/topics/networking/what-is-poe-lighting.html"
+  note: "Accessible PoE reference. Useful for the taxonomy branch where power and data are distributed over Ethernet."
+
+#----------------------------------------------------------------------------------------
+# Use for: Concrete example of DC-to-DC / zonal DC lighting architecture.
+# Reading angle: Use to show the preferred architecture is not imaginary; it has product/system
+# Reading angle: precedents.
+# Caution: Manufacturer source. Do not treat as independent proof of performance or cost.
+# Best chapters: Power Architecture taxonomy D
+#----------------------------------------------------------------------------------------
+acuity-dc2dc-architecture-in-action:
+  type: web
+  title: "DC2DC Architecture in Action"
+  author: "Acuity Brands"
+  url: "https://www.acuitybrands.com/resources/featured-technologies/dc2dc"
+  note: "Concrete manufacturer example of zonal DC lighting architecture. Use as an example, not neutral proof."
+
+#----------------------------------------------------------------------------------------
+# Use for: Physical/product example of a DC power distribution hub.
+# Reading angle: Useful for visualizing what zonal DC infrastructure can look like.
+# Caution: Product page. Use as example, not evidence that the architecture is always best.
+# Best chapters: Power Architecture taxonomy D
+#----------------------------------------------------------------------------------------
+acuity-dchub:
+  type: web
+  title: "DCHUB: DC Power Distribution Hub"
+  author: "Acuity Brands"
+  url: "https://www.acuitybrands.com/products/detail/1839095/nlight/dchub/dc-power-distribution-hub"
+  note: "Product-level example of a DC power-distribution hub. Useful for illustrating what zonal DC infrastructure can physically look like."
+
+#----------------------------------------------------------------------------------------
+# Use for: Manufacturer argument for DC-powered lighting benefits.
+# Reading angle: Read to understand industry selling points: efficiency, integration, controls,
+# Reading angle: serviceability.
+# Caution: Clearly vendor-perspective evidence. Balance with DOE/DC distribution and PoE loss
+# Caution: sources.
+# Best chapters: Power Architecture taxonomy D; claims
+#----------------------------------------------------------------------------------------
+acuity-benefits-dc-powered-lighting:
+  type: web
+  title: "The Benefits of DC-Powered Lighting Solutions"
+  author: "Acuity Brands"
+  url: "https://insights.acuitybrands.com/acuity-perspectives-blog/the-benefits-of-dc-powered-lighting-solutions"
+  note: "Manufacturer argument for DC-powered lighting. Useful for industry framing, but should be labeled as vendor-perspective evidence."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting as distributed energy resource, digitized lighting, controls, grid/building
+# Use for: integration.
+# Reading angle: Good broader systems framing when the paper wants to feel forward-looking.
+# Caution: May pull the argument too far toward grid strategy. Use selectively.
+# Best chapters: Power Architecture closing; claims 4–5
+#----------------------------------------------------------------------------------------
+aceee-lighting-as-der-2024:
+  type: paper
+  title: "Lighting as a Distributed Energy Resource"
+  author: "American Council for an Energy-Efficient Economy"
+  date: 2024
+  url: "https://www.aceee.org/sites/default/files/proceedings/ssb24/assets/attachments/20240722163153672_c19e8020-f906-4eaa-a220-71a7c749c92f.pdf"
+  note: "Useful broader systems framing: digitization, interoperability, lighting as a DER, and grid/building integration."
+
+#----------------------------------------------------------------------------------------
+# Use for: Energy savings from networked controls and luminaire-level lighting controls.
+# Reading angle: Use for quantifying why controls matter beyond convenience.
+# Caution: Savings depend on baseline, application, commissioning, and behavior. Avoid universal
+# Caution: percentages without context.
+# Best chapters: Power Architecture controls layer; claim 4
+#----------------------------------------------------------------------------------------
+dlc-nlc-savings-with-without-lllc-2020:
+  type: report
+  title: "Energy Savings from Networked Lighting Control Systems with and without Luminaire Level Lighting Controls"
+  author: "DesignLights Consortium and Northwest Energy Efficiency Alliance"
+  date: 2020
+  url: "https://designlights.org/wp-content/uploads/2021/01/Energy-Savings-From-Networked-Lighting-Controls-with-and-without-LLLC_FINAL_09242020.pdf"
+  note: "Useful for quantifying control-system savings and luminaire-level lighting control value."
+
+#----------------------------------------------------------------------------------------
+# Use for: Economic potential and under-adoption of networked lighting controls.
+# Reading angle: Useful for arguing that much value is stranded when lighting remains simple
+# Reading angle: fixture replacement.
+# Caution: Market potential report; not proof that every individual project pencils out.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+dlc-economic-potential-nlc-2023:
+  type: report
+  title: "Economic Potential of Networked Lighting Controls"
+  author: "DesignLights Consortium"
+  date: 2023
+  url: "https://designlights.org/wp-content/uploads/2023/08/Full-Potential-Study-Final.pdf"
+  note: "Strategic source on stranded value and the economic potential of NLC adoption. Good for retrofit sequencing arguments."
+
+#----------------------------------------------------------------------------------------
+# Use for: Standards trailhead and terminology orientation.
+# Reading angle: Use as a map to relevant NEMA/ANSI/industry standards, not as a central
+# Reading angle: citation.
+# Caution: Guide is broad and older. For standards claims, cite the actual standard or current
+# Caution: official page.
+# Best chapters: Technical constraints; standards notes
+#----------------------------------------------------------------------------------------
+nema-electrical-standards-products-guide-2015:
+  type: report
+  title: "Electrical Standards & Products Guide"
+  author: "NEMA"
+  date: 2015
+  url: "https://www.nema.org/docs/default-source/news-document-library/nema-espg.pdf"
+  note: "Not a core citation, but useful as a trailhead for standards numbers and related NEMA material."
+
+
+# ========================================================================================
+# 08-trade-practitioner-market-ideas.yml
+# ========================================================================================
+
+#----------------------------------------------------------------------------------------
+# Use for: Luminaire-level lighting controls, wireless control, retrofit flexibility, ROI
+# Use for: framing, code-driven adoption.
+# Reading angle: Good market-perspective source for why intelligence is moving into or near
+# Reading angle: luminaires.
+# Caution: Interview/vendor perspective. Useful as industry framing, not neutral comparative
+# Caution: proof.
+# Best chapters: Power Architecture controls layer; taxonomy E
+#----------------------------------------------------------------------------------------
+lightnow-signify-luminaire-level-controls-2022:
+  type: web
+  title: "Signify's Rahul Shira Talks Luminaire-Level Lighting Controls"
+  author: "LightNOW"
+  date: 2022
+  url: "https://www.lightnowblog.com/2022/03/signifys-rahul-shira-talks-luminaire-level-lighting-controls/"
+  note: "Useful for wireless, luminaire-level controls, ROI, retrofit flexibility, and code-driven controls adoption."
+
+#----------------------------------------------------------------------------------------
+# Use for: Lighting-HVAC controls integration, occupancy data, rebates, shallow dimming, and
+# Use for: future system value.
+# Reading angle: Use for the idea that lighting control infrastructure can become building
+# Reading angle: intelligence infrastructure.
+# Caution: Future-facing trade conversation; avoid making it sound mature everywhere.
+# Best chapters: Power Architecture claims 4–5; closing
+#----------------------------------------------------------------------------------------
+lightnow-lighting-hvac-controls-integration-2024:
+  type: web
+  title: "The Horizons of Lighting-HVAC Controls Integration"
+  author: "LightNOW"
+  date: 2024
+  url: "https://www.lightnowblog.com/2024/04/the-horizons-of-lighting-hvac-controls-integration-a-conversation/"
+  note: "Strong options/future-value source: lighting/HVAC integration, rebates, shallow dimming adoption, and stranded potential."
+
+#----------------------------------------------------------------------------------------
+# Use for: Facility-management perspective on lighting controls, operational savings, HVAC
+# Use for: signaling, and customization.
+# Reading angle: Useful for post-handover ownership and facilities value.
+# Caution: General facility article; check specific claims before using them as evidence.
+# Best chapters: Power Architecture claims 4–5
+#----------------------------------------------------------------------------------------
+facility-executive-lighting-cost-savings-2024:
+  type: web
+  title: "Lighting the Way to Cost Savings"
+  author: "Facility Executive"
+  date: 2024
+  url: "https://facilityexecutive.com/lighting-the-way-to-cost-savings/"
+  note: "Facility-management angle on networked lighting, HVAC signaling, occupancy response, customization, and operational savings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Engineering-trade perspective on wireless lighting controls, retrofits, smart
+# Use for: buildings, and decarbonization.
+# Reading angle: Use to capture current practitioner language around wireless lighting control
+# Reading angle: direction.
+# Caution: Current as of 2026; future readers may need updated context. Verify before
+# Caution: publication.
+# Best chapters: Power Architecture controls layer; taxonomy E
+#----------------------------------------------------------------------------------------
+cse-wireless-lighting-control-innovations-2026:
+  type: web
+  title: "Exploring New Innovations in Wireless Lighting Control"
+  author: "Consulting-Specifying Engineer"
+  date: 2026
+  url: "https://www.csemag.com/exploring-new-innovations-in-wireless-lighting-control/"
+  note: "Engineering-trade perspective on wireless lighting controls, LEDs, retrofits, decarbonization, and smart buildings."
+
+#----------------------------------------------------------------------------------------
+# Use for: Subjective trend tracking: healthy buildings, occupancy data, maintenance, product
+# Use for: turnover, attic stock.
+# Reading angle: Useful for market mood and issue spotting.
+# Caution: Trend piece, not authority. Use lightly or as a prompt for further sourcing.
+# Best chapters: Industry framing; optional sidebars
+#----------------------------------------------------------------------------------------
+facility-executive-2025-lighting-trends:
+  type: web
+  title: "A Look at 2025 Lighting Design Trends"
+  author: "Facility Executive"
+  date: 2025
+  url: "https://facilityexecutive.com/a-look-at-lighting-trends/"
+  note: "Subjective trend piece. Useful for rhetoric around healthy buildings, occupancy data, maintenance, product turnover, and attic stock."
