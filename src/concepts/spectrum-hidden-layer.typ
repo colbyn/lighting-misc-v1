@@ -19,14 +19,12 @@
     x: 0.20in,
     y: 0.20in,
   ),
-  fill: white,
   flipped: true,
 )
 
 #set text(
   font: "Avenir Next",
   size: 9pt,
-  fill: rgb("#24242a"),
 )
 
 #set par(

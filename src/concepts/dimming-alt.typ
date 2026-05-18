@@ -31,13 +31,14 @@
 #let faint = rgb("#f6f7fb")
 #let panel = rgb("#fcfcff")
 #let white = rgb("#ffffff")
-#let off-fill = luma(235)
 
 #let amber = rgb("#bd6a00")
 #let green = rgb("#3a9a00")
 #let violet = rgb("#7a3cff")
 #let blue = rgb("#005eff")
 #let blackish = rgb("#111111")
+
+#let off-fill = luma(235)
 
 // =============================================================================
 // Typography / components
@@ -164,20 +165,6 @@
   )
 }
 
-#let big-signal-strip(
-  samples,
-  fill: blackish,
-  height: 50pt,
-  zero-fill: off-fill,
-) = signal-strip(
-  samples,
-  height: height,
-  fill: fill,
-  zero-fill: zero-fill,
-  radius: 0.7pt,
-  gutter: 1.6pt,
-)
-
 #let signal-cell(samples, caption, fill: blackish) = block(
   width: 100%,
   inset: (x: 5.5pt, y: 5pt),
@@ -219,44 +206,10 @@
 
 #let hybrid-lowest = (0.25, 0, 0, 0, 0, 0.25, 0, 0, 0, 0, 0.25, 0)
 
-// Longer samples for expanded teaching plates.
-#let full-current-long = (
-  0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85,
-  0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85,
-)
-
-#let mid-current-long = (
-  0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
-  0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
-)
-
-#let low-current-long = (
-  0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25,
-  0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25,
-)
-
-#let pwm-high-long = (
-  1, 1, 1, 1, 0, 1, 1, 1,
-  1, 0, 1, 1, 1, 1, 0, 1,
-)
-
-#let pwm-mid-long = (
-  1, 1, 0, 0, 1, 1, 0, 0,
-  1, 1, 0, 0, 1, 1, 0, 0,
-)
-
-#let pwm-low-long = (
-  1, 0, 0, 0, 0, 1, 0, 0,
-  0, 0, 1, 0, 0, 0, 0, 0,
-)
-
-#let hybrid-lowest-long = (
-  0.25, 0, 0, 0, 0, 0.25, 0, 0,
-  0, 0, 0.25, 0, 0, 0, 0, 0,
-)
+#let blank-signal = (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 // =============================================================================
-// Compact atlas
+// Matrix
 // =============================================================================
 
 #let signal-atlas() = block(
@@ -313,7 +266,7 @@
     [
       #signal-cell(
         low-current,
-        [still analog if supported],
+        [still analog if driver supports it],
         fill: green,
       )
     ],
@@ -351,7 +304,7 @@
     [
       #signal-cell(
         pwm-low,
-        [same peak, low duty],
+        [same peak, very low duty],
         fill: violet,
       )
     ],
@@ -389,94 +342,10 @@
     [
       #signal-cell(
         hybrid-lowest,
-        [PWM below floor],
+        [PWM below the floor],
         fill: blue,
       )
     ],
-  )
-]
-
-// =============================================================================
-// Expanded method plates
-// =============================================================================
-
-#let expanded-row(title, subtitle, samples, fill: blackish) = block(
-  width: 100%,
-  inset: (x: 8pt, y: 7pt),
-  radius: 3pt,
-  fill: white,
-  stroke: hair + 0.45pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.26fr, 1fr),
-    column-gutter: 10pt,
-    align: horizon,
-
-    [
-      #text(size: 8.8pt, weight: "medium", fill: ink)[#title]
-      #v(2pt)
-      #text(size: 6.8pt, fill: mute)[#subtitle]
-    ],
-
-    [
-      #big-signal-strip(samples, fill: fill)
-    ],
-  )
-]
-
-#let method-plate(
-  kicker,
-  title,
-  claim,
-  body,
-  rows,
-  accent: blackish,
-) = block(
-  width: 100%,
-  inset: (x: 11pt, y: 10pt),
-  radius: 4pt,
-  fill: panel,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.31fr, 1fr),
-    column-gutter: 16pt,
-    align: top,
-
-    [
-      #label(kicker, fill: accent)
-      #v(4pt)
-      #headline(title, size: 20pt)
-      #v(5pt)
-      #text(size: 9.2pt, weight: "medium", fill: ink)[#claim]
-      #v(7pt)
-      #note(body, size: 7.7pt)
-    ],
-
-    [
-      #rows
-    ],
-  )
-]
-
-#let compare-pill(a, b, c, accent: blackish) = block(
-  width: 100%,
-  inset: (x: 9pt, y: 8pt),
-  radius: 3pt,
-  fill: white,
-  stroke: hair + 0.55pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.25fr, 0.25fr, 1fr),
-    column-gutter: 8pt,
-    align: horizon,
-
-    [#label(a, fill: accent)],
-    [#text(size: 10.5pt, weight: "semibold", fill: ink)[#b]],
-    [#note(c, size: 7.2pt)],
   )
 ]
 
@@ -536,160 +405,44 @@
 
 #v(10pt)
 
+#grid(
+  columns: (1fr, 1fr, 1fr),
+  column-gutter: 8pt,
+  align: top,
+
+  [
+    #rule-card(
+      [constant-current reduction],
+      [The signal stays continuous. Lower output is created by lowering the current level.],
+      accent: green,
+    )
+  ],
+
+  [
+    #rule-card(
+      [pulse-width modulation],
+      [The signal breaks into time slices. Lower output is created by reducing duty cycle.],
+      accent: violet,
+    )
+  ],
+
+  [
+    #rule-card(
+      [hybrid handoff],
+      [The driver behaves like CCR through much of the range, then like PWM below the analog floor.],
+      accent: blue,
+    )
+  ],
+)
+
+#v(10pt)
+
 #bottom-takeaway(
-  [visual thesis],
+  [dimming rule],
   [
-    CCR changes current height. PWM changes on-time width. Hybrid dimming changes
-    height first, then switches to width at the low end.
-  ],
-  accent: blue,
-)
-
-#pagebreak()
-
-#section-intro(
-  [method plates],
-  [The waveform tells you what “dimmed” actually means.],
-  [
-    The visible scene can be equally dim in each case, but the driver can be doing
-    very different work. These enlarged strips keep the same grammar as the atlas:
-    height is current, width is on-time, pale bars are off-time.
-  ],
-  accent: blackish,
-  title-size: 25pt,
-)
-
-#v(10pt)
-
-#method-plate(
-  [analog LED dimming],
-  [CCR],
-  [Same time profile, lower current level.],
-  [
-    Constant-current reduction keeps the LED continuously driven while lowering
-    the current. The signal does not break into pulses; it simply operates the
-    diode at a lower current level.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [higher continuous current],
-      full-current-long,
-      fill: green,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [reduced continuous current],
-      mid-current-long,
-      fill: green,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [low continuous current],
-      low-current-long,
-      fill: green,
-    )
-  ],
-  accent: green,
-)
-
-#v(10pt)
-
-#method-plate(
-  [pulsed LED dimming],
-  [PWM],
-  [Same peak current, less time on.],
-  [
-    Pulse-width modulation keeps the LED near a peak operating current while
-    reducing the fraction of time it is on. Output falls because duty cycle falls.
-    The peak bars stay tall; the on-time becomes shorter.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [long on-time],
-      pwm-high-long,
-      fill: violet,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [balanced on/off time],
-      pwm-mid-long,
-      fill: violet,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [short pulses],
-      pwm-low-long,
-      fill: violet,
-    )
+    “Dimmed” is not a complete specification for an LED source. The visual result
+    may be similar, but the current waveform can be continuous, pulsed, or hybrid.
+    Less light does not tell you what the driver is doing.
   ],
   accent: violet,
 )
-
-#v(10pt)
-
-#method-plate(
-  [combined strategy],
-  [Hybrid],
-  [Current reduction first, PWM below the analog floor.],
-  [
-    Hybrid drivers use CCR through the range where analog reduction behaves well.
-    At the low end, the driver may hold an analog floor and continue dimming by
-    pulsing that floor.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [upper range: CCR],
-      full-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [middle range: CCR],
-      mid-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [analog floor],
-      low-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Very low output],
-      [PWM below the floor],
-      hybrid-lowest-long,
-      fill: blue,
-    )
-  ],
-  accent: blue,
-)
-
-// ————————————————————————————————————————————————————————————————————————————
-// TODO
-// ————————————————————————————————————————————————————————————————————————————
-
-// TODO

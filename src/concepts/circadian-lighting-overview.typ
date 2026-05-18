@@ -23,7 +23,6 @@ Section flow:
   paper: "us-letter",
   flipped: true,
   margin: (x: 0.2in, y: 0.2in),
-  fill: white,
 )
 
 #set text(font: "Avenir Next", size: 8.45pt, fill: rgb("#23242a"))
@@ -942,7 +941,7 @@ Section flow:
   [
     #section-intro(
       [day structure],
-      [Good lighting is a sequence, not a setting.],
+      [Good lighting is a function.],
       [The design target is not one optimized white spectrum. It is a day that changes spectral job.],
       accent: blue,
       title-size: 28pt,
@@ -1009,52 +1008,52 @@ Section flow:
 // LANDSCAPE SECTION — Specification habit
 // =============================================================================
 
-#grid(
-  columns: (0.33fr, 0.67fr),
-  column-gutter: 13pt,
-  align: top,
-  [
-    #section-intro(
-      [specification habit],
-      [Specify the signal, not just the lamp.],
-      [Circadian lighting begins when visual output and ipRGC signal are treated as related but distinct design quantities.],
-      accent: violet,
-      title-size: 28pt,
-    )
-    #v(9pt)
-    #reference-overlay-key()
-  ],
-  [
-    #grid(
-      columns: (1fr, 1fr),
-      column-gutter: 8pt,
-      row-gutter: 8pt,
-      align: top,
-      [#spec-panel(
-        [ask for SPD],
-        [Read the distribution.],
-        [A spectral power distribution shows where the energy is. CCT describes color appearance; CRI describes color rendering. Neither shows how the spectrum sits against the photopic or melanopic reader.],
-        accent: blue,
-      )],
-      [#spec-panel(
-        [separate metrics],
-        [Photopic and melanopic output are not the same output.],
-        [Visual brightness and ipRGC signal should be evaluated as distinct quantities. A single word — intensity — hides both. Design documents should show both for each scene.],
-        accent: violet,
-      )],
-      [#spec-panel(
-        [compare fairly],
-        [Normalize by visual output before comparing.],
-        [A source comparison is meaningful only when photopic output is held constant first. Otherwise brightness differences obscure spectral differences.],
-        accent: ref-visual,
-      )],
-      [#spec-panel(
-        [design states],
-        [Anchor, transition, protect.],
-        [The day needs three spectral jobs. Specify each as a scene with its own output level, spectral character, and schedule. A dimming curve is not a scene schedule.],
-        accent: red,
-      )],
-    )
-  ],
-)
+// #grid(
+//   columns: (0.33fr, 0.67fr),
+//   column-gutter: 13pt,
+//   align: top,
+//   [
+//     #section-intro(
+//       [specification habit],
+//       [Specify the signal, not just the lamp.],
+//       [Circadian lighting begins when visual output and ipRGC signal are treated as related but distinct design quantities.],
+//       accent: violet,
+//       title-size: 28pt,
+//     )
+//     #v(9pt)
+//     #reference-overlay-key()
+//   ],
+//   [
+//     #grid(
+//       columns: (1fr, 1fr),
+//       column-gutter: 8pt,
+//       row-gutter: 8pt,
+//       align: top,
+//       [#spec-panel(
+//         [ask for SPD],
+//         [Read the distribution.],
+//         [A spectral power distribution shows where the energy is. CCT describes color appearance; CRI describes color rendering. Neither shows how the spectrum sits against the photopic or melanopic reader.],
+//         accent: blue,
+//       )],
+//       [#spec-panel(
+//         [separate metrics],
+//         [Photopic and melanopic output are not the same output.],
+//         [Visual brightness and ipRGC signal should be evaluated as distinct quantities. A single word — intensity — hides both. Design documents should show both for each scene.],
+//         accent: violet,
+//       )],
+//       [#spec-panel(
+//         [compare fairly],
+//         [Normalize by visual output before comparing.],
+//         [A source comparison is meaningful only when photopic output is held constant first. Otherwise brightness differences obscure spectral differences.],
+//         accent: ref-visual,
+//       )],
+//       [#spec-panel(
+//         [design states],
+//         [Anchor, transition, protect.],
+//         [The day needs three spectral jobs. Specify each as a scene with its own output level, spectral character, and schedule. A dimming curve is not a scene schedule.],
+//         accent: red,
+//       )],
+//     )
+//   ],
+// )
 
