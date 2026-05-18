@@ -962,7 +962,7 @@ Section flow:
 #v(8pt)
 #state-row(
   [state 01],
-  [Day anchor],
+  [Awake Daytime],
   day-state,
   1.0pt + blue,
   blue,
@@ -973,7 +973,7 @@ Section flow:
 #v(7pt)
 #state-row(
   [state 02],
-  [Evening transition],
+  [Evening Transition],
   evening-state,
   1.0pt + amber,
   amber,
@@ -984,7 +984,7 @@ Section flow:
 #v(7pt)
 #state-row(
   [state 03],
-  [Night protection],
+  [Restful Nighttime],
   night-state,
   1.0pt + red,
   red,
