@@ -19,14 +19,8 @@
 
 // #{ include "content/playground.typ" }
 
-// #{ include "concepts/dimming-alt-basic.typ" }
-// #{ include "concepts/dimming-alt.typ" }
-
-// #{ include "concepts/dimming.typ" }
-
-#{ include "concepts/spectrum-hidden-layer.typ" }
-#{ include "concepts/spectrum-atlas-gallery.typ" }
-#{ include "concepts/circadian-lighting-overview.typ" }
-
-#{ include "concepts/dimming_with_led_power.typ" }
+#{ include "concepts/spectrum-white-light.typ" }
+#{ include "concepts/spectrum-example-gallery.typ" }
+#{ include "concepts/circadian-lighting.typ" }
+#{ include "concepts/leds-dimming.typ" }
 
