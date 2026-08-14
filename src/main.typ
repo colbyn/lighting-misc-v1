@@ -1,6 +1,6 @@
 #set document(
   title: "On Lighting",
-  author: "Colbyn Wadman",
+  author: "The Lighting Nerd",
 )
 
 #set page(
@@ -24,3 +24,4 @@
 #{ include "concepts/circadian-lighting.typ" }
 #{ include "concepts/leds-dimming.typ" }
 
+// #{ include "led-basics/optics.typ" }
