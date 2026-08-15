@@ -23,7 +23,7 @@ Section flow:
 // Shared document tokens
 // =============================================================================
 
-#import "fragments/components.typ": ink
+#import "spectra/components.typ": ink
 
 // =============================================================================
 // Document setup
@@ -51,7 +51,7 @@ Section flow:
 // Two reading systems
 // =============================================================================
 
-#include "fragments/reading-systems.typ"
+#include "spectra/reading-systems.typ"
 
 #pagebreak()
 
@@ -59,7 +59,31 @@ Section flow:
 // Industry metrics
 // =============================================================================
 
-#include "fragments/industry-metrics.typ"
+#include "spectra/industry-metrics.typ"
+
+#pagebreak()
+
+// =============================================================================
+// Industry metrics
+// =============================================================================
+
+#include "spectra/industry-metrics-der-page.typ"
+
+#pagebreak()
+
+// =============================================================================
+// Industry metrics
+// =============================================================================
+
+#include "spectra/industry-metrics-spectrum-strategy.typ"
+
+#pagebreak()
+
+// =============================================================================
+// Industry metrics
+// =============================================================================
+
+#include "spectra/industry-metrics-source-reading.typ"
 
 #pagebreak()
 
@@ -67,7 +91,7 @@ Section flow:
 // Source comparison
 // =============================================================================
 
-#include "fragments/source-comparison.typ"
+#include "spectra/source-comparison.typ"
 
 #pagebreak()
 
@@ -75,7 +99,7 @@ Section flow:
 // Night products
 // =============================================================================
 
-#include "fragments/night-products.typ"
+#include "spectra/night-products.typ"
 
 #pagebreak()
 
@@ -83,15 +107,15 @@ Section flow:
 // Three spectral states
 // =============================================================================
 
-#include "fragments/spectral-states.typ"
+#include "spectra/spectral-states.typ"
 
 // =============================================================================
 // Specification habit
 // =============================================================================
 
 // Currently inactive. If this section is restored, factor it into:
-//   fragments/specification-habit.typ
+//   spectra/specification-habit.typ
 //
 // #pagebreak()
-// #include "fragments/specification-habit.typ"
+// #include "spectra/specification-habit.typ"
 // 

@@ -55,7 +55,7 @@
 
   #metric-pill(
     value,
-    overlap-max,
+    melanopic-der-max,
     fill: violet,
   )
 
@@ -130,7 +130,7 @@
     #callout-card(
       [reading the number],
       [What the pill numbers on the right mean.],
-      [Each source is first normalized to equal visual (photopic) output. Its spectrum is then weighted against the melanopic curve and summed — a melanopic-weighted integral, not a percentage or a geometric overlap area. Higher means more clock signal for the same amount of usable light.],
+      [Each modeled source is evaluated by melanopic DER: its melanopic response is compared with its photopic response, then referenced to D65 daylight, which has a DER of 1.0. Higher DER means more melanopic stimulus for the same amount of visual light.],
       accent: violet,
       fill: faint,
       inset-y: 7pt,
@@ -183,7 +183,7 @@
         #reading-example(
           [same visual target],
           source-catalog.at("cheap_blue_pump_led"),
-          overlap-values.at(1),
+          melanopic-der-values.at(1),
           [Ordinary white light, but the pump peak sits inside the ipRGC window: a strong clock signal riding on an unremarkable-looking lamp.],
           accent: blue,
         )
@@ -193,8 +193,8 @@
         #reading-example(
           [same visual target],
           source-catalog.at("warm_phosphor_led"),
-          overlap-values.at(6),
-          [Comparable brightness, warmer appearance, and a somewhat smaller melanopic integral: a modest reduction in clock drive, not an escape from it.],
+          melanopic-der-values.at(6),
+          [Comparable brightness, warmer appearance, and a somewhat lower melanopic DER: a modest reduction in clock drive, not an escape from it.],
           accent: amber,
         )
       ],

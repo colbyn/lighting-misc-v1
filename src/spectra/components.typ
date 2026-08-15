@@ -181,8 +181,12 @@
       size: 10.6pt,
       weight: "semibold",
       fill: ink,
-    )[#("≈ " + str(calc.round(value * 100.0) / 100.0))]],
-    [#text(size: 5.8pt, fill: mute)[melanopic weighted area]],
+    )[
+      #("≈ " + str(calc.round(value * 100.0) / 100.0))]
+    ],
+    [
+      #text(size: 5.8pt, fill: mute)[melanopic DER]
+    ],
   )
 ]
 
@@ -384,7 +388,7 @@
       #v(2pt)
       #note(src.note, size: 6.2pt, fill: mute)
       #v(4pt)
-      #metric-pill(value, overlap-max, fill: violet)
+      #metric-pill(value, melanopic-der-max, fill: violet)
     ],
     [
       #spectrum-plot(
@@ -407,74 +411,3 @@
   #note(src.detail, size: detail-size)
 ]
 
-// #let compact-source(src, value) = block(
-//   width: 100%,
-//   inset: (x: 5pt, y: 4.5pt),
-//   radius: 3pt,
-//   fill: white,
-//   stroke: hair + 0.55pt,
-//   breakable: false,
-// )[
-//   #label(src.name, fill: src.accent)
-//   #v(2pt)
-//   #spectrum-plot(
-//     wl,
-//     height: 1.85cm,
-//     legend-position: "none",
-//     xlabel: text(size: 0pt)[],
-//     ylabel: text(size: 0pt)[],
-//     series: with-reference-overlays(((
-//       label: [],
-//       values: src.values,
-//       stroke: src.stroke,
-//       draw-area: true,
-//       z: 2,
-//     ),)),
-//   )
-//   #v(3pt)
-//   #metric-pill(value, overlap-max, fill: violet)
-//   #v(2pt)
-//   #note(src.note, size: 5.9pt, fill: mute)
-// ]
-
-// #let night-source-feature(src, value) = block(
-//   width: 100%,
-//   inset: (x: 8pt, y: 7pt),
-//   radius: 4pt,
-//   fill: white,
-//   stroke: hair + 0.55pt,
-//   breakable: false,
-// )[
-//   #grid(
-//     columns: (0.26fr, 0.74fr),
-//     column-gutter: 10pt,
-//     align: top,
-//     [
-//       #label(src.name, fill: src.accent)
-//       #v(3pt)
-//       #note(src.note, size: 6.8pt, fill: mute)
-//       #v(6pt)
-//       #label[melanopic integral, fill: violet]
-//       #v(4pt)
-//       #metric-pill(value, overlap-max, fill: violet)
-//       #v(5pt)
-//       #note(src.detail, size: 6.85pt)
-//     ],
-//     [
-//       #spectrum-plot(
-//         wl,
-//         height: 4.15cm,
-//         legend-position: "none",
-//         xlabel: text(size: 5.2pt)[Wavelength / nm],
-//         ylabel: text(size: 5.2pt)[Relative power],
-//         series: with-reference-overlays(((
-//           label: [],
-//           values: src.values,
-//           stroke: src.stroke,
-//           draw-area: true,
-//           z: 2,
-//         ),)),
-//       )
-//     ],
-//   )
-// ]

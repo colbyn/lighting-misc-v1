@@ -8,6 +8,7 @@
 
 #import "@preview/lilaq:0.6.0" as lq
 #import "components.typ": *
+#import "../data/cie-reference-data.typ": cie-photopic, cie-melanopic, cie-d65
 
 // =============================================================================
 // Math helpers
@@ -489,6 +490,38 @@
 #let night-state = make-series(spd-night-state)
 
 // =============================================================================
+// Melanopic DER
+// =============================================================================
+//
+// Standards-based numerical calculation using:
+// - CIE photopic V(lambda)
+// - CIE S 026 melanopic action spectrum
+// - CIE standard illuminant D65
+//
+// The source SPDs themselves remain illustrative / modeled.
+
+#let melanopic-per-photopic(values) = {
+  let photopic-response = integrate-product(values, cie-photopic)
+  let melanopic-response = integrate-product(values, cie-melanopic)
+
+  if photopic-response == 0 {
+    0.0
+  } else {
+    melanopic-response / photopic-response
+  }
+}
+
+#let d65-melanopic-per-photopic = melanopic-per-photopic(cie-d65)
+
+#let melanopic-der(values) = {
+  if d65-melanopic-per-photopic == 0 {
+    0.0
+  } else {
+    melanopic-per-photopic(values) / d65-melanopic-per-photopic
+  }
+}
+
+// =============================================================================
 // Source catalog
 // =============================================================================
 
@@ -587,7 +620,7 @@
     note: [shifted toward amber and red, pump reduced],
     detail: [
       Warm phosphor LEDs move more visual work into longer wavelengths,
-      which trims melanopic overlap somewhat compared with cool sources —
+      which lowers melanopic efficiency somewhat compared with cool sources —
       but the reduction is modest, not a large drop. Warm-white is a
       better evening candidate than daylight LEDs, but it is still far
       from biological night protection.
@@ -616,8 +649,8 @@
     note: [low-temperature thermal spectrum],
     detail: [
       A flame sits far down the warm thermal curve. It still emits
-      visible light, but its photopic-normalized melanopic overlap is
-      much smaller because very little energy lands in the blue-cyan window.
+      visible light, but its melanopic DER is much lower because relatively
+      little energy lands in the blue-cyan region for the same visual output.
     ],
   ),
 
@@ -642,7 +675,7 @@
     note: [long-wavelength protection state],
     detail: [
       Deep red is the extreme case: little useful color rendering,
-      low general visibility, but minimal melanopic overlap. It belongs
+      low general visibility, but extremely low melanopic efficiency. It belongs
       to night protection, not ordinary room lighting.
     ],
   ),
@@ -667,16 +700,9 @@
 
 #let source-defs = source-order.map(key => source-catalog.at(key))
 
-#let overlap-values = source-defs.map(s =>
-    integrate-product(
-      visual-normalize(s.values, photopic),
-      melanopic,
-    )
-  )
+#let melanopic-der-values = source-defs.map(s => melanopic-der(s.values))
 
-#let overlap-max = calc.max(..overlap-values)
-
-#let approx-integral(value) = str(calc.round(value * 100.0) / 100.0)
+#let melanopic-der-max = calc.max(1.0, ..melanopic-der-values)
 
 // =============================================================================
 // Reference overlay infrastructure

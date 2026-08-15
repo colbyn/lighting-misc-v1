@@ -23,9 +23,9 @@
       #v(3pt)
       #note(src.note, size: 6.8pt, fill: mute)
       #v(6pt)
-      #label[melanopic integral, fill: violet]
+      #label[melanopic DER, fill: violet]
       #v(4pt)
-      #metric-pill(value, overlap-max, fill: violet)
+      #metric-pill(value, melanopic-der-max, fill: violet)
       #v(5pt)
       #note(src.detail, size: 6.85pt)
     ],
@@ -90,14 +90,14 @@
   [
     #night-source-feature(
       source-defs.at(9),
-      overlap-values.at(9),
+      melanopic-der-values.at(9),
     )
   ],
 
   [
     #night-source-feature(
       source-defs.at(10),
-      overlap-values.at(10),
+      melanopic-der-values.at(10),
     )
   ],
 )

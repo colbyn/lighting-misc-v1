@@ -21,7 +21,7 @@
 
 #{ include "concepts/spectrum-white-light.typ" }
 #{ include "concepts/spectrum-example-gallery.typ" }
-#{ include "concepts/circadian-lighting.typ" }
+#{ include "spectra.typ" }
 #{ include "concepts/leds-dimming.typ" }
 
 // #{ include "led-basics/optics.typ" }

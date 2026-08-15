@@ -2,7 +2,7 @@
 // Standalone section: Dimming Is Not Just “Less Power”
 // =============================================================================
 
-#import "lib/spd-plot.typ": spectrum-plot
+#import "./lib/spd-plot.typ": spectrum-plot
 
 #set page(
   paper: "us-letter",
@@ -536,160 +536,6 @@
 
 #signal-atlas()
 
-#v(10pt)
-
-#bottom-takeaway(
-  [visual thesis],
-  [
-    CCR changes current height. PWM changes on-time width. Hybrid dimming changes
-    height first, then switches to width at the low end.
-  ],
-  accent: blue,
-)
-
-#pagebreak()
-
-#section-intro(
-  [method plates],
-  [The waveform tells you what “dimmed” actually means.],
-  [
-    The visible scene can be equally dim in each case, but the driver can be doing
-    very different work. These enlarged strips keep the same grammar as the atlas:
-    height is current, width is on-time, pale bars are off-time.
-  ],
-  accent: blackish,
-  title-size: 25pt,
-)
-
-#v(10pt)
-
-#method-plate(
-  [analog LED dimming],
-  [CCR],
-  [Same time profile, lower current level.],
-  [
-    Constant-current reduction keeps the LED continuously driven while lowering
-    the current. The signal does not break into pulses; it simply operates the
-    diode at a lower current level.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [higher continuous current],
-      full-current-long,
-      fill: green,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [reduced continuous current],
-      mid-current-long,
-      fill: green,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [low continuous current],
-      low-current-long,
-      fill: green,
-    )
-  ],
-  accent: green,
-)
-
-#v(10pt)
-
-#method-plate(
-  [pulsed LED dimming],
-  [PWM],
-  [Same peak current, less time on.],
-  [
-    Pulse-width modulation keeps the LED near a peak operating current while
-    reducing the fraction of time it is on. Output falls because duty cycle falls.
-    The peak bars stay tall; the on-time becomes shorter.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [long on-time],
-      pwm-high-long,
-      fill: violet,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [balanced on/off time],
-      pwm-mid-long,
-      fill: violet,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [short pulses],
-      pwm-low-long,
-      fill: violet,
-    )
-  ],
-  accent: violet,
-)
-
-
-#v(10pt)
-
-#method-plate(
-  [combined strategy],
-  [Hybrid],
-  [Current reduction first, PWM below the analog floor.],
-  [
-    Hybrid drivers use CCR through the range where analog reduction behaves well.
-    At the low end, the driver may hold an analog floor and continue dimming by
-    pulsing that floor.
-  ],
-  [
-    #expanded-row(
-      [High output],
-      [upper range: CCR],
-      full-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Medium output],
-      [middle range: CCR],
-      mid-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Low output],
-      [analog floor],
-      low-current-long,
-      fill: blue,
-    )
-
-    #v(7pt)
-
-    #expanded-row(
-      [Very low output],
-      [PWM below the floor],
-      hybrid-lowest-long,
-      fill: blue,
-    )
-  ],
-  accent: blue,
-)
 
 
 
@@ -1184,75 +1030,31 @@
 ]
 
 // =============================================================================
-// Section
+// Render: Current Is Not the Same Thing as Light
 // =============================================================================
 
-
-== Current Is Not the Same Thing as Light
+#pagebreak()
 
 #section-intro(
-  [led power],
-  [The driver controls current; the room receives photons, heat, and time structure.],
+  [current → light],
+  [Current is the control signal. Light is the result.],
   [
-    LED power is usually discussed through current because the diode is current-driven.
-    But current is not the final visual product. The same electrical input is filtered
-    through package efficiency, junction temperature, phosphor conversion, driver timing,
-    and optics before it becomes useful light.
+    LED dimming begins electrically, but electrical current, optical output, heat,
+    and time structure are not interchangeable quantities. The driver determines
+    the current waveform; the LED package determines what that waveform becomes.
   ],
   accent: orange,
   title-size: 25pt,
 )
 
-#v(9pt)
-
+#v(8pt)
 #energy-split-card()
-
-#v(9pt)
-
+#v(7pt)
 #current-response-card()
-
-#v(9pt)
-
-#bottom-takeaway(
-  [section thesis],
-  [
-    Current is the control variable. Light output is the result after conversion losses,
-    thermal behavior, spectral construction, and driver timing have all had their say.
-  ],
-  accent: orange,
-)
-
-
-#section-intro(
-  [current over time],
-  [Average light is not the same as instantaneous drive.],
-  [
-    Dimming often compares visible averages, but LEDs and cameras respond to the
-    instantaneous waveform. The area under the current-time signal explains the
-    average; the peaks and gaps explain stress, flicker, and driver behavior.
-  ],
-  accent: violet,
-  title-size: 25pt,
-)
-
-#v(9pt)
-
+#v(7pt)
 #same-average-card()
-
-#v(9pt)
-
+#v(7pt)
 #photon-dose-card()
-
-#v(9pt)
-
-#bottom-takeaway(
-  [visual rule],
-  [
-    Area gives the simplified average. Shape gives the mechanism. A smooth half-current
-    signal and a half-duty full-current signal can look similar while behaving differently.
-  ],
-  accent: violet,
-)
 
 #pagebreak()
 
@@ -1351,4 +1153,3 @@
   ],
   accent: cyan,
 )
-

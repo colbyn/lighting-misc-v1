@@ -32,7 +32,7 @@
     ),)),
   )
   #v(3pt)
-  #metric-pill(value, overlap-max, fill: violet)
+  #metric-pill(value, melanopic-der-max, fill: violet)
   #v(2pt)
   #note(src.note, size: 5.9pt, fill: mute)
 ]
@@ -59,8 +59,8 @@
 
     #callout-card(
       [reading the number],
-      [Equal visual output first.],
-      [Each source is normalized to equal photopic visual output, then weighted against melanopic sensitivity — the same logic as the industry's melanopic ratio (MDER), from CIE S 026/E:2018. Here it's an illustrative approximation on an arbitrary scale, not a certified measurement.],
+      [Melanopic efficiency relative to daylight.],
+      [Each modeled source is evaluated by melanopic DER: melanopic response per unit of photopic illumination, referenced to D65 daylight, which has a DER of 1.0. The values are illustrative because the source spectra are representative models rather than measured product spectra.],
       accent: violet,
       fill: faint,
     )
@@ -89,77 +89,77 @@
       [
         #compact-source(
           source-defs.at(0),
-          overlap-values.at(0),
+          melanopic-der-values.at(0),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(1),
-          overlap-values.at(1),
+          melanopic-der-values.at(1),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(2),
-          overlap-values.at(2),
+          melanopic-der-values.at(2),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(3),
-          overlap-values.at(3),
+          melanopic-der-values.at(3),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(4),
-          overlap-values.at(4),
+          melanopic-der-values.at(4),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(5),
-          overlap-values.at(5),
+          melanopic-der-values.at(5),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(6),
-          overlap-values.at(6),
+          melanopic-der-values.at(6),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(7),
-          overlap-values.at(7),
+          melanopic-der-values.at(7),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(8),
-          overlap-values.at(8),
+          melanopic-der-values.at(8),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(9),
-          overlap-values.at(9),
+          melanopic-der-values.at(9),
         )
       ],
 
       [
         #compact-source(
           source-defs.at(10),
-          overlap-values.at(10),
+          melanopic-der-values.at(10),
         )
       ],
 
