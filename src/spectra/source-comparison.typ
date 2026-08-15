@@ -161,17 +161,7 @@
           source-defs.at(10),
           melanopic-der-values.at(10),
         )
-      ],
-
-      [
-        #callout-card(
-          [matrix reading],
-          [Lower is not automatically better. Later is different.],
-          [Daytime needs alerting light. Evening needs a taper. Biological night needs protection. The matrix is not a universal ranking; it is a schedule argument.],
-          accent: blue,
-          fill: faint,
-        )
-      ],
+      ]
     )
   ],
 )
