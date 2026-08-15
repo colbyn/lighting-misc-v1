@@ -57,15 +57,15 @@
     ylabel: text(size: 4.9pt)[Relative power],
     series: (
       source-series(
+        [☀️ idealized daylight (CIE D65)],
+        daylight,
+        0.75pt + ref-day,
+      ),
+      source-series(
         source-label,
         source-values,
         source-stroke,
         draw-area: true,
-      ),
-      source-series(
-        [idealized daylight],
-        daylight,
-        0.75pt + ref-day,
       ),
     ),
   )
@@ -208,7 +208,7 @@
       ylabel: text(size: 5.1pt)[Relative power],
       series: (
         source-series(
-          [idealized daylight],
+          [☀️ idealized daylight (CIE D65)],
           daylight,
           0.85pt + ref-day,
         ),

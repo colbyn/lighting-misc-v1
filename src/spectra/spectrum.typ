@@ -449,17 +449,36 @@
   gauss(x, 660, 38, amp: 0.82)
 )
 
+#let smooth-series(values, radius: 5) = {
+  range(values.len()).map(i => {
+    let lo = calc.max(0, i - radius)
+    let hi = calc.min(values.len() - 1, i + radius)
+
+    let total = 0.0
+    let count = 0
+
+    for j in range(lo, hi + 1) {
+      total += values.at(j)
+      count += 1
+    }
+
+    total / count
+  })
+}
+
 // =============================================================================
 // Computed spectral series
 // =============================================================================
 
 #let make-series(f) = normalize(wl.map(f))
 
-#let daylight = make-series(daylight-reference)
+#let daylight = normalize(
+  smooth-series(cie-d65, radius: 5)
+)
 
-#let photopic = make-series(photopic-weight)
+#let photopic = normalize(cie-photopic)
 
-#let melanopic = make-series(melanopic-weight)
+#let melanopic = normalize(cie-melanopic)
 
 #let incandescent = make-series(spd-incandescent)
 
@@ -712,7 +731,7 @@
 
 #let reference-overlay-series = (
   (
-    label: [idealized daylight],
+    label: [idealized daylight (CIE D65)],
     values: daylight,
     stroke: 0.62pt + ref-day,
     z: 6,
@@ -733,7 +752,7 @@
 )
 
 #let with-reference-overlays(base) = {
-  base + reference-overlay-series
+  reference-overlay-series + base
 }
 
 #let reference-overlay-key() = align(center)[

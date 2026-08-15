@@ -154,7 +154,7 @@
       legend-columns: (auto, auto, auto),
       series: (
         (
-          label: [idealized daylight],
+          label: [☀️ idealized daylight (CIE D65)],
           values: daylight,
           stroke: 1.0pt + ref-day,
         ),

@@ -16,6 +16,8 @@
 #let faint    = rgb("#1b1c22")
 #let white    = rgb("#111217")
 
+#let foreground = rgb("#fff")
+
 
 #let blue     = rgb("#5b91ff")
 #let cyan     = rgb("#43c6d3")
@@ -29,7 +31,7 @@
 // Reference curve accent colors — kept distinct from the source palette.
 // These are shared because fragments use the same reference-curve vocabulary.
 
-#let ref-day    = rgb("#91c47b")
+#let ref-day    = foreground
 #let ref-visual = rgb("#a4a7b1")
 #let ref-clock  = rgb("#ad86ea")
 
@@ -193,7 +195,7 @@
     value / max-value * 100%
   }
 
-  box(width: 100%, height: 4pt, fill: rgb("#ececf4"))[
+  box(width: 100%, height: 4pt, fill: hair)[
     #box(width: pct, height: 4pt, fill: fill)[]
   ]
 }
