@@ -9,26 +9,54 @@
 // Color tokens
 // =============================================================================
 
-#let ink     = rgb("#23242a")
-#let soft    = rgb("#50525d")
-#let mute    = rgb("#777985")
-#let hair    = rgb("#ddddE8")
-#let faint   = rgb("#f6f7fb")
-#let white   = rgb("#ffffff")
+#let ink      = rgb("#e8e9ef")
+#let soft     = rgb("#b6b8c2")
+#let mute     = rgb("#8b8e9a")
+#let hair     = rgb("#3a3c47")
+#let faint    = rgb("#1b1c22")
+#let white    = rgb("#111217")
 
-#let blue    = rgb("#005eff")
-#let cyan    = rgb("#0097a7")
-#let green   = rgb("#3a9a00")
-#let violet  = rgb("#7a3cff")
-#let amber   = rgb("#bd6a00")
-#let red     = rgb("#b03a3a")
-#let blackish = rgb("#111111")
+
+#let blue     = rgb("#5b91ff")
+#let cyan     = rgb("#43c6d3")
+#let green    = rgb("#79c957")
+#let violet   = rgb("#a77aff")
+#let amber    = rgb("#e7a54b")
+#let red      = rgb("#e06b6b")
+#let blackish = rgb("#f2f2f4")
+
 
 // Reference curve accent colors — kept distinct from the source palette.
 // These are shared because fragments use the same reference-curve vocabulary.
-#let ref-day    = rgb("#75a85f")
-#let ref-visual = rgb("#70727c")
-#let ref-clock  = rgb("#8d62d5")
+
+#let ref-day    = rgb("#91c47b")
+#let ref-visual = rgb("#a4a7b1")
+#let ref-clock  = rgb("#ad86ea")
+
+// // =============================================================================
+// // Color tokens
+// // =============================================================================
+
+// #let ink     = rgb("#23242a")
+// #let soft    = rgb("#50525d")
+// #let mute    = rgb("#777985")
+// #let hair    = rgb("#ddddE8")
+// #let faint   = rgb("#f6f7fb")
+// #let white   = rgb("#ffffff")
+
+// #let blue    = rgb("#005eff")
+// #let cyan    = rgb("#0097a7")
+// #let green   = rgb("#3a9a00")
+// #let violet  = rgb("#7a3cff")
+// #let amber   = rgb("#bd6a00")
+// #let red     = rgb("#b03a3a")
+// #let blackish = rgb("#111111")
+
+// // Reference curve accent colors — kept distinct from the source palette.
+// // These are shared because fragments use the same reference-curve vocabulary.
+// #let ref-day    = rgb("#75a85f")
+// #let ref-visual = rgb("#70727c")
+// #let ref-clock  = rgb("#8d62d5")
 
 // =============================================================================
 // Typography
