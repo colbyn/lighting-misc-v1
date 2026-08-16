@@ -1,90 +1,17 @@
 // =============================================================================
-// Standalone section: Dimming Is Not Just “Less Power”
+// Section fragment: Dimming Is Not Just “Less Power”
 // =============================================================================
+//
+// Page geometry, global typography, and the dark document background are owned
+// by main.typ. This fragment imports the shared spectra design/computation layers
+// and defines only dimming-specific presentation helpers.
 
-#import "./lib/spd-plot.typ": spectrum-plot
-
-#set page(
-  paper: "us-letter",
-  flipped: true,
-  margin: (x: 0.2in, y: 0.2in),
-)
-
-#set text(
-  font: "Avenir Next",
-  size: 8.6pt,
-  fill: rgb("#23242a"),
-)
-
-#set par(
-  justify: false,
-  leading: 0.64em,
-  spacing: 6pt,
-)
+#import "../spectra/components.typ": ink, mute, hair, faint, white, amber, green, violet, blue, cyan, red, blackish, label, headline, note, section-intro, bottom-takeaway
+#import "../spectra/spectrum.typ": spectrum-plot, wl, neutral-led, blackbody
 
 // =============================================================================
-// Tokens
+// Dimming-specific components
 // =============================================================================
-
-#let ink = rgb("#23242a")
-#let soft = rgb("#50525d")
-#let mute = rgb("#777985")
-#let hair = rgb("#dddde8")
-#let faint = rgb("#f6f7fb")
-#let panel = rgb("#fcfcff")
-#let white = rgb("#ffffff")
-#let off-fill = luma(235)
-
-#let amber = rgb("#bd6a00")
-#let green = rgb("#3a9a00")
-#let violet = rgb("#7a3cff")
-#let blue = rgb("#005eff")
-#let blackish = rgb("#111111")
-
-// =============================================================================
-// Typography / components
-// =============================================================================
-
-#let label(body, fill: mute) = text(
-  size: 6.5pt,
-  weight: "bold",
-  tracking: 0.10em,
-  fill: fill,
-)[#upper(body)]
-
-#let headline(body, size: 28pt) = text(
-  size: size,
-  weight: "medium",
-  fill: ink,
-)[#body]
-
-#let lede(body, size: 10.9pt) = block(width: 100%)[
-  #set par(leading: 0.72em)
-  #text(size: size, fill: soft)[#body]
-]
-
-#let note(body, size: 7.2pt, fill: soft) = block(width: 100%)[
-  #set par(leading: 0.66em)
-  #text(size: size, fill: fill)[#body]
-]
-
-#let page-kicker(body, accent: mute) = block(width: 100%)[
-  #grid(
-    columns: (auto, 1fr),
-    column-gutter: 8pt,
-    align: horizon,
-    [#label(body, fill: accent)],
-    [#line(length: 100%, stroke: hair + 0.55pt)],
-  )
-]
-
-#let section-intro(kicker, title, body, accent: blackish, title-size: 27pt) = block(width: 100%)[
-  #page-kicker(kicker, accent: accent)
-  #v(5pt)
-  #headline(title, size: title-size)
-  #v(5pt)
-  #lede(body)
-]
 
 #let rule-card(kicker, body, accent: blackish) = block(
   width: 100%,
@@ -99,23 +26,6 @@
   #note(body, size: 7.0pt)
 ]
 
-#let bottom-takeaway(kicker, body, accent: blackish) = block(
-  width: 100%,
-  inset: (x: 10pt, y: 8pt),
-  radius: 3pt,
-  fill: faint,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.18fr, 1fr),
-    column-gutter: 10pt,
-    align: horizon,
-    [#label(kicker, fill: accent)],
-    [#note(body, size: 8.0pt, fill: ink)],
-  )
-]
-
 // =============================================================================
 // Signal-strip grammar
 // =============================================================================
@@ -124,7 +34,7 @@
   samples,
   height: 31pt,
   fill: blackish,
-  zero-fill: off-fill,
+  zero-fill: hair,
   radius: 0.55pt,
   gutter: 1.25pt,
 ) = {
@@ -170,7 +80,7 @@
   samples,
   fill: blackish,
   height: 50pt,
-  zero-fill: off-fill,
+  zero-fill: hair,
 ) = signal-strip(
   samples,
   height: height,
@@ -222,40 +132,18 @@
 #let hybrid-lowest = (0.25, 0, 0, 0, 0, 0.25, 0, 0, 0, 0, 0.25, 0)
 
 // Longer samples for expanded teaching plates.
-#let full-current-long = (
-  0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85,
-  0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85, 0.85,
-)
 
 #let mid-current-long = (
   0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
   0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
 )
 
-#let low-current-long = (
-  0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25,
-  0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25,
-)
-
-#let pwm-high-long = (
-  1, 1, 1, 1, 0, 1, 1, 1,
-  1, 0, 1, 1, 1, 1, 0, 1,
-)
 
 #let pwm-mid-long = (
   1, 1, 0, 0, 1, 1, 0, 0,
   1, 1, 0, 0, 1, 1, 0, 0,
 )
 
-#let pwm-low-long = (
-  1, 0, 0, 0, 0, 1, 0, 0,
-  0, 0, 1, 0, 0, 0, 0, 0,
-)
-
-#let hybrid-lowest-long = (
-  0.25, 0, 0, 0, 0, 0.25, 0, 0,
-  0, 0, 0.25, 0, 0, 0, 0, 0,
-)
 
 // =============================================================================
 // Compact atlas
@@ -265,7 +153,7 @@
   width: 100%,
   inset: (x: 10pt, y: 9pt),
   radius: 4pt,
-  fill: panel,
+  fill: faint,
   stroke: hair + 0.6pt,
   breakable: false,
 )[
@@ -427,61 +315,6 @@
   )
 ]
 
-#let method-plate(
-  kicker,
-  title,
-  claim,
-  body,
-  rows,
-  accent: blackish,
-) = block(
-  width: 100%,
-  inset: (x: 11pt, y: 10pt),
-  radius: 4pt,
-  fill: panel,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.31fr, 1fr),
-    column-gutter: 16pt,
-    align: top,
-
-    [
-      #label(kicker, fill: accent)
-      #v(4pt)
-      #headline(title, size: 20pt)
-      #v(5pt)
-      #text(size: 9.2pt, weight: "medium", fill: ink)[#claim]
-      #v(7pt)
-      #note(body, size: 7.7pt)
-    ],
-
-    [
-      #rows
-    ],
-  )
-]
-
-#let compare-pill(a, b, c, accent: blackish) = block(
-  width: 100%,
-  inset: (x: 9pt, y: 8pt),
-  radius: 3pt,
-  fill: white,
-  stroke: hair + 0.55pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.25fr, 0.25fr, 1fr),
-    column-gutter: 8pt,
-    align: horizon,
-
-    [#label(a, fill: accent)],
-    [#text(size: 10.5pt, weight: "semibold", fill: ink)[#b]],
-    [#note(c, size: 7.2pt)],
-  )
-]
-
 // =============================================================================
 // Section
 // =============================================================================
@@ -510,7 +343,7 @@
   [
     #rule-card(
       [read left to right],
-      [Each strip is current over time. Bar height is current. Pale bars are off-time.],
+      [Each strip is current over time. Bar height is current. Muted bars are off-time.],
       accent: blackish,
     )
   ],
@@ -537,19 +370,13 @@
 #signal-atlas()
 
 
-
-
 // =============================================================================
 // Section: Current Is Not the Same Thing as Light
 // =============================================================================
 
-#let orange = rgb("#d78700")
-#let red = rgb("#c0332b")
-#let cyan = rgb("#008aa8")
-
 #let clamp01(x) = calc.min(1.0, calc.max(0.0, x))
 
-#let metric-bar(value, fill: blackish, track: faint, height: 8pt) = block(width: 100%)[
+#let response-bar(value, fill: blackish, track: faint, height: 8pt) = block(width: 100%)[
   #grid(
     columns: (clamp01(value) * 1fr, (1.0 - clamp01(value)) * 1fr),
     column-gutter: 0pt,
@@ -580,12 +407,12 @@
         columns: (calc.max(0.02, photons) * 1fr, calc.max(0.02, heat) * 1fr),
         column-gutter: 2pt,
         [
-          #rect(width: 100%, height: 17pt, fill: accent.lighten(72%), stroke: accent + 0.45pt, radius: 2pt)[
+          #rect(width: 100%, height: 17pt, fill: faint, stroke: accent + 0.45pt, radius: 2pt)[
             #align(center + horizon)[#text(size: 6.6pt, fill: accent)[photons]]
           ]
         ],
         [
-          #rect(width: 100%, height: 17pt, fill: red.lighten(74%), stroke: red + 0.45pt, radius: 2pt)[
+          #rect(width: 100%, height: 17pt, fill: faint, stroke: red + 0.45pt, radius: 2pt)[
             #align(center + horizon)[#text(size: 6.6pt, fill: red)[heat]]
           ]
         ],
@@ -602,7 +429,7 @@
   width: 100%,
   inset: (x: 10pt, y: 9pt),
   radius: 4pt,
-  fill: panel,
+  fill: faint,
   stroke: hair + 0.6pt,
   breakable: false,
 )[
@@ -612,7 +439,7 @@
     align: top,
 
     [
-      #label([electrical input], fill: orange)
+      #label([electrical input], fill: amber)
       #v(4pt)
       #headline([Current does not become light one-to-one.], size: 17pt)
       #v(5pt)
@@ -645,7 +472,7 @@
         0.46,
         0.54,
         [more heat penalty],
-        accent: orange,
+        accent: amber,
       )
     ],
   )
@@ -668,13 +495,13 @@
     align: horizon,
 
     [#text(size: 6.5pt, fill: mute)[current]],
-    [#metric-bar(current, fill: accent, height: 7pt)],
+    [#response-bar(current, fill: accent, height: 7pt)],
 
     [#text(size: 6.5pt, fill: mute)[light]],
-    [#metric-bar(light, fill: green, height: 7pt)],
+    [#response-bar(light, fill: green, height: 7pt)],
 
     [#text(size: 6.5pt, fill: mute)[heat]],
-    [#metric-bar(heat, fill: red, height: 7pt)],
+    [#response-bar(heat, fill: red, height: 7pt)],
   )
   #v(6pt)
   #note(caption, size: 6.9pt)
@@ -684,7 +511,7 @@
   width: 100%,
   inset: (x: 10pt, y: 9pt),
   radius: 4pt,
-  fill: panel,
+  fill: faint,
   stroke: hair + 0.6pt,
   breakable: false,
 )[
@@ -735,7 +562,7 @@
           0.86,
           0.78,
           [Current keeps rising; useful light rises less cleanly than heat.],
-          accent: orange,
+          accent: amber,
         )],
       )
     ],
@@ -759,7 +586,7 @@
   width: 100%,
   inset: (x: 10pt, y: 9pt),
   radius: 4pt,
-  fill: panel,
+  fill: faint,
   stroke: hair + 0.6pt,
   breakable: false,
 )[
@@ -850,79 +677,28 @@
 // =============================================================================
 // Spectral comparison: dimming behavior by source family
 // =============================================================================
+//
+// Reuse the common wavelength grid, neutral LED reference, and blackbody model
+// from spectrum.typ. Only the page-specific dimming transforms remain local.
 
-#let gaussian(x, center, width, amp: 1.0) = {
-  let t = (x - center) / width
-  amp * calc.exp(-0.5 * t * t)
-}
+#let scale-values(values, factor) = values.map(v => v * factor)
 
-#let map-values(xs, f) = {
-  let out = ()
-  for x in xs {
-    out.push(f(x))
-  }
-  out
-}
-
-#let scale-values(values, factor) = {
-  let out = ()
-  for v in values {
-    out.push(v * factor)
-  }
-  out
-}
-
-#let max-value(values) = {
-  let m = 0.0
-  for v in values {
-    m = calc.max(m, v)
-  }
-  m
-}
-
-#let scale-to-reference(values, reference-max) = {
-  let out = ()
-  for v in values {
-    out.push(if reference-max == 0 { 0 } else { v / reference-max })
-  }
-  out
-}
-
-// Simple idealized phosphor-white LED shape.
-// The important teaching point: the shape stays stable; intensity changes.
-#let led-base(l) = (
-  gaussian(l, 450.0, 15.0, amp: 0.88) +
-  gaussian(l, 560.0, 78.0, amp: 1.02) +
-  gaussian(l, 620.0, 58.0, amp: 0.16)
+#let scale-to-reference(values, reference-max) = values.map(
+  v => if reference-max == 0 { 0 } else { v / reference-max }
 )
 
-// Simple idealized blackbody-like spectral model.
-// Deliberately illustrative: lower filament temperature makes the source dimmer
-// and shifts the visible balance toward longer wavelengths.
-#let blackbody-radiance(l, temp) = {
-  let lm = l * 1e-9
-  let c2 = 1.4388e-2
-  1.0 / (calc.pow(lm, 5) * (calc.exp(c2 / (lm * temp)) - 1.0))
-}
-
-#let source-wl = range(380, 781, step: 10)
-
-// LED: normalize one full-output reference, then scale every dimmed curve from it.
-// This makes the Y axis a shared intensity scale.
-#let led-reference-raw = map-values(source-wl, l => led-base(l))
-#let led-reference-max = max-value(led-reference-raw)
-#let led-full = scale-to-reference(led-reference-raw, led-reference-max)
+// LED: keep the common neutral-LED spectral recipe and scale amplitude only.
+#let led-full = neutral-led
 #let led-mid = scale-values(led-full, 0.55)
 #let led-low = scale-values(led-full, 0.18)
 
-// Incandescent: compute all temperatures in absolute blackbody-like units,
-// then divide every curve by the full-output reference max.
-// This preserves the visual drop in intensity and the warm spectral shift.
-#let inc-full-raw = map-values(source-wl, l => blackbody-radiance(l, 2700.0))
-#let inc-mid-raw = map-values(source-wl, l => blackbody-radiance(l, 2200.0))
-#let inc-low-raw = map-values(source-wl, l => blackbody-radiance(l, 1800.0))
+// Incandescent: evaluate the common blackbody model at progressively lower
+// filament temperatures, then preserve one shared full-output reference.
+#let inc-full-raw = wl.map(l => blackbody(l, 2700.0))
+#let inc-mid-raw = wl.map(l => blackbody(l, 2200.0))
+#let inc-low-raw = wl.map(l => blackbody(l, 1800.0))
 
-#let inc-reference-max = max-value(inc-full-raw)
+#let inc-reference-max = calc.max(..inc-full-raw)
 #let inc-full = scale-to-reference(inc-full-raw, inc-reference-max)
 #let inc-mid = scale-to-reference(inc-mid-raw, inc-reference-max)
 #let inc-low = scale-to-reference(inc-low-raw, inc-reference-max)
@@ -949,12 +725,12 @@
   (
     label: [full output],
     values: inc-full,
-    stroke: amber + 1.25pt,
+    stroke: blackish + 1.25pt,
   ),
   (
     label: [medium output],
     values: inc-mid,
-    stroke: orange + 1.1pt,
+    stroke: amber + 1.1pt,
   ),
   (
     label: [low output],
@@ -973,7 +749,7 @@
   width: 100%,
   inset: (x: 10pt, y: 9pt),
   radius: 4pt,
-  fill: panel,
+  fill: faint,
   stroke: hair + 0.6pt,
   breakable: false,
 )[
@@ -985,7 +761,7 @@
   #v(8pt)
 
   #spectrum-plot(
-    source-wl,
+    wl,
     title: none,
     height: 6.25cm,
     legend-position: "bottom",
@@ -1043,7 +819,7 @@
     and time structure are not interchangeable quantities. The driver determines
     the current waveform; the LED package determines what that waveform becomes.
   ],
-  accent: orange,
+  accent: amber,
   title-size: 25pt,
 )
 
