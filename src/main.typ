@@ -1,4 +1,5 @@
 #import "lib/common.typ": page-margin
+#import "spectra/components.typ": ink
 
 #set document(
   title: "On Lighting",
@@ -26,34 +27,6 @@
   fill: rgb("#222222"),
 )
 
-// #set text(
-//   font: "Avenir Next",
-//   size: 8.45pt,
-//   fill: rgb("#fff"),
-// )
-
-// #set par(
-//   justify: false,
-//   leading: 0.62em,
-//   spacing: 7pt,
-// )
-
-// =============================================================================
-// Shared document tokens
-// =============================================================================
-
-#import "spectra/components.typ": ink
-
-// =============================================================================
-// Document setup
-// =============================================================================
-
-// #set page(
-//   paper: "us-letter",
-//   flipped: true,
-//   margin: (x: 0.2in, y: 0.2in),
-// )
-
 #set text(
   font: "Avenir Next",
   size: 8.45pt,
@@ -65,6 +38,18 @@
   leading: 0.62em,
   spacing: 7pt,
 )
+
+
+
+// =============================================================================
+// Document setup
+// =============================================================================
+
+// #set page(
+//   paper: "us-letter",
+//   flipped: true,
+//   margin: (x: 0.2in, y: 0.2in),
+// )
 
 // #{ include "cover/page.typ" }
 
