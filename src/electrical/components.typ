@@ -1,33 +1,17 @@
 // =============================================================================
-// Shared electrical presentation components
+// Shared electrical presentation primitives
 // =============================================================================
 //
-// Reusable visual grammar for electrical / control sections.
+// Reusable electrical / control visual grammar only.
 //
 // Global page geometry and document typography are owned by main.typ.
 // General-purpose colors and typography components are owned by
 // spectra/components.typ.
 //
-// Keep rendered section narrative in the individual electrical/*.typ files.
+// Page-specific compositions — such as the CCR/PWM atlas or current-to-light
+// teaching plates — belong in the section files that render them.
 
-#import "../spectra/components.typ": ink, mute, hair, faint, white, amber, green, violet, blue, red, blackish, label, headline, note
-
-// =============================================================================
-// General electrical cards
-// =============================================================================
-
-#let rule-card(kicker, body, accent: blackish) = block(
-  width: 100%,
-  inset: (x: 8pt, y: 7pt),
-  radius: 3pt,
-  fill: white,
-  stroke: hair + 0.55pt,
-  breakable: false,
-)[
-  #label(kicker, fill: accent)
-  #v(3pt)
-  #note(body, size: 7.0pt)
-]
+#import "../spectra/components.typ": ink, mute, hair, faint, white, green, violet, blue, red, blackish, label, note
 
 // =============================================================================
 // Signal-strip grammar
@@ -93,7 +77,11 @@
   gutter: 1.6pt,
 )
 
-#let signal-cell(samples, caption, fill: blackish) = block(
+#let signal-cell(
+  samples,
+  caption,
+  fill: blackish,
+) = block(
   width: 100%,
   inset: (x: 5.5pt, y: 5pt),
   radius: 3pt,
@@ -106,7 +94,12 @@
   #text(size: 6.4pt, fill: mute)[#caption]
 ]
 
-#let method-label(kicker, title, subtitle, accent: blackish) = block(width: 100%)[
+#let method-label(
+  kicker,
+  title,
+  subtitle,
+  accent: blackish,
+) = block(width: 100%)[
   #label(kicker, fill: accent)
   #v(3pt)
   #text(size: 12.2pt, weight: "medium", fill: ink)[#title]
@@ -114,7 +107,10 @@
   #text(size: 7.3pt, fill: mute)[#subtitle]
 ]
 
-#let column-head(title, subtitle) = block(width: 100%)[
+#let column-head(
+  title,
+  subtitle,
+) = block(width: 100%)[
   #text(size: 7.6pt, weight: "bold", fill: ink)[#title]
   #v(1.5pt)
   #text(size: 6.2pt, fill: mute)[#subtitle]
@@ -123,6 +119,9 @@
 // =============================================================================
 // Signal samples
 // =============================================================================
+//
+// These are illustrative waveform samples used across electrical teaching
+// graphics. Keep the signal data here so individual pages do not duplicate it.
 
 #let full-current = (
   0.85, 0.85, 0.85, 0.85, 0.85, 0.85,
@@ -159,8 +158,6 @@
   0, 0, 0, 0, 0.25, 0,
 )
 
-// Longer samples for expanded teaching plates.
-
 #let mid-current-long = (
   0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
   0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55, 0.55,
@@ -172,147 +169,15 @@
 )
 
 // =============================================================================
-// CCR / PWM / hybrid comparison
+// Expanded waveform row
 // =============================================================================
 
-#let signal-atlas() = block(
-  width: 100%,
-  inset: (x: 10pt, y: 9pt),
-  radius: 4pt,
-  fill: faint,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (1.05fr, 1fr, 1fr, 1fr, 1fr),
-    column-gutter: 7pt,
-    row-gutter: 8pt,
-    align: top,
-
-    // Header row
-    [],
-    [#column-head([High output], [large delivered average])],
-    [#column-head([Medium output], [lower delivered average])],
-    [#column-head([Low output], [near lower range])],
-    [#column-head([Very low output], [deep dimming behavior])],
-
-    // CCR row
-    [
-      #method-label(
-        [analog LED dimming],
-        [CCR],
-        [height changes],
-        accent: green,
-      )
-    ],
-    [
-      #signal-cell(
-        full-current,
-        [continuous high current],
-        fill: green,
-      )
-    ],
-    [
-      #signal-cell(
-        mid-current,
-        [continuous reduced current],
-        fill: green,
-      )
-    ],
-    [
-      #signal-cell(
-        low-current,
-        [continuous low current],
-        fill: green,
-      )
-    ],
-    [
-      #signal-cell(
-        low-current,
-        [still analog if supported],
-        fill: green,
-      )
-    ],
-
-    // PWM row
-    [
-      #method-label(
-        [pulsed LED dimming],
-        [PWM],
-        [width changes],
-        accent: violet,
-      )
-    ],
-    [
-      #signal-cell(
-        pwm-high,
-        [long on-time],
-        fill: violet,
-      )
-    ],
-    [
-      #signal-cell(
-        pwm-mid,
-        [balanced on/off],
-        fill: violet,
-      )
-    ],
-    [
-      #signal-cell(
-        pwm-low,
-        [short on-time],
-        fill: violet,
-      )
-    ],
-    [
-      #signal-cell(
-        pwm-low,
-        [same peak, low duty],
-        fill: violet,
-      )
-    ],
-
-    // Hybrid row
-    [
-      #method-label(
-        [combined strategy],
-        [Hybrid],
-        [height first, then width],
-        accent: blue,
-      )
-    ],
-    [
-      #signal-cell(
-        full-current,
-        [upper range: CCR],
-        fill: blue,
-      )
-    ],
-    [
-      #signal-cell(
-        mid-current,
-        [middle range: CCR],
-        fill: blue,
-      )
-    ],
-    [
-      #signal-cell(
-        low-current,
-        [analog floor],
-        fill: blue,
-      )
-    ],
-    [
-      #signal-cell(
-        hybrid-lowest,
-        [PWM below floor],
-        fill: blue,
-      )
-    ],
-  )
-]
-
-#let expanded-row(title, subtitle, samples, fill: blackish) = block(
+#let expanded-row(
+  title,
+  subtitle,
+  samples,
+  fill: blackish,
+) = block(
   width: 100%,
   inset: (x: 8pt, y: 7pt),
   radius: 3pt,
@@ -338,7 +203,7 @@
 ]
 
 // =============================================================================
-// Current → light response graphics
+// Normalized response bars
 // =============================================================================
 
 #let clamp01(x) = calc.min(1.0, calc.max(0.0, x))
@@ -355,10 +220,30 @@
       (1.0 - clamp01(value)) * 1fr,
     ),
     column-gutter: 0pt,
-    [#rect(width: 100%, height: height, fill: fill, radius: 1pt)],
-    [#rect(width: 100%, height: height, fill: track, radius: 1pt)],
+
+    [
+      #rect(
+        width: 100%,
+        height: height,
+        fill: fill,
+        radius: 1pt,
+      )
+    ],
+
+    [
+      #rect(
+        width: 100%,
+        height: height,
+        fill: track,
+        radius: 1pt,
+      )
+    ],
   )
 ]
+
+// =============================================================================
+// Electrical comparison primitives
+// =============================================================================
 
 #let split-row(
   kicker,
@@ -427,59 +312,6 @@
   )
 ]
 
-#let energy-split-card() = block(
-  width: 100%,
-  inset: (x: 10pt, y: 9pt),
-  radius: 4pt,
-  fill: faint,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.27fr, 1fr),
-    column-gutter: 14pt,
-    align: top,
-
-    [
-      #label([electrical input], fill: amber)
-      #v(4pt)
-      #headline([Current does not become light one-to-one.], size: 17pt)
-      #v(5pt)
-      #note([
-        A driver controls current. The LED package converts part of that electrical
-        input into photons and sheds the rest as heat. Higher drive current increases
-        output, but the useful fraction does not stay fixed.
-      ], size: 7.3pt)
-    ],
-
-    [
-      #split-row(
-        [low drive],
-        0.72,
-        0.28,
-        [efficient region],
-        accent: green,
-      )
-      #v(6pt)
-      #split-row(
-        [nominal drive],
-        0.60,
-        0.40,
-        [normal working point],
-        accent: blue,
-      )
-      #v(6pt)
-      #split-row(
-        [hard drive],
-        0.46,
-        0.54,
-        [more heat penalty],
-        accent: amber,
-      )
-    ],
-  )
-]
-
 #let response-cell(
   kicker,
   current,
@@ -496,6 +328,7 @@
   breakable: false,
 )[
   #label(kicker, fill: accent)
+
   #v(5pt)
 
   #grid(
@@ -515,78 +348,15 @@
   )
 
   #v(6pt)
+
   #note(caption, size: 6.9pt)
 ]
 
-#let current-response-card() = block(
-  width: 100%,
-  inset: (x: 10pt, y: 9pt),
-  radius: 4pt,
-  fill: faint,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.31fr, 1fr),
-    column-gutter: 13pt,
-    align: top,
-
-    [
-      #label([drive response], fill: blue)
-      #v(4pt)
-      #headline([More current gives more light, then more penalty.], size: 17pt)
-      #v(5pt)
-      #note([
-        The important curve bends. At ordinary currents, extra current mostly
-        buys more output. Near the upper range, heat and efficiency droop take
-        a larger share of the electrical input.
-      ], size: 7.3pt)
-    ],
-
-    [
-      #grid(
-        columns: (1fr, 1fr, 1fr),
-        column-gutter: 7pt,
-        align: top,
-
-        [
-          #response-cell(
-            [soft drive],
-            0.28,
-            0.32,
-            0.18,
-            [Low current is often efficient, but absolute output is small.],
-            accent: green,
-          )
-        ],
-
-        [
-          #response-cell(
-            [rated drive],
-            0.62,
-            0.66,
-            0.42,
-            [The normal operating region balances output, efficacy, and lifetime.],
-            accent: blue,
-          )
-        ],
-
-        [
-          #response-cell(
-            [overdrive],
-            0.95,
-            0.86,
-            0.78,
-            [Current keeps rising; useful light rises less cleanly than heat.],
-            accent: amber,
-          )
-        ],
-      )
-    ],
-  )
-]
-
-#let consequence-chip(kicker, body, accent: blackish) = block(
+#let consequence-chip(
+  kicker,
+  body,
+  accent: blackish,
+) = block(
   width: 100%,
   inset: (x: 7pt, y: 6pt),
   radius: 3pt,
@@ -597,144 +367,5 @@
   #label(kicker, fill: accent)
   #v(3pt)
   #note(body, size: 6.8pt)
-]
-
-#let same-average-card() = block(
-  width: 100%,
-  inset: (x: 10pt, y: 9pt),
-  radius: 4pt,
-  fill: faint,
-  stroke: hair + 0.6pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.30fr, 1fr),
-    column-gutter: 13pt,
-    align: top,
-
-    [
-      #label([same average], fill: violet)
-      #v(4pt)
-      #headline([Equal visible average can hide unequal peak stress.], size: 17pt)
-      #v(5pt)
-      #note([
-        Two dimming methods can deliver a similar time-average output. The diode,
-        camera, driver, and thermal stack still experience different instantaneous
-        conditions.
-      ], size: 7.3pt)
-    ],
-
-    [
-      #grid(
-        columns: (1fr, 1fr),
-        column-gutter: 8pt,
-        align: top,
-
-        [
-          #expanded-row(
-            [CCR at 50%],
-            [lower continuous current],
-            mid-current-long,
-            fill: green,
-          )
-          #v(6pt)
-          #grid(
-            columns: (1fr, 1fr),
-            column-gutter: 6pt,
-            [
-              #consequence-chip(
-                [peak current],
-                [Lower peak; lower instantaneous stress.],
-                accent: green,
-              )
-            ],
-            [
-              #consequence-chip(
-                [time structure],
-                [Continuous emission; no off-gaps in the signal.],
-                accent: green,
-              )
-            ],
-          )
-        ],
-
-        [
-          #expanded-row(
-            [PWM at 50%],
-            [full current half the time],
-            pwm-mid-long,
-            fill: violet,
-          )
-          #v(6pt)
-          #grid(
-            columns: (1fr, 1fr),
-            column-gutter: 6pt,
-            [
-              #consequence-chip(
-                [peak current],
-                [Full peak remains; only duty cycle changes.],
-                accent: violet,
-              )
-            ],
-            [
-              #consequence-chip(
-                [time structure],
-                [Emission arrives in bursts; the average is visual.],
-                accent: violet,
-              )
-            ],
-          )
-        ],
-      )
-    ],
-  )
-]
-
-#let photon-dose-card() = block(
-  width: 100%,
-  inset: (x: 10pt, y: 9pt),
-  radius: 4pt,
-  fill: white,
-  stroke: hair + 0.55pt,
-  breakable: false,
-)[
-  #grid(
-    columns: (0.23fr, 1fr, 1fr, 1fr),
-    column-gutter: 8pt,
-    align: top,
-
-    [
-      #label([area rule], fill: blackish)
-      #v(3pt)
-      #note(
-        [For a simplified teaching model, delivered light follows the area under the current-time signal.],
-        size: 6.9pt,
-      )
-    ],
-
-    [
-      #signal-cell(
-        mid-current,
-        [lower height × full time],
-        fill: green,
-      )
-    ],
-
-    [
-      #signal-cell(
-        pwm-mid,
-        [full height × half time],
-        fill: violet,
-      )
-    ],
-
-    [
-      #signal-cell(
-        hybrid-lowest,
-        [low height × short time],
-        fill: blue,
-      )
-    ],
-  )
 ]
 

@@ -72,8 +72,8 @@
 
 // #{ include "concepts/spectrum-white-light.typ" }
 // #{ include "concepts/spectrum-example-gallery.typ" }
+
 #{ include "spectra.typ" }
-// #{ include "concepts/leds-dimming.typ" }
 
 #{ include "electrical/led-dimming.typ" }
 #{ include "electrical/current-to-light.typ" }
